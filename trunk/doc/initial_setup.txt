@@ -1,0 +1,38 @@
+
+This document describes the inital setup for the KnowledgeBlog development process.
+
+** Apache Configuration
+
+Running 2 virtual hosts. First serves *.knowledgeblog.org from /var/www
+ * Version 3.0.1 - updated by WP updater.
+
+Second serves tomatin.vm.bytemark.co.uk from /home/beta/wordpress
+ * Version 3.0.1 - updated by Subversion 
+
+** Wordpress/MySQL Configuration
+
+Both WordPresses are same user, different databases.
+
+** Versioning
+
+Main repo /home/beta/version/knowledgeblog 
+
+Working copy /home/beta/beta-checkout/trunk
+
+** To publish
+
+1. Push personal repo to Main repo
+2. bzr pull in beta-checkout as user beta
+3. make in beta-checkout/trunk/publish as user beta
+
+
+
+
+
+
+
+
+** Setup notes
+
+Had to do lots of chmod'ing on bzr repo to get this to work, but it does seem
+okay now. 
