@@ -1,0 +1,4 @@
+A python script to mint DataCite DOIs for your dataset. You need to have a DataCite API username and password.
+
+Depends on httplib2.
+
