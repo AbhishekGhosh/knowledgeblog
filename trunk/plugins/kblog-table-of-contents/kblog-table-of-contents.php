@@ -58,11 +58,12 @@ class KToC{
 		if ($name == $cat) {
 			$catposts = get_posts('numberposts=-1&order=ASC&orderby=title&category_name='.$category->cat_name);
 			foreach ($catposts as $post) {
-				$author = get_userdata($post->post_author);
+				if(!function_exists('coauthors')) {
+                $author = get_userdata($post->post_author);
 				$author_name = $author->user_login;
 				$author_realname = $author->first_name." ".$author->last_name;
 				$author_url = $author->user_url;
-				$item = "<li><a href=" . get_permalink($post->ID) . ">" . get_the_title($post->ID) . "</a> submitted by ";
+				$item = "<li><a href=" . get_permalink($post->ID) . ">" . get_the_title($post->ID) . "</a> by ";
 				if ($author_realname != ' ') {
 					$item .= $author_realname ."</li>\n";
 				}
@@ -70,6 +71,38 @@ class KToC{
 					$item .= $author_name ."</li>\n";
 				}
 				echo $item;
+                }
+                else {
+                    //deal with co-authors
+                    $item = "<li><a href=" . get_permalink($post->ID) . ">" . get_the_title($post->ID) . "</a> by ";
+                    echo $item;
+                    $authors = get_coauthors($post->ID);
+                    $i = 1;
+                    $len = count($authors);
+                    $author_html = '';
+                    foreach ($authors as $author) {
+				        $author_name = $author->user_login;
+				        $author_realname = $author->first_name." ".$author->last_name;
+				        $author_url = $author->user_url;
+				        if ($author_realname != ' ') {
+					        $author_html .= $author_realname;
+				        }
+				        else {
+					        $author_html .= $author_name;
+				        }
+                        if ($i == $len-1) {
+                            $author_html .= " and ";
+                        }
+                        elseif ($i < $len-1) {
+                            $author_html .= ", ";
+                        }
+                        else {
+                            $author_html .= "</li>";
+                        }
+                        $i++;
+                    }
+                    echo $author_html;
+                }
 			}
 		}
 	}
