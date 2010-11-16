@@ -62,7 +62,7 @@ class KToC{
 				$author_name = $author->user_login;
 				$author_realname = $author->first_name." ".$author->last_name;
 				$author_url = $author->user_url;
-				$item = "<li><a href=" . get_permalink($post->ID) . ">" . get_the_title($post->ID) . "</a> by ";
+				$item = "<li><a href=" . get_permalink($post->ID) . ">" . get_the_title($post->ID) . "</a> submitted by ";
 				if ($author_realname != ' ') {
 					$item .= $author_realname ."</li>\n";
 				}
