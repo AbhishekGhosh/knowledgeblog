@@ -4,7 +4,7 @@ Contributors: philliplord, sjcockell, knowledgeblog, d_swan
 Tags: table-of-contents
 Requires at least: 3.0
 Tested up to: 3.0.1
-Stable tag: 0.1
+Stable tag: 0.2
 
 This plugin writes an alphabetic list of posts in a single category in place of a [ktoc] shortcode.
 
