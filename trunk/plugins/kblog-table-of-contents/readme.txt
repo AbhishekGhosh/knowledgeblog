@@ -14,6 +14,8 @@ Interprets the &#91;ktoc&#93; shortcode to produce a bulleted list, alphabetical
 
 The ToC is generated from a single category, which can be controlled through a simple settings menu, or through the "cat" attribute on the shortcode (which overrides the default setting).
 
+Unlike other Table of Contents plugins, KToC does not embed affiliate links in the output.
+
 == Installation ==
 
 1. Unzip the downloaded .zip archive to the `/wp-content/plugins/` directory

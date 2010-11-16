@@ -1,7 +1,7 @@
 <?php
   /*
    Plugin Name: Knowledgeblog Table of Contents
-   Plugin URI: http://knowledgeblog.org/kblog-table-of-contents-plugin/
+   Plugin URI: http://knowledgeblog.org/knowledgeblog-table-of-contents-plugin/
    Description: Display alphabetic list of articles in a particular category
    Version: 0.1
    Author: Simon Cockell
@@ -77,7 +77,7 @@ class KToC{
 
   //add a link to settings on the plugin management page
   function ktoc_settings_link( $links, $file ) {
-    if ($file == 'kblog-table-of-contents/kblog-table-of-contents.php' && function_exists('admin_url')) {
+    if ($file == 'knowledgeblog-table-of-contents/kblog-table-of-contents.php' && function_exists('admin_url')) {
         $settings_link = '<a href="' .admin_url('options-general.php?page=kblog-table-of-contents.php').'">'. __('Settings') . '</a>';
         array_unshift($links, $settings_link);
     }
