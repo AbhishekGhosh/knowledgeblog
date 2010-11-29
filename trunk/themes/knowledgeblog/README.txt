@@ -1,0 +1,52 @@
+﻿+------------------------------
+|
+|	Wordpress Theme:
+|	GonzoDaily
+|	http://www.gnu.org/licenses/gpl.html
+|
++------------------------------
+|
+|	Author: Milen Petrinski - Gonzo
+|	Author url: http://greatgonzo.net/
+|
++------------------------------
+|
+|	License:
+|	http://www.gnu.org/licenses/gpl.html
+|
++------------------------------
+
++------------------------------
+|	CREDITS
++------------------------------
+
+Gputeks font, used in the theme header:
+Created by gluk with FontForge 1.0 (http://fontforge.sf.net) 
+This Font Software is licensed under the SIL Open Font License, V.1.1. 
+This license is available with a FAQ at: http://scripts.sil.org/OFL.
+Copyright (c) 2008, gluk,(gluksza@wp.pl) with Reserved Font Name Gputeks.
+
+
++------------------------------
+|	NO WARRANTY
++------------------------------
+
+BECAUSE THE PROGRAM IS LICENSED FREE OF CHARGE, THERE IS NO WARRANTY
+FOR THE PROGRAM, TO THE EXTENT PERMITTED BY APPLICABLE LAW.  EXCEPT WHEN
+OTHERWISE STATED IN WRITING THE COPYRIGHT HOLDERS AND/OR OTHER PARTIES
+PROVIDE THE PROGRAM "AS IS" WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESSED
+OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
+MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.  THE ENTIRE RISK AS
+TO THE QUALITY AND PERFORMANCE OF THE PROGRAM IS WITH YOU.  SHOULD THE
+PROGRAM PROVE DEFECTIVE, YOU ASSUME THE COST OF ALL NECESSARY SERVICING,
+REPAIR OR CORRECTION.
+
+IN NO EVENT UNLESS REQUIRED BY APPLICABLE LAW OR AGREED TO IN WRITING
+WILL ANY COPYRIGHT HOLDER, OR ANY OTHER PARTY WHO MAY MODIFY AND/OR
+REDISTRIBUTE THE PROGRAM, BE LIABLE TO YOU FOR DAMAGES,
+INCLUDING ANY GENERAL, SPECIAL, INCIDENTAL OR CONSEQUENTIAL DAMAGES ARISING
+OUT OF THE USE OR INABILITY TO USE THE PROGRAM (INCLUDING BUT NOT LIMITED
+TO LOSS OF DATA OR DATA BEING RENDERED INACCURATE OR LOSSES SUSTAINED BY
+YOU OR THIRD PARTIES OR A FAILURE OF THE PROGRAM TO OPERATE WITH ANY OTHER
+PROGRAMS), EVEN IF SUCH HOLDER OR OTHER PARTY HAS BEEN ADVISED OF THE
+POSSIBILITY OF SUCH DAMAGES.
