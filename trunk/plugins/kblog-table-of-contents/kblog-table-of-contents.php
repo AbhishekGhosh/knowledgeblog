@@ -53,6 +53,7 @@ class KToC{
                 'cat' => get_option('display_category'),
             ), $atts));
 	$categories = get_categories();
+	$items = array();
 	foreach ($categories as $category) {
 		$name = $category->cat_name;
 		if ($name == $cat) {
@@ -70,12 +71,11 @@ class KToC{
 				else {
 					$item .= $author_name ."</li>\n";
 				}
-				echo $item;
+				$items[] = $item;
                 }
                 else {
                     //deal with co-authors
                     $item = "<li><a href=" . get_permalink($post->ID) . ">" . get_the_title($post->ID) . "</a> by ";
-                    echo $item;
                     $authors = get_coauthors($post->ID);
                     $i = 1;
                     $len = count($authors);
@@ -101,10 +101,17 @@ class KToC{
                         }
                         $i++;
                     }
-                    echo $author_html;
+					$item .= $author_html;
+					$items[] = $item;
                 }
 			}
 		}
+		$list = "<ul>\n";
+		foreach ($items as $item) {
+			$list .= $item."\n";
+		}
+		$list .= "</ul>\n";
+		return $list;
 	}
   }
 
