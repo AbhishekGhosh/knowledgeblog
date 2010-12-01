@@ -60,20 +60,20 @@ class KToC{
 			$catposts = get_posts('numberposts=-1&order=ASC&orderby=title&category_name='.$category->cat_name);
 			foreach ($catposts as $post) {
 				if(!function_exists('coauthors')) {
-                $author = get_userdata($post->post_author);
-				$author_name = $author->user_login;
-				$author_realname = $author->first_name." ".$author->last_name;
-				$author_url = $author->user_url;
-				$item = "<li><a href=" . get_permalink($post->ID) . ">" . get_the_title($post->ID) . "</a> by ";
-				if ($author_realname != ' ') {
-					$item .= $author_realname ."</li>\n";
+					$author = get_userdata($post->post_author);
+					$author_name = $author->user_login;
+					$author_realname = $author->first_name." ".$author->last_name;
+					$author_url = $author->user_url;
+					$item = "<li><a href=" . get_permalink($post->ID) . ">" . get_the_title($post->ID) . "</a> by ";
+					if ($author_realname != ' ') {
+						$item .= $author_realname ."</li>\n";
+					}
+					else {
+						$item .= $author_name ."</li>\n";
+					}
+					$items[] = $item;
 				}
 				else {
-					$item .= $author_name ."</li>\n";
-				}
-				$items[] = $item;
-                }
-                else {
                     //deal with co-authors
                     $item = "<li><a href=" . get_permalink($post->ID) . ">" . get_the_title($post->ID) . "</a> by ";
                     $authors = get_coauthors($post->ID);
@@ -111,8 +111,8 @@ class KToC{
 			$list .= $item."\n";
 		}
 		$list .= "</ul>\n";
-		return $list;
 	}
+		return $list;
   }
 
   //add a link to settings on the plugin management page
