@@ -19,10 +19,10 @@ class RefManager{
     register_activation_hook(__FILE__, array(__CLASS__, 'refman_install'));
     
     /*add_shortcode('doi',
-                  array(__CLASS__, 'doi_shortcode' ));
+  array(__CLASS__, 'doi_shortcode' ));
     
     add_shortcode('pmid', 
-                  array(__CLASS__, 'pmid_shortcode' ));
+  array(__CLASS__, 'pmid_shortcode' ));
     */
     add_filter('the_content', array(__CLASS__, 'process_doi'));
     //shortcodes only allow in-place replacement, so not addition of biblio to foot of post.
@@ -38,6 +38,8 @@ class RefManager{
         add_filter( 'the_content', array(__CLASS__, 'inline_to_shortcode' ) );
     }
     */
+    add_action('template_redirect', array(__CLASS__, 'bibliography_output'));
+
     add_action('admin_menu', array(__CLASS__, 'refman_menu'));
 
     add_filter('plugin_action_links', array(__CLASS__, 'refman_settings_link'), 9, 2 );
@@ -79,23 +81,18 @@ class RefManager{
     //find dois in the_content
     //doi regex assumes dois start with '10.' - seems reasonable?
     //also - should we optionally allow ^doi:?
-    $preg = "#\[doi\](10\..*?)\[\/doi\]#"; //make sure this is non-greedy
-    preg_match_all($preg, $content, $dois);
-    echo "<pre>";
-    print_r($dois[0]);
-    print_r($dois[1]);
-    echo "</pre>";
-    //need to make sure we deal with duplicate DOIs here
-    $replacees = array_unique($dois[0]);
-    $uniq_doi = array_unique($dois[1]);
+    $dois = self::get_dois($content);
+    $replacees = $dois[0];
+    $uniq_doi = $dois[1];
+    //echo "<pre>";print_r($uniq_doi);echo "</pre>";
+    $metadata_arrays = self::get_arrays($uniq_doi);
     $i = 0;
     while ($i < count($replacees)) {
-        $doi = $uniq_doi[$i];
-        $article = self::get_pub_info($doi);
-        echo "<pre>";
-        echo $article;
-        echo "</pre>";
-        $replacer = "<sup>".strval($i+1)."</sup>";
+        //echo "<pre>";
+        //echo $article;
+        //print_r($article_arrays[$i]);
+        //echo "</pre>";
+        $replacer = '<span id="cad'.strval($i+1).'" name="citation-cad">[cite]</span>';
         $content = str_replace($replacees[$i], $replacer, $content);
         $i++;
     }
@@ -103,21 +100,81 @@ class RefManager{
     //http://www.crossref.org/openurl/?id=doi:10.3998/3336451.0009.101&noredirect=true&pid=s.j.cockell@newcastle.ac.uk&format=unixref
     //make array of xmls
     //add bibliography and in place pointers
+    $permalink = get_permalink();
+    echo "<a href='".$permalink."/bib.json'>JSON</a>"; 
     return $content;
   }
 
-  private function get_pub_info($pub_doi) {
+  private function get_arrays($dois) {
+    $metadata_arrays = array();
+    foreach ($dois as $doi) {
+        //echo $doi."<br/>";
+        $metadata = array();
+        $article = self::crossref_doi_lookup($doi);
+        if ($article == null) {
+            $article = self::pubmed_doi_lookup($doi);
+            $article_array = self::array_from_xml($article);
+            $metadata = self::get_pubmed_metadata($article_array);
+        }
+        else {
+            $article_array = self::array_from_xml($article);
+            $metadata = self::get_crossref_metadata($article_array);
+            //echo "<pre>";print_r($article_array);echo "</pre>";
+        }
+        $metadata_arrays[] = $metadata;
+    }
+    return $metadata_arrays;
+  }
+  
+  private function get_dois($content) {
+    $preg = "#\[doi\](10\..*?)\[\/doi\]#"; //make sure this is non-greedy
+    preg_match_all($preg, $content, $dois);
+    //echo "<pre>";
+    //print_r($dois[0]);
+    //print_r($dois[1]);
+    //echo "</pre>";
+    //need to make sure we deal with duplicate DOIs here
+    //array_values() needed to keep array indicies sequential
+    $replacees = array_values(array_unique($dois[0]));
+    $uniq_doi = array_values(array_unique($dois[1]));
+    $returnval = array($replacees, $uniq_doi);
+    return $returnval;
+  }
+
+  private function crossref_doi_lookup($pub_doi) {
     $url = "http://www.crossref.org/openurl/?noredirect=true&pid=s.j.cockell@newcastle.ac.uk&format=unixref&id=doi:".$pub_doi;
-    echo $url;
-    return file_get_contents($url, 0);
-    $handle = fopen($url, "r");
-    if ($xml = fread($handle)) {
-        fclose($handle);
-        return $xml;
+    //echo $url."<br/>";
+    $xml = file_get_contents($url, 0);
+    if (preg_match('/not found in CrossRef/', $xml)) {
+        return null;
     }
     else {
-        return "ERROR";
+        return $xml;
     }
+  }
+
+  private function pubmed_doi_lookup($pub_doi) {
+    $search = "http://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&retmax=1&term=".$pub_doi;
+    $search_xml = file_get_contents($search, 0);
+    //TODO - id can be retrieved from pubmed_xml
+    $search_obj = self::array_from_xml($search_xml);
+    $idlist = $search_obj->IdList;
+    $id = $idlist->Id;
+    $fetch_xml = self::pubmed_id_lookup($id);
+    return $fetch_xml;
+  }
+  private function pubmed_id_lookup($pub_id) {
+    $fetch = "http://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&retmode=xml&id=".$pub_id;
+    $xml = file_get_contents($fetch, 0);
+    //need to handle failures here too
+    return $xml;
+  }
+
+  private function array_from_xml($xml) {
+    $xmlarray = array();
+    $x = new SimpleXMLElement($xml);
+    //$x = simplexml_load_string($xml);
+    return $x;
   }
 
   private function check_doi() {
@@ -126,12 +183,233 @@ class RefManager{
   function pmid_shortcode($atts,$content){
     return "PMID!<br/>";
   }
+
+  function bibliography_output() {
+    global $post;
+    $uri = self::get_requested_uri();
+    if ($uri[0] == 'json') {
+        //render the json here
+        $this_post = get_post($post->ID, ARRAY_A);
+        $post_content = $this_post['post_content'];
+        $dois = self::get_dois($post_content);
+        $metadata = array();
+        $metadata = self::get_arrays($dois[1]);
+        $json = self::metadata_to_json($metadata);
+        exit;
+    }
+    elseif ($uri[0] == 'bib') {
+        //render bibtex here
+        exit;
+    }
+    elseif ($uri[0] == 'ris') {
+        //render ris here
+        exit; //prevents rest of page rendering
+    }
+  }
+
+  private function metadata_to_json($md) {
+    $json_string = "{\n";
+    $item_number = 1;
+    foreach ($md as $m) {
+        $item_string = "ITEM-".$item_number;
+        $json_string .= '"'.$item_string.'": {
+    "id": "'.$item_string.'",
+    "title": "'.$m[6].'",
+    "author": [
+    ';
+        foreach ($m[0] as $author) {
+            $json_string .= '{
+        "family": "'.$author['surname'].'",
+        "given": "'.$author['given_name'].'"
+    },
+    ';
+        }
+        $json_string .= '],
+    "container-title": "'.$m[1].'",
+    "issued:{
+        "date-parts":[
+            [';
+        $date_string = $m[3]['year'].", ".$m[3]['month'];
+        if ($m[3]['day']) {
+            $date_string .= ", ".$m[3]['day'];
+        }
+        $json_string .= $date_string.']
+        ]
+    },
+    ';
+        if ($m[7]) {
+            $json_string .= '"page": "'.$m[7].'-'.$m[8].'",
+    ';
+        }
+        //volume
+        if ($m[4]) {
+            $json_string .= '"volume": "'.$m[4].'",
+    ';
+        }
+        //issue
+        if ($m[5]) {
+            $json_string .= '"issue": "'.$m[5].'",
+    ';
+        }
+        //doi
+        if ($m[9]) {
+            $json_string .= '"DOI": "'.$m[9].'",
+    ';
+        }
+        //url
+        //type
+        $json_string .= '"type": "article-journal"
+},
+';
+
+
+        $item_number++;
+    }
+    $json_string .= '}';
+    echo "<pre>$json_string</pre>";
+  }
+  
+  private function get_crossref_metadata($article) {
+    $authors = array();
+    $journal_title = "";
+    $abbrv_title = "";
+    $pub_date = array();
+    $volume = "";
+    $title = "";
+    $first_page = "";
+    $last_page = "";
+    $reported_doi = "";
+    $resource = "";
+    $issue = "";
+    
+    $journal = $article->children()->children()->children();
+    foreach ($journal->children() as $child) {
+        if ($child->getName() == 'journal_metadata') {
+            $journal_title = $child->full_title;
+            $abbrv_title = $child->abbrev_title;
+        }
+        elseif ($child->getName() == 'journal_issue') {
+            $issue = $child->issue;
+            foreach ($child->children() as $issue_info) {
+                if ($issue_info->getName() == 'publication_date') {
+                    $pub_date['month'] = $issue_info->month;
+                    $pub_date['day'] = $issue_info->day;
+                    $pub_date['year'] = $issue_info->year;
+
+                }
+                elseif ($issue_info->getName() == 'journal_volume') {
+                    $volume = $issue_info->volume;
+                }
+            }
+        }
+        elseif ($child->getName() == 'journal_article') {
+            foreach ($child->children() as $details) {
+                if ($details->getName() == 'titles') {
+                    $title = $details->children();
+                }
+                elseif ($details->getName() == 'contributors') {
+                    $people = $details->children();
+                    $author_count = 0;
+                    foreach ($people as $person) {
+                        $authors[$author_count] = array();
+                        $authors[$author_count]['given_name'] = $person->given_name;
+                        $authors[$author_count]['surname'] = $person->surname;
+                        $author_count++;
+                    }
+                }
+                elseif ($details->getName() == 'pages') {
+                    $first_page = $details->first_page;
+                    $last_page = $details->last_page;
+                }
+                elseif ($details->getName() == 'doi_data') {
+                    $reported_doi = $details->doi;
+                    $resource = $details->resource;
+                }
+            }
+        }
+    }
+    return array($authors,$journal_title,$abbrv_title,$pub_date,$volume,$issue,$title,$first_page,$last_page,$reported_doi,$resource);
+  }
+
+  private function get_pubmed_metadata($article) {
+    $authors = array();
+    $journal_title = "";
+    $abbrv_title = "";
+    $pub_date = array();
+    $volume = "";
+    $title = "";
+    $first_page = "";
+    $last_page = "";
+    $reported_doi = "";
+    $resource = "";
+    $issue = "";
+    $meta = $article->children()->children()->children();
+    foreach ($meta as $child) {
+        if ($child->getName() == 'Article') {
+            //echo "<pre>";print_r($child);echo "</pre>";
+            foreach ($child->children() as $subchild) {
+                //Journal -> JournalIssue -> Volume, Issue, PubDate
+                //Journal -> Title
+                //Journal -> ISOAbbreviation
+                if ($subchild->getName() == 'Journal') {
+                    $jissue = $subchild->JournalIssue;
+                    $volume = $jissue->Volume;
+                    $issue = $jissue->Issue;
+                    $journal_title = $subchild->Title;
+                    $abbrv_title = $subchild->ISOAbbreviation;
+                }
+                //ArticleTitle
+                elseif ($subchild->getName() == 'ArticleTitle') {
+                    $title = $subchild;
+                }
+                //AuthorList -> Author[]
+                elseif ($subchild->getName() == 'AuthorList') {
+                    $author_count = 0;
+                    foreach ($subchild->Author as $author) {
+                        $authors[$author_count] = array();
+                        $authors[$author_count]['given_name'] = $author->ForeName;
+                        $authors[$author_count]['surname'] = $author->LastName;
+                        $author_count++;
+                    }
+                }
+                //ArticleDate
+                elseif ($subchild->getName() == 'ArticleDate') {
+                    //echo "<pre>";print_r($subchild);echo "</pre>";
+                    $pub_date['month'] = $subchild->Month;
+                    $pub_date['day'] = $subchild->Day;
+                    $pub_date['year'] = $subchild->Year;
+                }
+                //ELocationID (DOI)
+                elseif ($subchild->getName() == 'ELocationID') {
+                    $reported_doi = $subchild;
+                }
+            }
+        }
+    }
+    return array($authors,$journal_title,$abbrv_title,$pub_date,$volume,$issue,$title,$first_page,$last_page,$reported_doi,$resource);
+  }
+  
+  private function get_requested_uri() {
+    $requesturi = $_SERVER['REQUEST_URI'];
+    //echo "<pre>$requesturi</pre>";
+    preg_match('#\/(.*)\/bib\.(bib|ris|json)$#', $requesturi, $matches);
+    //echo "<pre>";
+    //print_r($matches);
+    //echo "</pre>";
+    //matches[1] is post (with extraneous paths maybe)
+    $uri = null;
+    if ($matches) { 
+        $uri = array();
+        $uri[0] = $matches[2];
+    }
+    return $uri;
+  }
   
   function latex_shortcode($atts,$content)
   {
     //this gives us an optional "syntax" attribute, which defaults to "inline", but can also be "display"
     extract(shortcode_atts(array(
-                'syntax' => get_option('latex_syntax'),
+'syntax' => get_option('latex_syntax'),
             ), $atts));
   }
 
@@ -143,8 +421,8 @@ class RefManager{
       return;
 
     wp_register_script( 'mathjax', 
-                        plugins_url('MathJax/MathJax.js',__FILE__),
-                        false, null, true );
+        plugins_url('MathJax/MathJax.js',__FILE__),
+        false, null, true );
 
     wp_print_scripts( 'mathjax' );
   }
