@@ -1,8 +1,8 @@
 <?php
   /*
-   Plugin Name: Knowledgeblog Reference Manager
-   Plugin URI: http://knowledgeblog.org/
-   Description: Manage references in blogposts
+   Plugin Name: KCite
+   Plugin URI: http://knowledgeblog.org/kcite-plugin
+   Description: Add references and bibliography to blogposts
    Version: 0.1
    Author: Simon Cockell
    Author URI: http://knowledgeblog.org
@@ -13,87 +13,50 @@
   */
 
 
-class RefManager{
+class KCite{
 
   function init(){
     register_activation_hook(__FILE__, array(__CLASS__, 'refman_install'));
-    
-    /*add_shortcode('doi',
-  array(__CLASS__, 'doi_shortcode' ));
-    
-    add_shortcode('pmid', 
-  array(__CLASS__, 'pmid_shortcode' ));
-    */
-    add_filter('the_content', array(__CLASS__, 'process_doi'));
-    //shortcodes only allow in-place replacement, so not addition of biblio to foot of post.
-    //could deal with this by having seperate shortcode for bibliography, or just using plain filters. 
-    //A further point is that shortcode processors don't know about the post_ID, so can I add metadata? Need to do this so we don't need to look up every time the post is loaded. Could they know, without having it passed as a ref?
-    /*add_action('wp_footer', 
-               array(__CLASS__, 'add_script'));
-    
-    add_action('wp_footer', 
-               array(__CLASS__, 'unconditional'));
-
-    if (get_option('wp_latex_enabled')) {
-        add_filter( 'the_content', array(__CLASS__, 'inline_to_shortcode' ) );
-    }
-    */
+    //process post content, pull out [cite]s and add bibliography
+    add_filter('the_content', array(__CLASS__, 'process_refs'));
+    //provide links to the bibliography in various formats
     add_action('template_redirect', array(__CLASS__, 'bibliography_output'));
-
+    //add settings menu link to sidebar
     add_action('admin_menu', array(__CLASS__, 'refman_menu'));
-
+    //add settings link on plugin page
     add_filter('plugin_action_links', array(__CLASS__, 'refman_settings_link'), 9, 2 );
   }
 
   function refman_install() {
-    /*
     //registers default options
-    add_option('force_load', FALSE);
-    add_option('latex_syntax', 'inline');
-    //test for wp-latex here
-    if (method_exists('WP_LaTeX', 'init')) {
-        add_option('wp_latex_enabled', FALSE);
-    }
-    else {
-        add_option('wp_latex_enabled', TRUE);
-    }
-    */
+    add_option('service', 'doi');
+    add_option('crossref_id', null); //this is just a placeholder
   }
   
   function debug(){
     echo "Simon's debug statement";
   }
 
-  function process_doi($content) {
-    //find dois in the_content
-    //doi regex assumes dois start with '10.' - seems reasonable?
-    //also - should we optionally allow ^doi:?
-    $dois = self::get_dois($content);
-    $replacees = $dois[0];
-    $uniq_doi = $dois[1];
-    if ($uniq_doi) {
-        //echo "<pre>";print_r($uniq_doi);echo "</pre>";}
-        $metadata_arrays = self::get_arrays($uniq_doi);
+  function process_refs($content) {
+    //find citations in the_content
+    $cites = self::get_cites($content);
+    $replacees = $cites[0];
+    $uniq_cites = $cites[1];
+    if ($uniq_cites) {
+        $metadata_arrays = self::get_arrays($uniq_cites);
         $i = 0;
         while ($i < count($replacees)) {
-            //echo "<pre>";
-            //echo $article;
-            //print_r($article_arrays[$i]);
-            //echo "</pre>";
             $replacer = '<span id="cad'.strval($i+1).'" name="citation-cad">['.strval($i+1).']</span>';
-            $content = str_replace($replacees[$i], $replacer, $content);
+            $content = preg_replace($replacees[$i], $replacer, $content);
             $i++;
         }
-        //call CrossRef to process them
-        //http://www.crossref.org/openurl/?id=doi:10.3998/3336451.0009.101&noredirect=true&pid=s.j.cockell@newcastle.ac.uk&format=unixref
-        //make array of xmls
-        //add bibliography and in place pointers
         $permalink = get_permalink();
-        //echo "<a href='".$permalink."/bib.json'>JSON</a>"; 
+        $json_link ="<a href='".$permalink."/bib.json' title='Bibliography JSON'>Bibliography in JSON format</a>"; 
     
         $json = self::metadata_to_json($metadata_arrays);
         $json_a = json_decode($json, true);
         $bibliography = self::build_bibliography($json_a);
+        $bibliography .= "<p>$json_link</p>";
         $content .= $bibliography;
     }
     return $content;
@@ -105,7 +68,17 @@ class RefManager{
     <ol>
     ";
     foreach ($pub_array as $pub) {
-        //echo "<pre>";print_r($pub);echo "</pre>";
+        if (!$pub['author'] && !$pub['title'] && !$pub['container-title']) { 
+            
+            //sufficient missing to assume no publication retrieved...
+            if ($pub['DOI']) {
+                $bib_string .= "<li><a href='http://dx.doi.org/".$pub['DOI']."'>DOI:".$pub['DOI']."</a> <i>(KCite cannot find metadata for this paper)</i></li>\n";
+            }
+            if ($pub['PMID']) {
+                $bib_string .= "<li><a href='http://www.ncbi.nlm.nih.gov/pubmed/".$pub['PMID']."'>PMID:".$pub['DOI']."</a> <i>(KCite cannot find metadata for this paper)</i></li>\n";
+            }
+        }
+        else {
         $bib_string .= "<li>
 ";
         $author_count = 1;
@@ -134,6 +107,7 @@ class RefManager{
         if ($pub['volume']) {
             $bib_string .= ', vol. '.$pub['volume'];
         }
+
         if ($pub['issued']['date-parts'][0][0]) {
             $bib_string .= ', '.$pub['issued']['date-parts'][0][0];
         }
@@ -146,64 +120,123 @@ class RefManager{
         $bib_string .= ".
 </li>
 ";
+        }
     }
     $bib_string .= "</ol>
 ";
     return $bib_string;
   }
 
-  private function get_arrays($dois) {
+  private function get_arrays($cites) {
     $metadata_arrays = array();
-    foreach ($dois as $doi) {
-        //echo $doi."<br/>";
+    foreach ($cites as $cite) {
         $metadata = array();
-        $article = self::crossref_doi_lookup($doi);
-        if ($article == null) {
-            $article = self::pubmed_doi_lookup($doi);
-            $article_array = self::array_from_xml($article);
-            $metadata = self::get_pubmed_metadata($article_array);
+        if ($cite[1] == 'doi') {
+            $doi = $cite[0];
+            $article = self::crossref_doi_lookup($doi);
+            //failover to pubmed
+            if ($article == null) {
+                $article = self::pubmed_doi_lookup($doi);
+                if (!$article) {
+                    //make sure DOI recorded if both lookups fail
+                    $metadata = array('doi-err'=>$doi); 
+                }
+                else {
+                    $article_array = self::array_from_xml($article);
+                    $metadata = self::get_pubmed_metadata($article_array);
+                }
+            }
+            else {
+                $article_array = self::array_from_xml($article);
+                $metadata = self::get_crossref_metadata($article_array);
+            }
+            $metadata_arrays[] = $metadata;
         }
-        else {
-            $article_array = self::array_from_xml($article);
-            $metadata = self::get_crossref_metadata($article_array);
-            //echo "<pre>";print_r($article_array);echo "</pre>";
+        elseif ($cite[1] == 'pubmed') {
+            $pmid = $cite[0];
+            $article = self::pubmed_id_lookup($pmid);
+            if (!$article) {
+                //make sure PMID recorded if lookup fails
+                $metadata = array('pubmed-err'=>$pmid); 
+            }
+            else {
+                $article_array = self::array_from_xml($article);
+                $metadata = self::get_pubmed_metadata($article_array);
+            }
+            $metadata_arrays[] = $metadata;
         }
-        $metadata_arrays[] = $metadata;
     }
     return $metadata_arrays;
   }
   
-  private function get_dois($content) {
-    $preg = "#\[doi\](10\..*?)\[\/doi\]#"; //make sure this is non-greedy
-    preg_match_all($preg, $content, $dois);
-    //echo "<pre>";
-    //print_r($dois[0]);
-    //print_r($dois[1]);
-    //echo "</pre>";
+  private function get_cites($content) {
+    $preg = "#\[cite( source=[\"\'](pubmed|doi)[\"\']){0,1}\](.*?)\[\/cite\]#"; //make sure this is non-greedy
+    preg_match_all($preg, $content, $cites);
     //need to make sure we deal with duplicate DOIs here
     //array_values() needed to keep array indicies sequential
-    $replacees = array_values(array_unique($dois[0]));
-    $uniq_doi = array_values(array_unique($dois[1]));
-    $returnval = array($replacees, $uniq_doi);
+    $replacees = array_values($cites[0]);
+    $replace_regexes = array();
+    foreach ($replacees as $replacee) {
+        preg_match('#\](.*)\[#', $replacee, $middle);
+        $replace_regex = '#(\[cite( source=[\'\"](doi|pubmed)[\'\"]){0,1}\]'.$middle[1].'\[\/cite\]?)#';
+        $replace_regexes[] = $replace_regex;
+    }
+    $i = 0;
+    $citations = array();
+    while ($i < count($cites[3])) {
+        $identifier = $cites[3][$i];
+        $source = $cites[2][$i];
+        if (!$source) {
+            //fallback to default if no option
+            $source = get_option('service');
+        }
+        $citation = array($identifier, $source);
+        $check = 0;
+        foreach ($citations as $test) {
+            if ($test[0] == $identifier) {
+                $check = 1;
+            }
+        }
+        if ($check == 0) {
+            $citations[] = $citation;
+        }
+        $i++;
+    }
+    $returnval = array(array_unique($replace_regexes), $citations);
     return $returnval;
   }
 
   private function crossref_doi_lookup($pub_doi) {
-    $url = "http://www.crossref.org/openurl/?noredirect=true&pid=s.j.cockell@newcastle.ac.uk&format=unixref&id=doi:".$pub_doi;
-    //echo $url."<br/>";
-    $xml = file_get_contents($url, 0);
-    if (preg_match('/not found in CrossRef/', $xml)) {
+    //use CrossRef ID provided on the options page
+    $crossref = get_option('crossref_id');
+    if (!$crossref) {
+        //automatically failover to pubmed without trying to connect to crossref
         return null;
     }
     else {
-        return $xml;
+        $url = "http://www.crossref.org/openurl/?noredirect=true&pid=".$crossref."&format=unixref&id=doi:".$pub_doi;
+        $xml = file_get_contents($url, 0);
+        if (preg_match('/not found in CrossRef/', $xml)) {
+            //null will cause failover to PubMed (if no metadata in crossref)
+            return null;
+        }
+        if (preg_match('/login you supplied is not recognized/', $xml)) {
+            //null will cause failover to PubMed (if no valid login supplied)
+            return null;
+        }
+        else {
+            return $xml;
+        }
     }
   }
 
   private function pubmed_doi_lookup($pub_doi) {
     $search = "http://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&retmax=1&term=".$pub_doi;
     $search_xml = file_get_contents($search, 0);
-    //TODO - id can be retrieved from pubmed_xml
+    if (preg_match('/PhraseNotFound/', $search_xml)) {
+        //handles DOI lookup failures
+        return null;
+    }
     $search_obj = self::array_from_xml($search_xml);
     $idlist = $search_obj->IdList;
     $id = $idlist->Id;
@@ -213,22 +246,17 @@ class RefManager{
   private function pubmed_id_lookup($pub_id) {
     $fetch = "http://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&retmode=xml&id=".$pub_id;
     $xml = file_get_contents($fetch, 0);
-    //need to handle failures here too
+    if (preg_match('/(Error|ERROR)>/', $xml)) {
+        //handles fetch failure
+        return null;
+    }
     return $xml;
   }
 
   private function array_from_xml($xml) {
     $xmlarray = array();
     $x = new SimpleXMLElement($xml);
-    //$x = simplexml_load_string($xml);
     return $x;
-  }
-
-  private function check_doi() {
-  }
-
-  function pmid_shortcode($atts,$content){
-    return "PMID!<br/>";
   }
 
   function bibliography_output() {
@@ -238,7 +266,7 @@ class RefManager{
         //render the json here
         $this_post = get_post($post->ID, ARRAY_A);
         $post_content = $this_post['post_content'];
-        $dois = self::get_dois($post_content);
+        $dois = self::get_cites($post_content);
         $metadata = array();
         $metadata = self::get_arrays($dois[1]);
         $json = self::metadata_to_json($metadata);
@@ -261,6 +289,17 @@ class RefManager{
     $md_number = count($md);
     foreach ($md as $m) {
         $item_string = "ITEM-".$item_number;
+        if ($m['doi-err']) {
+            $json_string .= '"'.$item_string.'": {
+    "DOI": "'.$m['doi-err'].'"
+';
+        }
+        elseif ($m['pubmed-err']) {
+            $json_string .= '"'.$item_string.'": {
+    "PMID": "'.$m['pubmed-err'].'"
+';
+        }
+        else {
         $json_string .= '"'.$item_string.'": {
     "id": "'.$item_string.'",
     "title": "'.$m[6].'",
@@ -322,6 +361,7 @@ class RefManager{
         //type
         $json_string .= '"type": "article-journal"
 ';
+        }
         if ($item_number != $md_number) {
             $json_string .= '},
 ';
@@ -330,7 +370,6 @@ class RefManager{
             $json_string .= '}
 ';
         }
-
         $item_number++;
     }
     $json_string .= '}';
@@ -414,7 +453,6 @@ class RefManager{
     $meta = $article->children()->children()->children();
     foreach ($meta as $child) {
         if ($child->getName() == 'Article') {
-            //echo "<pre>";print_r($child);echo "</pre>";
             foreach ($child->children() as $subchild) {
                 //Journal -> JournalIssue -> Volume, Issue, PubDate
                 //Journal -> Title
@@ -442,7 +480,6 @@ class RefManager{
                 }
                 //ArticleDate
                 elseif ($subchild->getName() == 'ArticleDate') {
-                    //echo "<pre>";print_r($subchild);echo "</pre>";
                     $pub_date['month'] = $subchild->Month;
                     $pub_date['day'] = $subchild->Day;
                     $pub_date['year'] = $subchild->Year;
@@ -459,11 +496,7 @@ class RefManager{
   
   private function get_requested_uri() {
     $requesturi = $_SERVER['REQUEST_URI'];
-    //echo "<pre>$requesturi</pre>";
     preg_match('#\/(.*)\/bib\.(bib|ris|json)$#', $requesturi, $matches);
-    //echo "<pre>";
-    //print_r($matches);
-    //echo "</pre>";
     //matches[1] is post (with extraneous paths maybe)
     $uri = null;
     if ($matches) { 
@@ -473,39 +506,17 @@ class RefManager{
     return $uri;
   }
   
-  function latex_shortcode($atts,$content)
-  {
-    //this gives us an optional "syntax" attribute, which defaults to "inline", but can also be "display"
-    extract(shortcode_atts(array(
-'syntax' => get_option('latex_syntax'),
-            ), $atts));
-  }
-
-  function add_script(){
-    if( !self::$add_script )
-      return;
-    
-    if( self::$block_script )
-      return;
-
-    wp_register_script( 'mathjax', 
-        plugins_url('MathJax/MathJax.js',__FILE__),
-        false, null, true );
-
-    wp_print_scripts( 'mathjax' );
-  }
-  
   //add a link to settings on the plugin management page
   function refman_settings_link( $links, $file ) {
-    if ($file == 'kb-ref-management/kb-ref-management.php' && function_exists('admin_url')) {
-        $settings_link = '<a href="' .admin_url('options-general.php?page=kb-ref-management.php').'">'. __('Settings') . '</a>';
+    if ($file == 'kcite/kcite.php' && function_exists('admin_url')) {
+        $settings_link = '<a href="' .admin_url('options-general.php?page=kcite.php').'">'. __('Settings') . '</a>';
         array_unshift($links, $settings_link);
     }
     return $links;
   }
 
   function refman_menu() {
-    add_options_page('Reference Management Plugin Options', 'Knowledgeblgo Reference Management Plugin', 'manage_options', 'kb-ref-management', array(__CLASS__, 'refman_plugin_options'));
+    add_options_page('KCite Plugin Options', 'KCite Plugin', 'manage_options', 'kcite', array(__CLASS__, 'refman_plugin_options'));
   }
 
   function refman_plugin_options() {
@@ -513,67 +524,44 @@ class RefManager{
         wp_die( __('You do not have sufficient permissions to access this page.') );
       }
       echo '<div class="wrap" id="refman-options">
-<h2>Knowledgeblog Reference Management Plugin Options</h2>
+<h2>KCite Plugin Options</h2>
 ';
     if ($_POST['refman_hidden'] == 'Y') {
         //process form
-        /*if ($_POST['force_load']) {
-            update_option('force_load', TRUE);
+        if ($_POST['service'] != get_option('service')) {
+            update_option('service', $_POST['service']);
         }
-        else {
-            update_option('force_load', FALSE);
+        if ($_POST['crossref_id']) {
+            if(eregi("^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,3})$", $_POST['crossref_id'])) {
+                if ($_POST['crossref_id'] != get_option('crossref_id')) {
+                    update_option('crossref_id', $_POST['crossref_id']);
+                }
+            }
+            else {
+                echo "<div style='background-color:rgb(255,168,206);width:80%;padding:4px;border-style:solid;border-width:1px;' id='kcite-options-error'>
+                Warning - The CrossRef user ID should be a valid email address.
+                </div>
+                ";
+            }
         }
-        if ($_POST['wp_latex_enabled']) {
-            update_option('wp_latex_enabled', TRUE);
-        }
-        else {
-            update_option('wp_latex_enabled', FALSE);
-        }
-        if ($_POST['latex_syntax'] != get_option('latex_syntax')) {
-            update_option('latex_syntax', $_POST['latex_syntax']);
-        }*/
         echo '<p><i>Options updated</i></p>';   
     }
 ?>   
       <form id="refman" name="refman" action="" method='POST'>
       <input type="hidden" name="refman_hidden" value="Y">
       <table class="form-table">
+      <tr valign="middle">
+      <th scope="row">Default Identifier Type<br/><font size='-2'>Which type of identifier would you like to use as the default?</font></th>
+      <td><select name='service'>
+        <option value='doi' <?php if (get_option('service') == 'doi') echo 'SELECTED'; ?>>DOI</option>
+        <option value='pubmed' <?php if (get_option('service') == 'pubmed') echo 'SELECTED'; ?>>PubMed</option>
+      </select>
+      </td>
+      </tr>
+      <th scope="row">CrossRef User ID<br/><font size='-2'>Enter an e-mail address that has been <a href='http://www.crossref.org/requestaccount/'>registered with the CrossRef API</a>.</th>
+      <td><input type='text' name='crossref_id' class='regular-text code' value='<?php echo get_option('crossref_id'); ?>'></td>
+      </tr>
       <!--tr valign="middle">
-      <th scope="row">Force Load<br/><font size="-2">Force MathJax javascript to be loaded on every post (Removes the need to use the &#91;mathjax&#93; shortcode).</font></th>
-      <td><input type="checkbox" name="force_load" value="1"<?php 
-      if (get_option('force_load')) {
-        echo 'CHECKED';
-      }
-      ?>/></td>
-      </tr>
-      <tr valign="middle">
-      <th scope="row">Default &#91;latex&#93; syntax attribute.<br/><font size='-2'>By default, the &#91;latex&#93; shortcode renders equations using the MathJax '<?php get_option('latex_syntax') ?>' syntax.</font></th>
-      <td><select name='latex_syntax'>
-            <option value='inline' <?php if (get_option('latex_syntax') == 'inline') echo 'SELECTED'; ?>>Inline</option>
-            <option value='display' <?php if (get_option('latex_syntax') == 'display') echo 'SELECTED'; ?>>Display</option>
-          </select>
-      </td>
-      </tr>
-      <tr valign="middle">
-      <th scope="row">Use wp-latex syntax?<br/><font size="-2">Allows use of the $latex$ wp-latex syntax. Conflicts with wp-latex.</font></th>
-      <td><input type="checkbox" name="wp_latex_enabled" value="1"<?php 
-      if (method_exists('WP_LaTeX', 'init')) {
-        update_option('wp_latex_enabled', FALSE);
-        echo 'DISABLED';
-      }
-      if (get_option('wp_latex_enabled')) {
-        echo 'CHECKED';
-      }
-      //test for wp-latex
-      ?>/>
-      <?php
-        if (method_exists('WP_LaTeX', 'init')) {
-            echo '<br/>
-<font size="-2">Uninstall wp-latex to be able to use this syntax</font>
-';
-        }
-      ?>
-      </td>
       </tr-->
       </table>
       <p class="submit">
@@ -586,6 +574,6 @@ class RefManager{
 
 }
 
-RefManager::init();
+KCite::init();
 
 ?>
