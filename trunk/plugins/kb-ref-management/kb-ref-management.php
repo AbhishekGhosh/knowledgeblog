@@ -64,19 +64,6 @@ class RefManager{
     echo "Simon's debug statement";
   }
 
-  /*
-  function doi_shortcode($atts,$content){
-    $post_id = get_the_id();
-    //retrieve the references from the database - if the post has been loaded before, they should be stored, then we don't have to fetch it back.
-    //get_post_meta($post_id, $key, $single);
-    //self::check_doi($content);
-    //use to add references to WP database, so we don't have to retrieve every time.
-    //add_post_meta($post_id, $meta_key, $meta_value, $unique);
-    //eg
-    //add_post_meta($post_id, 'paperxml', $xml, False);
-    return get_the_id()." DOI!<br/>";
-  }
-    */
   function process_doi($content) {
     //find dois in the_content
     //doi regex assumes dois start with '10.' - seems reasonable?
@@ -84,25 +71,85 @@ class RefManager{
     $dois = self::get_dois($content);
     $replacees = $dois[0];
     $uniq_doi = $dois[1];
-    //echo "<pre>";print_r($uniq_doi);echo "</pre>";
-    $metadata_arrays = self::get_arrays($uniq_doi);
-    $i = 0;
-    while ($i < count($replacees)) {
-        //echo "<pre>";
-        //echo $article;
-        //print_r($article_arrays[$i]);
-        //echo "</pre>";
-        $replacer = '<span id="cad'.strval($i+1).'" name="citation-cad">[cite]</span>';
-        $content = str_replace($replacees[$i], $replacer, $content);
-        $i++;
+    if ($uniq_doi) {
+        //echo "<pre>";print_r($uniq_doi);echo "</pre>";}
+        $metadata_arrays = self::get_arrays($uniq_doi);
+        $i = 0;
+        while ($i < count($replacees)) {
+            //echo "<pre>";
+            //echo $article;
+            //print_r($article_arrays[$i]);
+            //echo "</pre>";
+            $replacer = '<span id="cad'.strval($i+1).'" name="citation-cad">['.strval($i+1).']</span>';
+            $content = str_replace($replacees[$i], $replacer, $content);
+            $i++;
+        }
+        //call CrossRef to process them
+        //http://www.crossref.org/openurl/?id=doi:10.3998/3336451.0009.101&noredirect=true&pid=s.j.cockell@newcastle.ac.uk&format=unixref
+        //make array of xmls
+        //add bibliography and in place pointers
+        $permalink = get_permalink();
+        //echo "<a href='".$permalink."/bib.json'>JSON</a>"; 
+    
+        $json = self::metadata_to_json($metadata_arrays);
+        $json_a = json_decode($json, true);
+        $bibliography = self::build_bibliography($json_a);
+        $content .= $bibliography;
     }
-    //call CrossRef to process them
-    //http://www.crossref.org/openurl/?id=doi:10.3998/3336451.0009.101&noredirect=true&pid=s.j.cockell@newcastle.ac.uk&format=unixref
-    //make array of xmls
-    //add bibliography and in place pointers
-    $permalink = get_permalink();
-    echo "<a href='".$permalink."/bib.json'>JSON</a>"; 
     return $content;
+  }
+
+  private function build_bibliography($pub_array) {
+    $i = 1;
+    $bib_string = "<h2>References</h2>
+    <ol>
+    ";
+    foreach ($pub_array as $pub) {
+        //echo "<pre>";print_r($pub);echo "</pre>";
+        $bib_string .= "<li>
+";
+        $author_count = 1;
+        $author_total = count($pub['author']);
+        foreach ($pub['author'] as $author) {
+            //get author initials
+            $firsts = $author['given'];
+            $words = explode(' ', $firsts);
+            $initials = "";
+            foreach ($words as $word) {
+                $initials .= strtoupper(substr($word,0,1)).".";
+            }
+            $initials;
+            $bib_string .= $initials." ".$author['family'].", ";
+            if ($author_count == ($author_total - 1)) {
+                $bib_string .= "and ";
+            }
+            $author_count++;
+        }
+        if ($pub['title']) {
+            $bib_string .= '"'.$pub['title'].'"';
+        }
+        if ($pub['container-title']) {
+            $bib_string .= ', <i>'.$pub['container-title'].'</i>';
+        }
+        if ($pub['volume']) {
+            $bib_string .= ', vol. '.$pub['volume'];
+        }
+        if ($pub['issued']['date-parts'][0][0]) {
+            $bib_string .= ', '.$pub['issued']['date-parts'][0][0];
+        }
+        if ($pub['page']) {
+            $bib_string .= ', pp. '.$pub['page'];
+        }
+        if ($pub['DOI']) {
+            $bib_string .= '. <a href="http://dx.doi.org/'.$pub['DOI'].'" target="_blank" title="'.$pub['title'].'">DOI</a>';
+        }
+        $bib_string .= ".
+</li>
+";
+    }
+    $bib_string .= "</ol>
+";
+    return $bib_string;
   }
 
   private function get_arrays($dois) {
@@ -195,6 +242,7 @@ class RefManager{
         $metadata = array();
         $metadata = self::get_arrays($dois[1]);
         $json = self::metadata_to_json($metadata);
+        echo $json;
         exit;
     }
     elseif ($uri[0] == 'bib') {
@@ -210,6 +258,7 @@ class RefManager{
   private function metadata_to_json($md) {
     $json_string = "{\n";
     $item_number = 1;
+    $md_number = count($md);
     foreach ($md as $m) {
         $item_string = "ITEM-".$item_number;
         $json_string .= '"'.$item_string.'": {
@@ -217,21 +266,34 @@ class RefManager{
     "title": "'.$m[6].'",
     "author": [
     ';
+        $author_length = count($m[0]);
+        $track = 1;
         foreach ($m[0] as $author) {
             $json_string .= '{
         "family": "'.$author['surname'].'",
         "given": "'.$author['given_name'].'"
-    },
     ';
+    if ($track != $author_length) {
+    $json_string .= '},
+    ';
+    }
+    else {
+        $json_string .= '}
+    ';
+        }
+        $track++;
         }
         $json_string .= '],
     "container-title": "'.$m[1].'",
-    "issued:{
+    "issued":{
         "date-parts":[
             [';
-        $date_string = $m[3]['year'].", ".$m[3]['month'];
+        $date_string = $m[3]['year'];
+        if ($m[3]['month']) {
+            $date_string .= ", ".(int)$m[3]['month'];
+        }
         if ($m[3]['day']) {
-            $date_string .= ", ".$m[3]['day'];
+            $date_string .= ", ".(int)$m[3]['day'];
         }
         $json_string .= $date_string.']
         ]
@@ -259,14 +321,20 @@ class RefManager{
         //url
         //type
         $json_string .= '"type": "article-journal"
-},
 ';
-
+        if ($item_number != $md_number) {
+            $json_string .= '},
+';
+        }
+        else {
+            $json_string .= '}
+';
+        }
 
         $item_number++;
     }
     $json_string .= '}';
-    echo "<pre>$json_string</pre>";
+    return $json_string;
   }
   
   private function get_crossref_metadata($article) {
