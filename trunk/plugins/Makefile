@@ -4,8 +4,7 @@ ROOT = ..
 include $(ROOT)/publish/makefile_conf.inc
 
 
-all: mathjax-latex
-	$(CP) simon_first.php $(PLUGINS)
+all: mathjax-latex kcite
 	$(CP) reference $(PLUGINS)
 
 mathjax-latex:
@@ -14,7 +13,7 @@ mathjax-latex:
 kcite:
 	$(CP) kcite $(PLUGINS)
 
-.PHONY: mathjax-latex
+.PHONY: mathjax-latex kcite
 
 include $(ROOT)/publish/fix_perm.inc
 

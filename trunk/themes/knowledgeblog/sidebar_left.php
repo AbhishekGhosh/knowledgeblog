@@ -9,12 +9,8 @@
 			<li><h2><?php _e('Categories:'); ?></h2>
 				<ul>
 				<?php
-					if ( function_exists( wp_list_categories ) ) {
-						wp_list_categories('title_li=&orderby=name&hierarchical=1');
-					}
-					else {
-						wp_list_cats('sort_column=name&optioncount=0&title_li=');
-					}
+                                                                                                  
+					wp_list_categories('title_li=&orderby=name&hierarchical=1');
 				?>
 				</ul>
 			</li>
