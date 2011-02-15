@@ -15,10 +15,17 @@
 
 class PostMetadata{
 
+  /**
+  * Initialise the class. Adds hooks for Wordpress.
+  */
   function init(){
     add_action('wp_head', array(__CLASS__, 'add_header'));
   }
 
+  /**
+  * Adds publication metadata to the blog header. This allows Google Scholar parsers to process the blogpost.
+  * All headers are post specific.
+  */
   function add_header() {
   ?>
 
