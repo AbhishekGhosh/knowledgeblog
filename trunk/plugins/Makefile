@@ -11,6 +11,9 @@ all: mathjax-latex
 mathjax-latex:
 	$(CP) mathjax-latex $(PLUGINS)
 
+kcite:
+	$(CP) kcite $(PLUGINS)
+
 .PHONY: mathjax-latex
 
 include $(ROOT)/publish/fix_perm.inc
