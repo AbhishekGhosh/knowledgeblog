@@ -239,6 +239,10 @@ code {
 	font-family:courier,"courier new", monospace;
 }
 
+tt{
+   	font-family:courier,"courier new", monospace;
+}
+
 pre {
 	display:block;
 	font-family:courier,"courier new", monospace;
