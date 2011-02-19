@@ -13,6 +13,9 @@ mathjax-latex:
 kcite:
 	$(CP) kcite $(PLUGINS)
 
+test-plugin:
+	$(CP) test-plugin.php $(PLUGINS)
+
 .PHONY: mathjax-latex kcite
 
 include $(ROOT)/publish/fix_perm.inc
