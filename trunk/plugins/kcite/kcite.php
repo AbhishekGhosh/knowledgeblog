@@ -4,24 +4,39 @@
    Plugin URI: http://knowledgeblog.org/kcite-plugin
    Description: Add references and bibliography to blogposts
    Version: 0.1
-   Author: Simon Cockell
+   Author: Simon Cockell, Phillip Lord
    Author URI: http://knowledgeblog.org
    
    Copyright 2010. Simon Cockell (s.j.cockell@newcastle.ac.uk)
+   Phillip Lord (phillip.lord@newcastle.ac.uk)
    Newcastle University. 
    
   */
 
 
+
 class KCite{
+    
+  static $bibliography;
 
   /**
    * Adds filters and hooks necessary initializiation. 
    */
   function init(){
     register_activation_hook(__FILE__, array(__CLASS__, 'refman_install'));
-    //process post content, pull out [cite]s and add bibliography
-    add_filter('the_content', array(__CLASS__, 'process_refs'));
+    
+    //add bibliography to post content
+    // priority 12 is lower than shortcode (11), so can assure that this runs
+    // after the shortcode filter does, otherwise, it is all going to work
+    // very badly. 
+    
+    add_filter('the_content', array(__CLASS__, 'bibliography_filter'), 
+               12);
+
+    add_shortcode( "cite", 
+                   array( __CLASS__, "cite_shortcode" ));
+
+    
     //provide links to the bibliography in various formats
     add_action('template_redirect', array(__CLASS__, 'bibliography_output'));
     //add settings menu link to sidebar
@@ -33,6 +48,7 @@ class KCite{
   /**
    * Adds options into data. Called on plugin activation. 
    */
+
   function refman_install() {
     //registers default options
     add_option('service', 'doi');
@@ -44,32 +60,73 @@ class KCite{
   }
 
   /**
-   * Main filter to discover shortcode like citations within the_content.
+   * citation short code
    */
-  function process_refs($content) {
-    //find citations in the_content
-    $cites = self::get_cites($content);
-    $replacees = $cites[0];
-    $uniq_cites = $cites[1];
-    if ($uniq_cites) {
-        $metadata_arrays = self::get_arrays($uniq_cites);
-        $i = 0;
-        while ($i < count($replacees)) {
-            $replacer = '<span id="cite'.strval($i+1).'" name="citation"><a href="#bib_'.strval($i+1).'">['.strval($i+1).']</a></span>';
-            $content = preg_replace($replacees[$i], $replacer, $content);
-            $i++;
-        }
-        $permalink = get_permalink();
-        $json_link ="<a href='".$permalink."/bib.json' title='Bibliography JSON'>Bibliography in JSON format</a>"; 
+
+  function cite_shortcode($atts,$content)
+  {
+      // extract attributes as local vars
+      extract( shortcode_atts
+               ( 
+                array(
+                      "source" => get_option( "service" ) 
+                      ), $atts ) );
     
-        $json = self::metadata_to_json($metadata_arrays);
-        $json_a = json_decode($json, true);
-        $bibliography = self::build_bibliography($json_a);
-        $bibliography .= "<p>$json_link</p>";
-        $content .= $bibliography;
-    }
-    return $content;
+      // lazy instantiate bib
+      if( !isset( self::$bibliography ) ){
+          self::$bibliography = new Bibliography();
+      }
+    
+      // store citation in bibliography. Replace anchor. 
+      $cite = new Citation();
+    
+      $cite->identifier=$content;
+      if( !isset( $source ) ){
+          $source = get_option("service");
+      }
+      $cite->source=$source;
+      
+      $anchor = self::$bibliography->add_cite( $cite );
+      return "<span id=\"cite_$anchor\" name=\"citation\">" .
+          "<a href=\"#bib_$anchor\">[$anchor]</a></span>";
   }
+
+
+
+  function bibliography_filter($content) {
+      return $content . self::get_html_bibliography();
+  }
+
+  function get_html_bibliography(){
+
+      // check the bib has been set, otherwise there have been no cites. 
+      if( !isset( self::$bibliography ) ){ 
+          return $content = $content . "<!-- kcite active, but no citations found -->";
+      }
+      
+      $cites = self::$bibliography->get_cites();
+      
+      // // get the metadata which we are going to use for the bibliography.
+      $metadata_arrays = self::get_arrays($cites);
+      $i = 0;
+      
+        
+      // synthesize the "get the bib" link
+      $permalink = get_permalink();
+      $json_link ="<a href=\"$permalink/bib.json\"".
+          "title=\"Bibliography JSON\">Bibliography in JSON format</a>"; 
+    
+      // translate the metadata array of bib data into the equivalent JSON
+      // representation. 
+      $json = self::metadata_to_json($metadata_arrays);
+      $json_a = json_decode($json, true);
+        
+      // build the bib, insert reference, insert bib
+      $bibliography = self::build_bibliography($json_a);
+      $bibliography .= "<p>$json_link</p>";
+      return $bibliography;
+  }
+
 
   /**
    * Builds the HTML for the bibliography. 
@@ -120,17 +177,17 @@ class KCite{
         if ($pub['container-title']) {
             $bib_string .= ', <i>'.$pub['container-title'].'</i>';
         }
-        if ($pub['volume']) {
+        if (array_key_exists("volume", $pub) ){
             $bib_string .= ', vol. '.$pub['volume'];
         }
 
         if ($pub['issued']['date-parts'][0][0]) {
             $bib_string .= ', '.$pub['issued']['date-parts'][0][0];
         }
-        if ($pub['page']) {
+        if (array_key_exists("page", $pub) ) {
             $bib_string .= ', pp. '.$pub['page'];
         }
-        if ($pub['DOI']) {
+        if (array_key_exists("DOI", $pub) ) {
             $bib_string .= '. <a href="http://dx.doi.org/'.$pub['DOI'].'" target="_blank" title="'.$pub['title'].'">DOI</a>';
         }
         $bib_string .= ".
@@ -145,15 +202,16 @@ class KCite{
   }
 
   /**
-   * Translates citation identifiers into a metadata array. 
+   * Translates citation objects into a metadata array
    * This can be used to build the JSON. 
    */
   private function get_arrays($cites) {
     $metadata_arrays = array();
     foreach ($cites as $cite) {
         $metadata = array();
-        if ($cite[1] == 'doi') {
-            $doi = $cite[0];
+        
+        if ($cite->source == 'doi') {
+            $doi = $cite->identifier;
             $article = self::crossref_doi_lookup($doi);
             //failover to pubmed
             if ($article == null) {
@@ -173,8 +231,8 @@ class KCite{
             }
             $metadata_arrays[] = $metadata;
         }
-        elseif ($cite[1] == 'pubmed') {
-            $pmid = $cite[0];
+        elseif ($cite->source == 'pubmed') {
+            $pmid = $cite->identifier;
             $article = self::pubmed_id_lookup($pmid);
             if (!$article) {
                 //make sure PMID recorded if lookup fails
@@ -186,53 +244,14 @@ class KCite{
             }
             $metadata_arrays[] = $metadata;
         }
+        else{
+            // TODO
+            print("UNKNOWN REFERENCE TYPE");
+        }
     }
     return $metadata_arrays;
   }
   
-  /**
-   * Filter-like function which finds citations. 
-   */
-  private function get_cites($content) {
-    $preg = "#\[cite( source=[\"\'](pubmed|doi)[\"\']){0,1}\](.*?)\[\/cite\]#"; //make sure this is non-greedy
-    preg_match_all($preg, $content, $cites);
-    //need to make sure we deal with duplicate DOIs here
-    //array_values() needed to keep array indicies sequential
-    $replacees = array_values($cites[0]);
-    $replace_regexes = array();
-    foreach ($replacees as $replacee) {
-        preg_match('#\](.*)\[#', $replacee, $middle);
-		$mid = $middle[1];
-		$mid = str_replace('(', '\(', $mid);
-		$mid = str_replace(')', '\)', $mid);
-        $replace_regex = '#(\[cite( source=[\\\'\"](doi|pubmed)[\\\'\"]){0,1}\]'.$mid.'\[\/cite\]?)#';
-        $replace_regexes[] = $replace_regex;
-    }
-    $i = 0;
-    $citations = array();
-    while ($i < count($cites[3])) {
-        $identifier = $cites[3][$i];
-        $source = $cites[2][$i];
-        if (!$source) {
-            //fallback to default if no option
-            $source = get_option('service');
-        }
-        $citation = array($identifier, $source);
-        $check = 0;
-        foreach ($citations as $test) {
-            if ($test[0] == $identifier) {
-                $check = 1;
-            }
-        }
-        if ($check == 0) {
-            $citations[] = $citation;
-        }
-        $i++;
-    }
-    $regex = array_values(array_unique($replace_regexes));
-    $returnval = array($regex, $citations);
-    return $returnval;
-  }
 
   /**
    * Look up DOI on cross ref. 
@@ -348,12 +367,14 @@ class KCite{
     $md_number = count($md);
     foreach ($md as $m) {
         $item_string = "ITEM-".$item_number;
-        if ($m['doi-err']) {
+
+        if (array_key_exists("doi-err", $m )) {
             $json_string .= '"'.$item_string.'": {
     "DOI": "'.$m['doi-err'].'"
 ';
         }
-        elseif ($m['pubmed-err']) {
+        
+        elseif (array_key_exists('pubmed-err',$m)) {
             $json_string .= '"'.$item_string.'": {
     "PMID": "'.$m['pubmed-err'].'"
 ';
@@ -648,8 +669,54 @@ class KCite{
       </form>
       </div>
 <?php
-  }
+   }
 
+}
+
+class Bibliography{
+  private $cites = array();
+  
+  function add_cite($citation){
+    // unique check
+    for( $i = 0;$i < count($this->cites);$i++ ){
+        if( $this->cites[ $i ]->equals( $citation ) ){
+            return $i + 1;
+        }
+    }
+      
+    // add new citation
+    $this->cites[] = $citation;
+    return count( $this->cites );
+  }
+  
+  function get_cites(){
+      return $this->cites;
+  }
+     
+}
+
+
+class Citation{
+    // generic properties from the citation
+    public $identifier;
+    public $source;
+  
+    public $authors;
+    public $journal_title;
+    public $abbrv_title;
+    public $pub_date;
+    public $volume;
+    public $title;
+    public $first_page;
+    public $last_page;
+    public $reported_doi;
+    public $resource;
+    public $issue;
+
+  function equals($citation){
+      return $this->identifier == $citation->identifier and
+          $this->source == $citation->source;
+  }
 }
 
 KCite::init();
