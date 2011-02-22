@@ -8,7 +8,7 @@ Template Name: Archives
 
 
 		<div id="content" class="single">
-			<div class="post column left">
+			<div class="post">
 
 			<?php /* include (TEMPLATEPATH . '/searchform.php');*/ ?>
 
