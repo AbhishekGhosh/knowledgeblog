@@ -1,0 +1,8 @@
+0. Create sjcockell user
+1. Create nologin beta user
+2. Create knowledgeblog group
+3. Move wp-test installation from phillord to beta
+4. Create bzr repo /home/beta/version
+5. Check repo out to /home/beta/knowledgeblog
+6. Symlink (or copy/rsync/other) wp-content or plugins to /home/beta/knowledgeblog
+
