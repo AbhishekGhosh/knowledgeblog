@@ -5,7 +5,16 @@
 			<div class="post" id="post-<?php the_ID(); ?>">
 				<p class="details_small">
 					on <?php the_date(); ?> 
-					by <?php the_author(); ?>
+					<!-- SJC 16112010 -->
+					by
+					<? 
+					if (function_exists('coauthors')) {
+						coauthors();
+					}
+					else {
+						the_author();
+					}
+					?>
 					in <?php the_category(', '); ?>, 
 					<?php comments_popup_link(__('Comments (0)'), __('Comments (1)'), __('Comments (%)')); ?>
 				</p>
@@ -13,28 +22,23 @@
 				<div class="post_content">
 
     <!-- PWL -->
-    <?php 
-    if( function_exists( 'wptoc_has_toc' ) ){ 
-      if(TRUE === wptoc_has_toc()) { ?>
-                                     <div id="toc">
-                                     <div id="contents"><h2>Contents</h2></div>
-                                     <?php wptoc_show_toc_as_ulist(); ?>
-                                     </div>
-                                     <?php 
-      } 
-    }?>
-    
+    <?php if(TRUE === wptoc_has_toc()) { ?>
+          <div id="toc">
+          <div id="contents"><h2>Contents</h2></div>
+          <?php wptoc_show_toc_as_ulist(); ?>
+          </div>
+    <?php } ?>
 
-    <?php the_content(); ?>
+
+				<?php the_content(); ?>
 
     <!-- PWL -->
-    <?php if( function_exists( 'wptoc_has_toc' ) ){
-            if(TRUE === wptoc_has_toc()) { ?>
-                <div id="toc">
-                <div id="contents"><h2>Contents</h2></div>
-                <?php wptoc_show_toc_as_ulist(); ?>
-                </div>
-    <?php } }?>
+    <?php if(TRUE === wptoc_has_toc()) { ?>
+          <div id="toc">
+          <div id="contents"><h2>Contents</h2></div>
+          <?php wptoc_show_toc_as_ulist(); ?>
+          </div>
+    <?php } ?>
 
 
 

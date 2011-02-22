@@ -1,26 +1,15 @@
 /*  
-Theme Name: Knowledgeblog
-Theme URI: http://knowledgeblog.org
-Description: Knowledgeblog is the default theme for knowledgeblog.org enabling
-the use of wordpress for formal scientific publishing. It is ordered like a
-journal, allowing rapid browsing of articles, with multiple columns, and then
-full width viewing of individual articles. This theme is derived from Gonzo
-Daily http://greatgonzo.net/. The font used in the header is <a
-href="http://openfontlibrary.org/media/files/gluk/306">Gputeks</a> by<a
-href="http://openfontlibrary.org/media/people/gluk"> gluk</a>, licensed under
-<a href="http://scripts.sil.org/OFL">SIL Open Font License</a>.
-Version: 1.0
-Author: Phillip Lord, knowledgeblog.org. Milen Petrinski - Gonzo
-Author URI: http://knowledgeblog.org, (Gonzo) http://greatgonzo.net/
+Theme Name: Gonzo Daily
+Theme URI: http://greatgonzo.net/projects/gonzodaily
+Description: Gonzo Daily is flexible-width three-column theme for WordPress. It has a newspaper-like front page, featuring three columns of text for browsers that support CSS columns (currently only Firefox, more to come)<br /><br />Wordpress Widgets ready.<br /><br />The font used in the header is <a href="http://openfontlibrary.org/media/files/gluk/306">Gputeks</a> by<a href="http://openfontlibrary.org/media/people/gluk"> gluk</a>, licensed under <a href="http://scripts.sil.org/OFL">SIL Open Font License</a>.
+Version: 1.4
+Author: Milen Petrinski - Gonzo
+Author URI: http://greatgonzo.net/
 Tags: black, two-columns, three-columns, right-sidebar, flexible-width
 */
 
 /**
 * Eric Meyer's Reset stylesheet - http://meyerweb.com/eric/thoughts/2007/05/01/reset-reloaded/
-*
-* This code snippet is public domain, as stated:
-*
-* http://meyerweb.com/eric/tools/css/reset/index.html
 */
 
 html,body,div,span,applet,object,iframe,
@@ -237,6 +226,10 @@ a img.aligncenter {display: block; margin-left: auto; margin-right: auto}
 
 code {
 	font-family:courier,"courier new", monospace;
+}
+
+tt {
+	font-family:courier,"courier new",monospace;
 }
 
 pre {
@@ -850,3 +843,28 @@ textarea {
 	padding-top:1.5em;
 }
 
+
+/** CSS FOR POST REVISION PLUIGIN **/
+
+table.diff { width: 100%; }
+table.diff th { text-align: left; }
+table.diff .diff-deletedline { background-color:#fdd;
+                               width: 50%; }
+table.diff .diff-deletedline del { background-color:#f99;
+                                   text-decoration: none; }
+table.diff .diff-addedline { background-color:#dfd;
+                             width: 50%; }
+table.diff .diff-addedline ins { background-color:#9f9;
+                                 text-decoration: none; }
+table.diff .diff-context { display: none; }
+
+<div class="revision-header">
+<div class="post-revisions">
+<div id="revision-diffs">
+
+.revision-header {
+    background-color: yellow;
+    border: 1px solid #3a8b8c;
+    padding: 10px; }
+
+div.revision-header { padding: 0 10px; }
