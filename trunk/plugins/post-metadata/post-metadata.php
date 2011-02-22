@@ -15,23 +15,59 @@
 
 class PostMetadata{
 
-  /**
-  * Initialise the class. Adds hooks for Wordpress.
-  */
   function init(){
+    //inject metadata into post head
     add_action('wp_head', array(__CLASS__, 'add_header'));
+    //add metadata API endpoint
+    add_action('init', array(__CLASS__, 'metadata_rewrite'));
+    //add query_var so metadata endpoint can be responded to
+    add_filter('query_vars', array(__CLASS__, 'metadata_query_vars'));
+    //deal with the metadata endpoint, emit the required format
+    add_action('template_redirect', array(__CLASS__, 'metadata_endpoint'));
+  }
+ 
+
+  /*
+  * Adds the rewrite_endpoint for the metadata RESTful API
+  */
+
+  function metadata_rewrite() {
+    global $wp_rewrite;
+    add_rewrite_endpoint( 'metadata', EP_ALL );
+    $wp_rewrite->flush_rules();
+    //echo "<pre>";print_r($wp_rewrite);echo "</pre>";
   }
 
-  /**
-  * Adds publication metadata to the blog header. This allows Google Scholar parsers to process the blogpost.
-  * All headers are post specific.
+  /*
+  * Adds query_var for the metadata endpoint. 
+  * Needed so the template_redirect can respond appropriately
+  */
+  function metadata_query_vars($vars) {
+     $vars[] = 'metadata';
+     return $vars;
+  }
+  
+  /*
+  * Uses template_redirect to emit the metadata endpoints
+  * Tests for the requested type and responds accordingly
+  * Unsupported requests should just result in the parent post
+  */
+  function metadata_endpoint() {
+    global $wp_query;
+     if ($wp_query->query_vars['metadata'] == '1') {
+        self::add_header();
+        exit();
+     }
+  }
+
+  /*
+  * Injects Google Scholar required metadata into the post header.
+  * Can be reused for the metadata RESTy service.
   */
   function add_header() {
-  ?>
 
-<!-- KNOWLEDGEBLOG METADATA -->
-
-  <?php
+    echo "<!-- KNOWLEDGEBLOG METADATA -->
+";
     if (is_single() || is_page()) {
         global $post;
         echo '<meta name="resource_type" content="knowledgeblog">
@@ -70,13 +106,14 @@ class PostMetadata{
         echo '<meta name="citation_journal_title" content="'.$site_name.'">
   ';
     }
-  ?>
 
-<!-- END KNOWLEDGEBLOG METADATA -->
-
-  <?php
+    echo "<!-- END KNOWLEDGEBLOG METADATA -->
+";
   }
 
+  /*
+  * Gets a list of post authors, plays nicely with default Wordpress and Coauthors Plus
+  */
   function get_authors($id) { 
         $authors = array();
         if (!function_exists('coauthors')) {
