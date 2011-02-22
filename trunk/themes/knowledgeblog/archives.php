@@ -18,14 +18,14 @@ Template Name: Archives
 			</ul>
 			</div>
 			
-			<div class="post">
+			<!--div class="post">
 				<h2>Tag Cloud</h2>
 				
 				<p class="tag-cloud">
 				<?php wp_tag_cloud('smallest=1&largest=4&unit=em'); ?>
 				</p>
 
-			</div>
+			</div-->
 	
 			<!--div class="post column right">
 
