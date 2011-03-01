@@ -3,7 +3,7 @@
    Plugin Name: Knowledgeblog Table of Contents
    Plugin URI: http://knowledgeblog.org/knowledgeblog-table-of-contents-plugin/
    Description: Display alphabetic list of articles in a particular category
-   Version: 0.2
+   Version: 0.3
    Author: Simon Cockell
    Author URI: http://knowledgeblog.org
    License: GPL2
