@@ -79,6 +79,10 @@ class KToC{
                     $authors = get_coauthors($post->ID);
                     $i = 1;
                     $len = count($authors);
+                    if ($len == 1) {
+                        //circumvent very rare (unique?) bug, where get_coauthors returns wrong info...
+                        $authors = array(get_userdata($post->post_author));
+                    }
                     $author_html = '';
                     foreach ($authors as $author) {
 				        $author_name = $author->user_login;
