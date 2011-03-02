@@ -9,7 +9,9 @@
 	<div class="latest" id="post-<?php the_ID(); ?>">
 		<p class="details_small">
 			on <?php the_date(); ?> 
-			by <?php the_author(); ?>
+						<!-- SJC -->
+						<!--by <?php the_author(); ?>-->
+						by <?php coauthors(); ?>
 			in <?php the_category(', '); ?>, 
 			<?php comments_popup_link(__('Comments (0)'), __('Comments (1)'), __('Comments (%)')); ?>
 		</p>
@@ -35,7 +37,9 @@
 			<h2><a href="<?php the_permalink() ?>" rel="bookmark" title="Permalink: <?php the_title(); ?>"><?php the_title(); ?></a></h2>
 			<p class="details_small">
 				on <?php the_date(); ?> 
-				by <?php the_author(); ?>
+						<!-- SJC -->
+						<!--by <?php the_author(); ?>-->
+						by <?php coauthors(); ?>
 				in <?php the_category(', '); ?>, 
 				<?php comments_popup_link(__('Comments (0)'), __('Comments (1)'), __('Comments (%)')); ?>
 			</p>

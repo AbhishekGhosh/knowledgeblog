@@ -3,7 +3,7 @@
    Plugin Name: Knowledgeblog Table of Contents
    Plugin URI: http://knowledgeblog.org/knowledgeblog-table-of-contents-plugin/
    Description: Display alphabetic list of articles in a particular category
-   Version: 0.2
+   Version: 0.3
    Author: Simon Cockell
    Author URI: http://knowledgeblog.org
    License: GPL2
@@ -79,6 +79,10 @@ class KToC{
                     $authors = get_coauthors($post->ID);
                     $i = 1;
                     $len = count($authors);
+                    if ($len == 1) {
+                        //circumvent very rare (unique?) bug, where get_coauthors returns wrong info...
+                        $authors = array(get_userdata($post->post_author));
+                    }
                     $author_html = '';
                     foreach ($authors as $author) {
 				        $author_name = $author->user_login;
