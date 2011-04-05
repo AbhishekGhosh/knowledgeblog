@@ -1,0 +1,26 @@
+# -*- Makefile -*-
+
+SOURCES = $(shell echo *.adoc)
+TARGETS = $(filter-out *.blogpost,$(SOURCES:%.adoc=%.blogpost))
+
+BLOGPOST = ~/bin/python/blogpost-google.hg/blogpost.py --asciidoc-opt '--conf-file ../build/journal-asciidoc.conf' -f ../build/local-test-vm.conf
+
+
+
+.SUFFIXES:     .adoc .blogpost
+
+
+.adoc.blogpost:
+	$(BLOGPOST) --mandatory-parameters=categories,status post $<
+
+
+all: $(TARGETS) Makefile
+
+index:
+	cd ..;./build/extract_index.py > index.txt
+
+
+Makefile-generated: Makefile
+	../build/generate_makefile.py $(SOURCES) > Makefile-generated
+
+include Makefile-generated
