@@ -2,7 +2,7 @@
 
 
 
-WORDPRESS = /var/www/wordpress
+WORDPRESS = /var/www/
 
 
 
