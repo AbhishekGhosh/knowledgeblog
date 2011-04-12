@@ -1,0 +1,42 @@
+\documentclass{article}
+
+\begin{document}
+
+This is a test of latex math mode support. 
+
+\section{Purpose of test}
+
+To test problematic equations to see whether they work. 
+
+\section{Pass Condition}
+
+All equations should render. Those equations in known failures are known to be
+broken, so it's a failure, but expected. 
+
+\section{Test Materials}
+
+
+
+This is a simple equation to make sure latex rendering is working at all:
+$E=mc^{2}$
+
+This is the same equation with the alternate slash, bracket syntax:
+\(E=mc^{2}\)
+
+
+
+\section{Known Failures in wp-Latex}
+
+
+From sample2e:  \( a_{1} > x^{2n} + y^{2n} > x' \)
+
+  \( a_{1} x^{2n} > + y ^{2n} > x' \)
+
+
+
+\end{document}
+
+
+
+
+

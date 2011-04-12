@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<style xmlns="http://purl.org/net/xbiblio/csl" version="1.0"
+class="in-text">
+  <info>
+    <title>KCite</title>
+    <id>kcite</id>
+	<updated>2011-04-12T15:11:03+00:00</updated>
+	<link href="http://www.knowledgeblog.org/styles/kcite" rel="self"/>
+	<author>
+		<name>Simon Cockell</name>
+		<email>s.j.cockell@newcastle.ac.uk</email>
+	</author>
+	<rights>
+		This work is licensed under a Creative Commons Attribution-Share Alike 3.0 License:
+		http://creativecommons.org/licenses/by-sa/3.0/
+	</rights>
+  </info>
+  <citation>
+    <layout prefix="[cite]" suffix="[/cite]" delimiter="[/cite] [cite]">
+      <text variable="DOI"/>
+    </layout>
+  </citation>
+</style>
