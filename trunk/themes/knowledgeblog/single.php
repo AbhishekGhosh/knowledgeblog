@@ -22,7 +22,7 @@
 				<div class="post_content">
 
     <!-- PWL -->
-    <?php if(TRUE === wptoc_has_toc()) { ?>
+      <?php if(function_exists( "wptoc_has_toc") && TRUE === wptoc_has_toc()) { ?>
           <div id="toc">
           <div id="contents"><h2>Contents</h2></div>
           <?php wptoc_show_toc_as_ulist(); ?>
@@ -33,7 +33,7 @@
 				<?php the_content(); ?>
 
     <!-- PWL -->
-    <?php if(TRUE === wptoc_has_toc()) { ?>
+    <?php if(function_exists( "wptoc_has_toc") && TRUE === wptoc_has_toc()) { ?>
           <div id="toc">
           <div id="contents"><h2>Contents</h2></div>
           <?php wptoc_show_toc_as_ulist(); ?>
