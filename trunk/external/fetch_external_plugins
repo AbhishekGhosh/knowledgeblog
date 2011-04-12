@@ -12,15 +12,20 @@ basesvn="http://svn.wp-plugins.org/"
 ## config -- plugin name, required version
 config = (
     ("co-authors-plus", "2.1.1"),
+    ("post-revision-display", "0.9"),
+    ("wp-post-to-pdf", "2.0.1"),
+    ("edit-flow", "0.6.3"),
+    ("epub-export", "1.1"),
+    ("syntaxhighlighter", "3.1.1"),
+    ("wp-gravatar", "2.6"),
+    ("wordpress-table-of-contents", "1.2.0"),
 )
 
 
 
 for plugin in config:
     if os.path.exists( plugin[ 0 ] ):
-        print "%s%s/tags/%s" % (basesvn, plugin[0], plugin[1]),
-                     
-
+        print( "Checking for update: %s" % (plugin[0]) )
         output = Popen( ["svn",
                          "switch", "%s%s/tags/%s" %
                      (basesvn, plugin[0], plugin[1]),
@@ -28,6 +33,7 @@ for plugin in config:
                      ],stdout=PIPE).communicate()[0]
         print( output )
     else:
+        print( "Checking out: %s" % (plugin[0]) )
         output = Popen( ["svn",
                          "checkout", "%s%s/tags/%s" %
                      (basesvn, plugin[0], plugin[1]),
