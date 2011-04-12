@@ -27,7 +27,7 @@ HOST=$(shell hostname)
 ###
 
 ## the location of the local workpress installation
-WORDPRESS?=/home/beta/wordpress
+WORDPRESS?=/var/www
 
 ## location of the WP content directory
 WPCONTENT?=$(WORDPRESS)/wp-content
@@ -50,7 +50,7 @@ PLUGINS?=$(WPCONTENT)/plugins
 CP?=rsync -vrt
 
 ## Recursive delete command
-RRM?=HELLO rm -rf
+RRM?=rm -rf
 
 
 ##
