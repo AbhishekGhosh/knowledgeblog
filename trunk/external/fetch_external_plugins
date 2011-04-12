@@ -1,0 +1,38 @@
+#!/usr/bin/env python
+
+import os.path
+from subprocess import *
+
+
+## run this from your wp-content/plugins directory it checks all the external
+## kblog plugins out into your local plugins directory ready to use
+
+basesvn="http://svn.wp-plugins.org/"
+
+## config -- plugin name, required version
+config = (
+    ("co-authors-plus", "2.1.1"),
+)
+
+
+
+for plugin in config:
+    if os.path.exists( plugin[ 0 ] ):
+        print "%s%s/tags/%s" % (basesvn, plugin[0], plugin[1]),
+                     
+
+        output = Popen( ["svn",
+                         "switch", "%s%s/tags/%s" %
+                     (basesvn, plugin[0], plugin[1]),
+                     plugin[ 0 ]
+                     ],stdout=PIPE).communicate()[0]
+        print( output )
+    else:
+        output = Popen( ["svn",
+                         "checkout", "%s%s/tags/%s" %
+                     (basesvn, plugin[0], plugin[1]),
+                     plugin[ 0 ]
+                     ],
+                    stdout=PIPE).communicate()[0]
+        print( output )
+

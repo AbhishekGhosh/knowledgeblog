@@ -1,0 +1,16 @@
+A python script to mint DataCite DOIs for your dataset. You need to have a DataCite API username and password.
+
+Depends on httplib2.
+
+--- HELP ---
+
+Usage: mintdoi.py [options] metadata.xml
+
+Options:
+  --version             show program's version number and exit
+  -h, --help            show this help message and exit
+  -t, --test            testMode=1 - test the API without minting fresh DOIs
+  -u USER, --user=USER  DataCite Username
+  -p PASSWD, --password=PASSWD
+                        DataCite Password
+
