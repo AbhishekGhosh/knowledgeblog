@@ -1,15 +1,19 @@
 <?php
 /*
-Plugin Name: COinS Metadata Exposer
-Plugin URI: http://www.zotero.org
-Description: Makes your blog readable by Zotero and other COinS interpreters.
-Version: 0.5
-Author: Sean Takats - Center for History and New Media
-Author URI: http://chnm.gmu.edu
+Plugin Name: Knowledgeblog COinS Metadata Exposer
+Plugin URI: http://www.knowledgeblog.org
+Description: Makes your blog readable by COinS interpreters (Zotero, Mendeley etc).
+Version: 1.0
+Author: Simon Cockell
+Author URI: http://knowledgeblog.org/
+Email: knowledgeblog-discuss@knowledgeblog.org 
 
-Copyright 2007 Sean Takats (email: stakats@gmu.edu)
+Copyright 2011 Simon Cockell (s.j.cockell@newcastle.ac.uk)
+Newcastle University
 
-NB: Adapted by Simon Cockell (s.j.cockell@newcastle.ac.uk) to support the Co-Authors Plus plugin (http://www.wordpress.org/extend/plugins/co-authors-plus).
+Sean Takats (email: stakats@gmu.edu)
+
+NB: Adapted from original code by Sean Takats (stakats@gmu.edu).
 
 This program is free software; you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
