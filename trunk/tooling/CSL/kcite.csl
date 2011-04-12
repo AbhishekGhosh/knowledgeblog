@@ -2,25 +2,13 @@
 <?oxygen RNGSchema="http://xbiblio.svn.sourceforge.net/viewvc/*checkout*/xbiblio/csl/schema/trunk/csl.rnc" type="compact"?>
 <style xmlns="http://purl.org/net/xbiblio/csl" class="in-text" xml:lang="en">
 	<info>
-		<title>IEEE</title>
-		<id>http://www.zotero.org/styles/ieee</id>
-		<link href="http://www.zotero.org/styles/ieee"/>
+		<title>KCite</title>
+		<id>http://www.knowledgeblog.org/styles/kcite</id>
+		<link href="http://www.knowledgeblog.org/styles/kcite"/>
 		<author>
-			<name>Michael Berkowitz</name>
-			<email>mberkowi@gmu.edu</email>
+			<name>Simon Cockell</name>
+			<email>s.j.cockell@newcastle.ac.uk</email>
 		</author>
-		<contributor>
-			<name>Julian Onions</name>
-			<email>julian.onions@gmail.com</email>
-		</contributor>
-		<contributor>
-			<name>Rintze Zelle</name>
-			<uri>http://forums.zotero.org/account/831/</uri>
-		</contributor>
-		<contributor>
-			<name>Stephen Frank</name>
-			<uri>http://www.zotero.org/sfrank</uri>
-		</contributor>
 		<category term="engineering"/>
 		<category term="generic-base"/>
 		<category term="numeric"/>
