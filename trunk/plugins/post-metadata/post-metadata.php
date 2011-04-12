@@ -141,7 +141,7 @@ class MetaData {
     function get_authors($id) { 
         $authors = array();
         if (!function_exists('coauthors')) {
-            $author = get_author($id);
+            $author = get_the_author($id);
             //$author = get_userdata($post->post_author);
             $author_realname = $author->last_name.", ".$author->first_name;
             if ($author_realname != ', ') {
