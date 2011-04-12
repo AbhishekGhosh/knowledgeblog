@@ -11,7 +11,7 @@
 			on <?php the_date(); ?> 
 						<!-- SJC -->
 						<!--by <?php the_author(); ?>-->
-						by <?php coauthors(); ?>
+						by <?php if( function_exists( "coauthors" ) ){coauthors();} ?>
 			in <?php the_category(', '); ?>, 
 			<?php comments_popup_link(__('Comments (0)'), __('Comments (1)'), __('Comments (%)')); ?>
 		</p>
@@ -39,7 +39,13 @@
 				on <?php the_date(); ?> 
 						<!-- SJC -->
 						<!--by <?php the_author(); ?>-->
-						by <?php coauthors(); ?>
+						by <?php 
+	<div class="latest" id="post-<?php the_ID(); ?>">
+		<p class="details_small">
+			on <?php the_date(); ?> 
+						<!-- SJC -->
+						<!--by <?php the_author(); ?>-->
+						by <?php if( function_exists( "coauthors" ) ){coauthors();} ?>
 				in <?php the_category(', '); ?>, 
 				<?php comments_popup_link(__('Comments (0)'), __('Comments (1)'), __('Comments (%)')); ?>
 			</p>
