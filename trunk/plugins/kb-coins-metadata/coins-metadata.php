@@ -34,13 +34,20 @@ add_filter('the_content', 'coinsify_the_content');
 
 function coinsify_the_content($content)
 {
+    $cats= "";
 	foreach((get_the_category()) as $cat) {
 		$cats = $cats . "&amp;rft.subject=" . urlencode($cat->cat_name);
 	} 
     $authors = get_authors();
     $i = 0;
     if (sizeof($authors) == 1) {	
-        $coins_span  = '<span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Adc&amp;rfr_id=info%3Asid%2Focoins.info%3Agenerator&amp;rft.title='.urlencode(get_the_title()).'&amp;rft.aulast='.urlencode(get_the_author_lastname()).'&amp;rft.aufirst='.urlencode(get_the_author_firstname()).$cats.'&amp;rft.source='.urlencode(get_bloginfo('name')).'&amp;rft.date='.the_time('Y-m-d').'&amp;rft.type=blogPost&amp;rft.format=text&amp;rft.identifier='.the_permalink().'&amp;rft.language=English"></span>';
+        $coins_span  = '<span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Adc&amp;rfr_id=info%3Asid%2Focoins.info%3Agenerator&amp;rft.title='
+            .urlencode(get_the_title()).'&amp;rft.aulast='
+            .urlencode(get_the_author_meta("last_name")).'&amp;rft.aufirst='.
+            urlencode(get_the_author_meta("first_name")).$cats.'&amp;rft.source='.
+            urlencode(get_bloginfo('name')).'&amp;rft.date='
+            .get_the_time('Y-m-d').'&amp;rft.type=blogPost&amp;rft.format=text&amp;rft.identifier='
+            .get_permalink().'&amp;rft.language=English"></span>';
     }
     else {
         //deal with coauthors here
@@ -55,7 +62,12 @@ function coinsify_the_content($content)
             }
             $i++;
         }
-    $coins_span = '<span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Adc&amp;rfr_id=info%3Asid%2Focoins.info%3Agenerator&amp;rft.title='.urlencode(get_the_title()).$author_string.$cats.'&amp;rft.source='.urlencode(get_bloginfo('name')).'&amp;rft.date='.the_time('Y-m-d').'&amp;rft.type=blogPost&amp;rft.format=text&amp;rft.identifier='.the_permalink().'&amp;rft.language=English"></span>';
+    $coins_span = '<span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Adc&amp;rfr_id=info%3Asid%2Focoins.info%3Agenerator&amp;rft.title='
+        .urlencode(get_the_title()).$author_string.$cats.
+        '&amp;rft.source='.urlencode(get_bloginfo('name')).
+        '&amp;rft.date='.get_the_time('Y-m-d')
+        .'&amp;rft.type=blogPost&amp;rft.format=text&amp;rft.identifier='
+        .get_permalink().'&amp;rft.language=English"></span>';
     }
 	return $content.$coins_span;
 }
@@ -63,7 +75,8 @@ function coinsify_the_content($content)
     function get_authors() { 
         $authors = array();
         if (!function_exists('coauthors')) {
-            $author = array('firstname'=>get_the_author_firstname(),'lastname'=>get_the_author_lastname());
+            $author = array('firstname'=>get_the_author_meta("first_name"),
+                            'lastname'=>get_the_author_meta("last_name"));
             $authors[] = $author;
         }
         else {
