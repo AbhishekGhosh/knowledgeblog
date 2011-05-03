@@ -2,6 +2,7 @@
 
 import os.path
 from subprocess import *
+import sys
 
 
 ## run this from your wp-content/plugins directory it checks all the external
@@ -10,8 +11,8 @@ from subprocess import *
 basesvn="http://svn.wp-plugins.org/"
 
 ## config -- plugin name, required version
-config = (
-    ("co-authors-plus", "2.1.1"),
+dependencies = (
+    ("co-authors-plus", "2.5.1"),
     ("post-revision-display", "0.9"),
     ("wp-post-to-pdf", "2.0.1"),
     ("edit-flow", "0.6.3"),
@@ -19,26 +20,53 @@ config = (
     ("syntaxhighlighter", "3.1.1"),
     ("wp-gravatar", "2.6"),
     ("wordpress-table-of-contents", "1.2.0"),
-)
+
+    ## kblog dependencies
+    ("kcite", "1.3", "kblog"),
+    ("mathjax-latex", "1.0", "kblog" ),
+    ("knowledgeblog-table-of-contents", "0.2", "kblog" ),
+    )
 
 
 
-for plugin in config:
-    if os.path.exists( plugin[ 0 ] ):
-        print( "Checking for update: %s" % (plugin[0]) )
-        output = Popen( ["svn",
-                         "switch", "%s%s/tags/%s" %
-                     (basesvn, plugin[0], plugin[1]),
-                     plugin[ 0 ]
-                     ],stdout=PIPE).communicate()[0]
-        print( output )
-    else:
-        print( "Checking out: %s" % (plugin[0]) )
-        output = Popen( ["svn",
-                         "checkout", "%s%s/tags/%s" %
-                     (basesvn, plugin[0], plugin[1]),
-                     plugin[ 0 ]
-                     ],
-                    stdout=PIPE).communicate()[0]
-        print( output )
+def do_checkout( config, block_kblog ):
 
+    for plugin in config:
+
+        if len( plugin ) >= 3 and plugin[ 2 ] == "kblog" and block_kblog:
+            print( "Skipping kblog produced plugin:" + plugin[ 0 ] )
+            continue
+        
+        if os.path.exists( plugin[ 0 ] ):
+            print( "Checking for update: %s" % (plugin[0]) )
+            output = Popen( ["svn",
+                                 "switch", "%s%s/tags/%s" %
+                                 (basesvn, plugin[0], plugin[1]),
+                                 plugin[ 0 ]
+                                 ],stdout=PIPE).communicate()[0]
+            print( output )
+        else:
+            print( "Checking out: %s" % (plugin[0]) )
+            output = Popen( ["svn",
+                             "checkout", "%s%s/tags/%s" %
+                             (basesvn, plugin[0], plugin[1]),
+                             plugin[ 0 ]
+                             ],
+                            stdout=PIPE).communicate()[0]
+            print( output )
+
+
+
+
+if __name__ == '__main__':
+    import getopt
+    opts,args = getopt.getopt(sys.argv[1:], 'h',
+                              ['no-kblog'])
+    block_kblog = False
+    
+    for o, v in opts:
+        print( o, v )
+        if o == "--no-kblog":
+            block_kblog = True
+
+    do_checkout( dependencies, block_kblog );
