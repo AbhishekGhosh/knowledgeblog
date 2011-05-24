@@ -1,0 +1,97 @@
+#!/usr/bin/env python
+
+import os
+import urllib2
+from config import config
+
+"""
+Run this from your wp-content/plugins directory it checks all the external
+kblog plugins out into your local plugins directory ready to use
+"""
+
+def do_download(kblog_flag=True, install=False, clean=False):
+    """Downloads the required plugins from download.wordpress.org"""
+    print("* Downloading plugins *")
+    map(fetch_plugin, config['external_dependencies'])
+    if kblog_flag:
+        map(fetch_plugin, config['knowledgeblog_dependencies'])
+    if install:
+        print("* Unpacking plugins *")
+        map(uncompress_plugin, config['external_dependencies'])
+        if kblog_flag:
+            map(uncompress_plugin, config['knowledgeblog_dependencies'])
+        if clean:
+            print("* Removing installed zipfiles *")
+            map(clean_plugin, config['external_dependencies'])
+            if kblog_flag:
+                map(clean_plugin, config['knowledgeblog_dependencies'])
+
+
+def fetch_plugin(dependency):
+    """uses urllib2 to download plugin"""
+    #TODO: Handle urllib2 errors gracefully
+    print("* Getting {0}".format(dependency))
+    url_base = config['root_url']
+    override = config['override_versions']
+    localfile = dependency+'.zip'
+    try:
+        override[dependency]
+    except KeyError:
+        #fetch current release
+        url = url_base + dependency + '.zip'
+    else:
+        #plugin is pinned at specific version
+        url = url_base + dependency + '.' + override[dependency] + '.zip'
+    f = urllib2.urlopen(url)
+    lf = open(localfile, "wb")
+    while 1:
+        packet = f.read()
+        if not packet:
+            break
+        lf.write(packet)
+    f.close()
+    lf.close()
+
+def uncompress_plugin(plugin):
+    """Unzips specified plugin to Wordpress installation"""
+    import shlex, subprocess
+    print("* Installing {0}".format(plugin))
+    #there is a way of doing this with zipfile module
+    #currently this is Unix specific (will not work on Windows?)
+    zipfile = '{0}.zip'.format(plugin)
+    destination = os.path.join(config['wordpress_root'],
+            'wp-content',
+            'plugins')
+    #determine write permissions of destination
+    if os.access(destination, os.W_OK):
+        zip_command = 'unzip -u -o -qq {0} -d {1}'.format(zipfile, destination)
+        args = shlex.split(zip_command)
+        subprocess.call(args)
+    else:
+        print("Error: You don't have permission to write to {0}".format(destination))
+
+def clean_plugin(plugin):
+    """Removes the downloaded zip file after installation"""
+    zipfile = '{0}.zip'.format(plugin)
+    print("* Removing {0}".format(zipfile))
+    os.remove(zipfile)
+
+if __name__ == '__main__':
+    import optparse
+    parser = optparse.OptionParser(usage="Usage: %prog [options]", 
+            version="%prog 1.0")
+    parser.add_option("-n", "--no-kblog", dest="kblog_flag",
+            action='store_false', default=True,
+            help="Don't get kblog dependencies")
+    parser.add_option("-i", "--install", dest="install",
+            action='store_true', default=False,
+            help="Try to install plugins under Wordpress defined in config.py")
+    parser.add_option("-c", "--clean", dest="clean",
+            action='store_true', default=False,
+            help="Remove .zip files after installation (only valid with -i option)")
+    (options, args) = parser.parse_args()
+    if options.clean == True and options.install == False:
+        #fail with incompatible options
+        parser.print_help()
+        parser.error("option -c requires option -i")
+    do_download(options.kblog_flag, options.install, options.clean)
