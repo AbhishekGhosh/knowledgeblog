@@ -1,7 +1,7 @@
 """Configure options for fetch_external_plugins"""
 config = {
     #define the root directory of your Wordpress/Knowledgeblog installation
-    'wordpress_root':'.',
+    'wordpress_root':'/var/www/wp',
     #plugins from wordpress.org, not written by kblog team
     'external_dependencies': ['co-authors-plus',
                 'post-revision-display',
