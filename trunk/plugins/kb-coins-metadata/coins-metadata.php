@@ -11,8 +11,6 @@ Email: knowledgeblog-discuss@knowledgeblog.org
 Copyright 2011 Simon Cockell (s.j.cockell@newcastle.ac.uk)
 Newcastle University
 
-Sean Takats (email: stakats@gmu.edu)
-
 NB: Adapted from original code by Sean Takats (stakats@gmu.edu).
 
 This program is free software; you can redistribute it and/or modify
