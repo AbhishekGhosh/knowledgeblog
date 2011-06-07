@@ -1,0 +1,1170 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Suffusion 3.6.3\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2010-08-11 06:51+0100\n"
+"PO-Revision-Date: \n"
+"Last-Translator: Team Blogos <wordpress@blogos.dk>\n"
+"Language-Team: Team Blogos <wordpress@blogos.dk>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2;plural=n != 1;\n"
+"X-Poedit-Language: Danish\n"
+"X-Poedit-Country: DENMARK\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;__ngettext:1,2;__ngettext_noop:1,2;_nc:1,2;_nx:1,2;_n_noop:1,2;_nx_noop;_x;_c;esc_html__;esc_html_e;esc_html_x;esc_attr__;esc_attr_e;esc_attr_x\n"
+"X-Poedit-Basepath: d:\\wordpress\\themes\\translated\\suffusion\n"
+"X-Poedit-SearchPath-0: d:\\wordpress\\themes\\translated\\suffusion\n"
+
+#: d:\wordpress\themes\translated\suffusion/categories.php:38
+msgid "RSS"
+msgstr "RSS"
+
+#: d:\wordpress\themes\translated\suffusion/comments.php:15
+msgid "This post is password protected. Enter the password to view comments."
+msgstr "Dette indlæg er kodeordsbeskyttet. Indtast kodeordet for at se kommentarer."
+
+#: d:\wordpress\themes\translated\suffusion/comments.php:35
+#, php-format
+msgid "%1$s to &#8220;%2$s&#8221;"
+msgstr "%1$s til &#8220;%2$s&#8221;"
+
+#: d:\wordpress\themes\translated\suffusion/comments.php:35
+msgid "No Responses"
+msgstr "Ingen kommentarer"
+
+#: d:\wordpress\themes\translated\suffusion/comments.php:35
+msgid "One Response"
+msgstr "Én kommentar"
+
+#: d:\wordpress\themes\translated\suffusion/comments.php:35
+msgid "% Responses"
+msgstr "% kommentarer"
+
+#: d:\wordpress\themes\translated\suffusion/comments.php:74
+#: d:\wordpress\themes\translated\suffusion/comments.php:103
+#, php-format
+msgid "Logged in as %s. "
+msgstr "Logget ind som %s. "
+
+#: d:\wordpress\themes\translated\suffusion/comments.php:75
+#: d:\wordpress\themes\translated\suffusion/comments.php:104
+msgid "Log out"
+msgstr "Log ud"
+
+#: d:\wordpress\themes\translated\suffusion/comments.php:77
+#: d:\wordpress\themes\translated\suffusion/comments.php:92
+msgid "You must be logged in to post a comment."
+msgstr "Du skal være logget ind for at skrive en kommentar."
+
+#: d:\wordpress\themes\translated\suffusion/comments.php:78
+#: d:\wordpress\themes\translated\suffusion/comments.php:89
+msgid "Leave a Reply"
+msgstr "Skriv en kommentar"
+
+#: d:\wordpress\themes\translated\suffusion/comments.php:79
+#: d:\wordpress\themes\translated\suffusion/comments.php:89
+#, php-format
+msgid "Leave a Reply to %s"
+msgstr "Skriv en kommentar til %s"
+
+#: d:\wordpress\themes\translated\suffusion/comments.php:80
+#: d:\wordpress\themes\translated\suffusion/comments.php:141
+msgid "Submit Comment"
+msgstr "Indsend kommentar"
+
+#: d:\wordpress\themes\translated\suffusion/comments.php:82
+#, php-format
+msgid "You may use these <abbr title=\"HyperText Markup Language\">HTML</abbr> tags and attributes: %s"
+msgstr "Du må bruge disse <abbr title=\"HyperText Markup Language\">HTML</abbr>-tags og attributter: %s"
+
+#: d:\wordpress\themes\translated\suffusion/comments.php:83
+msgid "Cancel reply"
+msgstr "Annullér svar"
+
+#: d:\wordpress\themes\translated\suffusion/comments.php:165
+msgid "Sorry, the comment form is closed at this time."
+msgstr "Beklager! Kommentarformularen er lukket i øjeblikket."
+
+#: d:\wordpress\themes\translated\suffusion/featured-posts.php:27
+msgid "Previous Post"
+msgstr "Forrige indlæg"
+
+#: d:\wordpress\themes\translated\suffusion/featured-posts.php:28
+msgid "Pause"
+msgstr "Pause"
+
+#: d:\wordpress\themes\translated\suffusion/featured-posts.php:29
+msgid "Next Post"
+msgstr "Næste indlæg"
+
+#: d:\wordpress\themes\translated\suffusion/functions.php:62
+msgid "Comments"
+msgstr "Kommentarer"
+
+#: d:\wordpress\themes\translated\suffusion/functions.php:62
+msgid "Trackbacks"
+msgstr "Trackbacks"
+
+#: d:\wordpress\themes\translated\suffusion/functions.php:62
+msgid "Pingbacks"
+msgstr "Pingbacks"
+
+#: d:\wordpress\themes\translated\suffusion/functions.php:65
+#: d:\wordpress\themes\translated\suffusion/sidebar.php:47
+msgid "Archives"
+msgstr "Arkiver"
+
+#: d:\wordpress\themes\translated\suffusion/functions.php:66
+#: d:\wordpress\themes\translated\suffusion/sidebar.php:36
+msgid "Categories"
+msgstr "Kategorier"
+
+#: d:\wordpress\themes\translated\suffusion/functions.php:67
+#: d:\wordpress\themes\translated\suffusion/sidebar.php:58
+msgid "Links"
+msgstr "Links"
+
+#: d:\wordpress\themes\translated\suffusion/functions.php:68
+#: d:\wordpress\themes\translated\suffusion/sidebar.php:69
+msgid "Meta"
+msgstr "Meta"
+
+#: d:\wordpress\themes\translated\suffusion/functions.php:69
+msgid "Pages"
+msgstr "Sider"
+
+#: d:\wordpress\themes\translated\suffusion/functions.php:70
+msgid "Recent Comments"
+msgstr "Nye kommentarer"
+
+#: d:\wordpress\themes\translated\suffusion/functions.php:71
+msgid "Recent Posts"
+msgstr "Nye indlæg"
+
+#: d:\wordpress\themes\translated\suffusion/functions.php:72
+#: d:\wordpress\themes\translated\suffusion/searchform.php:11
+msgid "Search"
+msgstr "Søg"
+
+#: d:\wordpress\themes\translated\suffusion/functions.php:73
+msgid "Tag Cloud"
+msgstr "Tag-sky"
+
+#: d:\wordpress\themes\translated\suffusion/functions.php:74
+msgid "Custom Tab 1"
+msgstr "Egen fane 1"
+
+#: d:\wordpress\themes\translated\suffusion/functions.php:75
+msgid "Custom Tab 2"
+msgstr "Egen fane 2"
+
+#: d:\wordpress\themes\translated\suffusion/functions.php:76
+msgid "Custom Tab 3"
+msgstr "Egen fane 3"
+
+#: d:\wordpress\themes\translated\suffusion/functions.php:77
+msgid "Custom Tab 4"
+msgstr "Egen fane 4"
+
+#: d:\wordpress\themes\translated\suffusion/functions.php:78
+msgid "Custom Tab 5"
+msgstr "Egen fane 5"
+
+#: d:\wordpress\themes\translated\suffusion/functions.php:79
+msgid "Custom Tab 6"
+msgstr "Egen fane 6"
+
+#: d:\wordpress\themes\translated\suffusion/functions.php:80
+msgid "Custom Tab 7"
+msgstr "Egen fane 7"
+
+#: d:\wordpress\themes\translated\suffusion/functions.php:81
+msgid "Custom Tab 8"
+msgstr "Egen fane 8"
+
+#: d:\wordpress\themes\translated\suffusion/functions.php:82
+msgid "Custom Tab 9"
+msgstr "Egen fane 9"
+
+#: d:\wordpress\themes\translated\suffusion/functions.php:83
+msgid "Custom Tab 10"
+msgstr "Egen fane 10"
+
+#: d:\wordpress\themes\translated\suffusion/functions.php:86
+msgid "Error 404 - Not Found"
+msgstr "Fejl 404 - Ikke fundet"
+
+#: d:\wordpress\themes\translated\suffusion/functions.php:87
+msgid "Sorry, the page that you are looking for does not exist."
+msgstr "Beklager, men siden, du ser efter, eksisterer ikke."
+
+#: d:\wordpress\themes\translated\suffusion/functions.php:89
+msgid "Name"
+msgstr "Navn"
+
+#: d:\wordpress\themes\translated\suffusion/functions.php:90
+msgid "(required)"
+msgstr "(skal udfyldes)"
+
+#: d:\wordpress\themes\translated\suffusion/functions.php:91
+msgid "E-mail"
+msgstr "E-mail"
+
+#: d:\wordpress\themes\translated\suffusion/functions.php:92
+msgid "URI"
+msgstr "URI"
+
+#: d:\wordpress\themes\translated\suffusion/functions.php:93
+msgid "Your Comment"
+msgstr "Din kommentar"
+
+#: d:\wordpress\themes\translated\suffusion/functions.php:208
+msgid "Page Title in Dropdown Menu"
+msgstr "Sidetitel i dropdown-menu"
+
+#: d:\wordpress\themes\translated\suffusion/functions.php:210
+msgid "This text will be shown in the drop-down menus in the navigation bar. If left blank, the title of the page is used."
+msgstr "Denne tekst vises i dropdown-menuerne i navigeringsbjælken. Hvis feltet er blankt, bruges sidens titel."
+
+#: d:\wordpress\themes\translated\suffusion/functions.php:213
+msgid "Do not link to this page in the navigation bars"
+msgstr "Link ikke til denne side i navigeringsbjælken"
+
+#: d:\wordpress\themes\translated\suffusion/functions.php:216
+msgid "If this box is checked, clicking on this page in the navigation bar will not take you anywhere."
+msgstr "Hvis dette felt er krydset af, vil et klik på denne side i navigeringsbjælken ikke have nogen effekt."
+
+#: d:\wordpress\themes\translated\suffusion/functions.php:219
+#: d:\wordpress\themes\translated\suffusion/functions.php:245
+msgid "Thumbnail"
+msgstr "Miniature"
+
+#: d:\wordpress\themes\translated\suffusion/functions.php:221
+#: d:\wordpress\themes\translated\suffusion/functions.php:247
+msgid "Enter the full URL of the thumbnail image that you would like to use, including http://"
+msgstr "Indtast den fulde URL til miniaturebilledet, som du vil bruge, inkl. http://"
+
+#: d:\wordpress\themes\translated\suffusion/functions.php:224
+#: d:\wordpress\themes\translated\suffusion/functions.php:250
+msgid "Featured Image"
+msgstr "Fremhævet (featured) billede"
+
+#: d:\wordpress\themes\translated\suffusion/functions.php:226
+#: d:\wordpress\themes\translated\suffusion/functions.php:252
+msgid "Enter the full URL of the featured image that you would like to use, including http://"
+msgstr "Indtast den fulde URL til det fremhævede billede, som du vil bruge, inkl. http://"
+
+#: d:\wordpress\themes\translated\suffusion/functions.php:229
+#: d:\wordpress\themes\translated\suffusion/functions.php:267
+msgid "Meta Description"
+msgstr "Meta-beskrivelse"
+
+#: d:\wordpress\themes\translated\suffusion/functions.php:233
+#: d:\wordpress\themes\translated\suffusion/functions.php:271
+msgid "Meta Keywords"
+msgstr "Meta-nøgleord"
+
+#: d:\wordpress\themes\translated\suffusion/functions.php:235
+#: d:\wordpress\themes\translated\suffusion/functions.php:273
+msgid "Enter a comma-separated list of keywords for this post. This list will be included in the meta tags for this post."
+msgstr "Indtast en kommasepareret liste med nøgleord for dette indlæg. Listen medtages i meta-tagsene for dette indlæg."
+
+#: d:\wordpress\themes\translated\suffusion/functions.php:255
+msgid "Make this post a headline"
+msgstr "Gør dette indlæg til en tophistorie"
+
+# ???
+#: d:\wordpress\themes\translated\suffusion/functions.php:258
+msgid "If this box is checked, this post will show up as a headline in the magazine template."
+msgstr "Hvis dette felt er krydset af, vises dette indlæg som en overskrift (\"headline\") i magasin-skabelonen."
+
+#: d:\wordpress\themes\translated\suffusion/functions.php:261
+msgid "Make this post an excerpt in the magazine layout"
+msgstr "Vis dette indlæg som uddrag i magasin-layoutet"
+
+#: d:\wordpress\themes\translated\suffusion/functions.php:264
+msgid "If this box is checked, this post will show up as an excerpt in the magazine template."
+msgstr "Hvis dette felt er krydset af, vises dette indlæg som uddrag i magasin-skabelonen."
+
+#: d:\wordpress\themes\translated\suffusion/login.php:34
+#, php-format
+msgid "You are currently logged in as <a href=\"%1$s\" title=\"%2$s\">%2$s</a>."
+msgstr "Du er i øjeblikket logget ind som <a href=\"%1$s\" title=\"%2$s\">%2$s</a>."
+
+#: d:\wordpress\themes\translated\suffusion/login.php:41
+#, php-format
+msgid "You have successfully logged in as <a href=\"%1$s\" title=\"%2$s\">%2$s</a>."
+msgstr "Du har logget dig ind som <a href=\"%1$s\" title=\"%2$s\">%2$s</a>."
+
+#: d:\wordpress\themes\translated\suffusion/login.php:60
+msgid "Username"
+msgstr "Brugernavn"
+
+#: d:\wordpress\themes\translated\suffusion/login.php:65
+msgid "Password"
+msgstr "Kodeord"
+
+#: d:\wordpress\themes\translated\suffusion/login.php:70
+msgid "Log in"
+msgstr "Log ind"
+
+#: d:\wordpress\themes\translated\suffusion/login.php:72
+msgid "Remember me"
+msgstr "Husk mig"
+
+#: d:\wordpress\themes\translated\suffusion/sidebar-tabs.php:28
+msgid "Select"
+msgstr "Vælg"
+
+#: d:\wordpress\themes\translated\suffusion/sidebar-tabs.php:64
+msgid "Syndicate this site using RSS 2.0"
+msgstr "Syndikér denne side med RSS 2.0"
+
+#: d:\wordpress\themes\translated\suffusion/sidebar-tabs.php:64
+msgid "Entries <abbr title=\"Really Simple Syndication\">RSS</abbr>"
+msgstr "Indlægs-<abbr title=\"Really Simple Syndication\">RSS</abbr>"
+
+#: d:\wordpress\themes\translated\suffusion/sidebar-tabs.php:65
+msgid "The latest comments to all posts in RSS"
+msgstr "De seneste kommentarer til alle indlæg via RSS"
+
+#: d:\wordpress\themes\translated\suffusion/sidebar-tabs.php:65
+msgid "Comments <abbr title=\"Really Simple Syndication\">RSS</abbr>"
+msgstr "Kommentar-<abbr title=\"Really Simple Syndication\">RSS</abbr>"
+
+#: d:\wordpress\themes\translated\suffusion/sidebar-tabs.php:83
+#, php-format
+msgid "%1$s on %2$s"
+msgstr "%1$s til %2$s"
+
+#: d:\wordpress\themes\translated\suffusion/sidebar.php:74
+msgid "Valid XHTML"
+msgstr "Gyldig XHTML"
+
+#: d:\wordpress\themes\translated\suffusion/sidebar.php:75
+msgid "Entries (RSS)"
+msgstr "Indlæg (RSS)"
+
+#: d:\wordpress\themes\translated\suffusion/sidebar.php:76
+msgid "Comments (RSS)"
+msgstr "Kommentarer (RSS)"
+
+#: d:\wordpress\themes\translated\suffusion/single.php:55
+msgid "Sorry, no posts matched your criteria."
+msgstr "Der var desværre ingen indlæg, der matchede dine søgekriterier."
+
+#: d:\wordpress\themes\translated\suffusion/functions/actions.php:892
+msgid "Continue reading"
+msgstr "Fortsæt læsning"
+
+#: d:\wordpress\themes\translated\suffusion/functions/actions.php:1022
+#: d:\wordpress\themes\translated\suffusion/functions/actions.php:1278
+#: d:\wordpress\themes\translated\suffusion/functions/actions.php:1323
+#, php-format
+msgid "Posted by %1$s at %2$s"
+msgstr "Udgivet af %1$s kl. %2$s"
+
+#: d:\wordpress\themes\translated\suffusion/functions/actions.php:1034
+#: d:\wordpress\themes\translated\suffusion/functions/actions.php:1046
+#: d:\wordpress\themes\translated\suffusion/functions/actions.php:1289
+#: d:\wordpress\themes\translated\suffusion/functions/actions.php:1328
+msgid "Add comments"
+msgstr "Tilføj Kommentarer"
+
+#: d:\wordpress\themes\translated\suffusion/functions/actions.php:1039
+#: d:\wordpress\themes\translated\suffusion/functions/actions.php:1294
+msgid "1 Response"
+msgstr "Én kommentar"
+
+#: d:\wordpress\themes\translated\suffusion/functions/actions.php:1051
+#: d:\wordpress\themes\translated\suffusion/functions/actions.php:1301
+msgid "Tagged with: "
+msgstr "Tagget med: "
+
+#: d:\wordpress\themes\translated\suffusion/functions/actions.php:1097
+#: d:\wordpress\themes\translated\suffusion/functions/actions.php:1149
+#: d:\wordpress\themes\translated\suffusion/functions/filters.php:220
+#, php-format
+msgid "Page %1$s of %2$s"
+msgstr "Side %1$s af %2$s"
+
+#: d:\wordpress\themes\translated\suffusion/functions/actions.php:1110
+#: d:\wordpress\themes\translated\suffusion/functions/actions.php:1121
+#: d:\wordpress\themes\translated\suffusion/functions/actions.php:1162
+#: d:\wordpress\themes\translated\suffusion/functions/actions.php:1173
+msgid "Older Entries"
+msgstr "Ældre indlæg"
+
+#: d:\wordpress\themes\translated\suffusion/functions/actions.php:1111
+#: d:\wordpress\themes\translated\suffusion/functions/actions.php:1122
+#: d:\wordpress\themes\translated\suffusion/functions/actions.php:1163
+#: d:\wordpress\themes\translated\suffusion/functions/actions.php:1174
+msgid "Newer Entries"
+msgstr "Nyere indlæg"
+
+#: d:\wordpress\themes\translated\suffusion/functions/actions.php:1297
+#: d:\wordpress\themes\translated\suffusion/functions/actions.php:1333
+msgid "Edit"
+msgstr "Redigér"
+
+#: d:\wordpress\themes\translated\suffusion/functions/actions.php:1450
+#, php-format
+msgid "Copyright (c) %1$s"
+msgstr "Copyright &copy; %1$s"
+
+#: d:\wordpress\themes\translated\suffusion/functions/actions.php:1558
+msgid "Resume"
+msgstr "Genoptag"
+
+#: d:\wordpress\themes\translated\suffusion/functions/filters.php:51
+msgid "Pages:"
+msgstr "Sider:"
+
+#: d:\wordpress\themes\translated\suffusion/functions/filters.php:185
+msgid "Older Comments"
+msgstr "Ældre kommentarer"
+
+#: d:\wordpress\themes\translated\suffusion/functions/filters.php:186
+msgid "Newer Comments"
+msgstr "Nyere kommentarer"
+
+#: d:\wordpress\themes\translated\suffusion/functions/filters.php:190
+#, php-format
+msgid "Older %1$s"
+msgstr "Ældre %1$s"
+
+#: d:\wordpress\themes\translated\suffusion/functions/filters.php:191
+#, php-format
+msgid "Newer %1$s"
+msgstr "Nyere %1$s"
+
+#: d:\wordpress\themes\translated\suffusion/functions/shortcodes.php:161
+msgid "Register"
+msgstr "Registrér"
+
+#: d:\wordpress\themes\translated\suffusion/functions/shortcodes.php:165
+msgid "Site Admin"
+msgstr "Site-admin"
+
+#: d:\wordpress\themes\translated\suffusion/layouts/template-missing.php:12
+msgid "Nothing Found"
+msgstr "Intet fundet"
+
+#: d:\wordpress\themes\translated\suffusion/layouts/template-missing.php:14
+msgid "Please try another search."
+msgstr "Vil du prøve en anden søgning?"
+
+#: d:\wordpress\themes\translated\suffusion/layouts/template-missing.php:22
+#: d:\wordpress\themes\translated\suffusion/now-reading/single.php:118
+msgid "Not Found"
+msgstr "Ikke fundet"
+
+#: d:\wordpress\themes\translated\suffusion/layouts/template-missing.php:24
+#: d:\wordpress\themes\translated\suffusion/now-reading/single.php:120
+msgid "Sorry, but you are looking for something that isn't here"
+msgstr "Beklager, men du leder efter noget, som ikke er her."
+
+#: d:\wordpress\themes\translated\suffusion/now-reading/author.php:25
+#: d:\wordpress\themes\translated\suffusion/now-reading/library.php:29
+#: d:\wordpress\themes\translated\suffusion/now-reading/search.php:23
+#: d:\wordpress\themes\translated\suffusion/now-reading/single.php:45
+#: d:\wordpress\themes\translated\suffusion/now-reading/tag.php:25
+msgid "Manage Books"
+msgstr "Håndtér bøger"
+
+#: d:\wordpress\themes\translated\suffusion/widgets/suffusion-category-posts.php:13
+msgid "A widget for displaying posts in a category. You can use this to selectively display posts."
+msgstr "Widget til at vise indlæg i en kategori. Du kan bruge denne til at vise udvalgte indlæg."
+
+#: d:\wordpress\themes\translated\suffusion/widgets/suffusion-category-posts.php:16
+msgid "Category Posts"
+msgstr "Kategori-indlæg"
+
+#: d:\wordpress\themes\translated\suffusion/widgets/suffusion-category-posts.php:115
+msgid "<p>This widget lets you display the latest posts from a category.</p>"
+msgstr "<p>Denne widget lader dig vise de nyeste indlæg fra en kategori.</p>"
+
+#: d:\wordpress\themes\translated\suffusion/widgets/suffusion-category-posts.php:119
+#: d:\wordpress\themes\translated\suffusion/widgets/suffusion-featured-posts.php:53
+msgid "Title:"
+msgstr "Titel:"
+
+#: d:\wordpress\themes\translated\suffusion/widgets/suffusion-category-posts.php:121
+msgid "This will default to the name of the selected category if left blank"
+msgstr "Hvis feltet ikke udfyldes, bruges den valgte kategoris navn som standard"
+
+#: d:\wordpress\themes\translated\suffusion/widgets/suffusion-category-posts.php:125
+msgid "Select category to show:"
+msgstr "Vælg kategori at vise:"
+
+#: d:\wordpress\themes\translated\suffusion/widgets/suffusion-category-posts.php:134
+msgid "Posts from the selected category will show in the widget"
+msgstr "Indlæg fra den valgte kategori vises i widgetten"
+
+#: d:\wordpress\themes\translated\suffusion/widgets/suffusion-category-posts.php:138
+msgid "Number of posts to display:"
+msgstr "Antal indlæg, der skal vises:"
+
+#: d:\wordpress\themes\translated\suffusion/widgets/suffusion-category-posts.php:151
+msgid "Post display style:"
+msgstr "Style for visning af indlæg:"
+
+#: d:\wordpress\themes\translated\suffusion/widgets/suffusion-category-posts.php:154
+msgid "Underline upon hover (sidebar-style)"
+msgstr "Understreg når mus er over (sidepanel-style)"
+
+#: d:\wordpress\themes\translated\suffusion/widgets/suffusion-category-posts.php:155
+msgid "Box upon hover (magazine-style)"
+msgstr "Indram når mus er over (magasin-stil)"
+
+#: d:\wordpress\themes\translated\suffusion/widgets/suffusion-category-posts.php:164
+#: d:\wordpress\themes\translated\suffusion/widgets/suffusion-category-posts.php:189
+msgid "You can choose to display an icon for the category based on the Category Icons plugin, or a custom image"
+msgstr "Du kan vælge at vise enten et ikon for kategorien, baseret på Category Icons-pluginnet, eller dit eget billede"
+
+#: d:\wordpress\themes\translated\suffusion/widgets/suffusion-category-posts.php:168
+msgid "Text for \"All Posts\":"
+msgstr "Tekst for \"Alle indlæg\":"
+
+#: d:\wordpress\themes\translated\suffusion/widgets/suffusion-category-posts.php:170
+msgid "The text you enter here will be the displayed in the button for \"All Posts\". If you leave this field blank the button will not be shown."
+msgstr "Teksten, du indtaster her, vises på knappen for \"Alle indlæg\". Hvis du intet indtaster, vises knappen ikke."
+
+#: d:\wordpress\themes\translated\suffusion/widgets/suffusion-category-posts.php:175
+msgid "Category Icon:"
+msgstr "Kategori-ikon:"
+
+#: d:\wordpress\themes\translated\suffusion/widgets/suffusion-category-posts.php:178
+msgid "No category icon"
+msgstr "Ingen kategori-ikon"
+
+#: d:\wordpress\themes\translated\suffusion/widgets/suffusion-category-posts.php:179
+msgid "Use Category Icons Plugin"
+msgstr "Brug Category Icons-pluginnet"
+
+#: d:\wordpress\themes\translated\suffusion/widgets/suffusion-category-posts.php:180
+msgid "Use custom image"
+msgstr "Brug eget billede"
+
+#: d:\wordpress\themes\translated\suffusion/widgets/suffusion-category-posts.php:193
+msgid "Category icon custom image link:"
+msgstr "Link til eget billede for kategori-ikon:"
+
+#: d:\wordpress\themes\translated\suffusion/widgets/suffusion-category-posts.php:195
+msgid "If you have chosen to use a custom image in the previous option, please enter the complete URL of the category icon here, including http://"
+msgstr "Hvis du har valgt at bruge dit eget billede i den forrige indstilling, skal du indtaste den fulde URL til kategori-ikonet her, inkl. http://"
+
+#: d:\wordpress\themes\translated\suffusion/widgets/suffusion-category-posts.php:199
+msgid "Set the height for the category icon:"
+msgstr "Sæt højden for kategori-ikonen:"
+
+#: d:\wordpress\themes\translated\suffusion/widgets/suffusion-category-posts.php:203
+msgid "The image you have picked will be scaled to this height."
+msgstr "Billedet, du har valgt, vil blive skaleret til denne højde."
+
+#: d:\wordpress\themes\translated\suffusion/widgets/suffusion-category-posts.php:207
+msgid "Set the width for the category icon:"
+msgstr "Sæt bredden for kategori-ikonen:"
+
+#: d:\wordpress\themes\translated\suffusion/widgets/suffusion-category-posts.php:211
+msgid "The image you have picked will be scaled to this width."
+msgstr "Billedet, du har valgt, vil blive skaleret til denne bredde."
+
+#: d:\wordpress\themes\translated\suffusion/widgets/suffusion-featured-posts.php:13
+msgid "A widget for displaying featured posts."
+msgstr "Widget, der viser fremhævede indlæg (\"featured posts\")."
+
+#: d:\wordpress\themes\translated\suffusion/widgets/suffusion-featured-posts.php:15
+msgid "Featured Content"
+msgstr "Fremhævet (featured) indhold"
+
+#: d:\wordpress\themes\translated\suffusion/widgets/suffusion-featured-posts.php:50
+msgid "<p>This widget displays a featured posts slider.</p>"
+msgstr "<p>Denne widget viser en skyder med fremhævede indlæg.</p>"
+
+#: d:\wordpress\themes\translated\suffusion/widgets/suffusion-featured-posts.php:58
+msgid "Maximum number of posts / pages to display:"
+msgstr "Max antal indlæg/sider, der skal vises:"
+
+#: d:\wordpress\themes\translated\suffusion/widgets/suffusion-featured-posts.php:72
+msgid "Include sticky posts"
+msgstr "Medtag klistrede indlæg"
+
+#: d:\wordpress\themes\translated\suffusion/widgets/suffusion-featured-posts.php:77
+msgid "Include latest posts"
+msgstr "Medtag nye indlæg"
+
+#: d:\wordpress\themes\translated\suffusion/widgets/suffusion-featured-posts.php:81
+msgid "Number of \"Latest Posts\":"
+msgstr "Antal Nye indlæg, der skal vises:"
+
+#: d:\wordpress\themes\translated\suffusion/widgets/suffusion-featured-posts.php:91
+msgid "If you are including latest posts and you select 5 here, the latest 5 posts will be included in the featured content. If this number is higher than the maximum number of posts, this setting will be ignored"
+msgstr "Hvis du medtager nye indlæg og du vælger 5 her, vil de 5 nyeste indlæg blive medtaget i fremhævede indlæg. Hvis dette tal er højere end max antal indlæg, vil denne indstilling blive ignoreret."
+
+#: d:\wordpress\themes\translated\suffusion/widgets/suffusion-featured-posts.php:95
+msgid "Include categories:"
+msgstr "Medtag kategorier:"
+
+#: d:\wordpress\themes\translated\suffusion/widgets/suffusion-featured-posts.php:97
+msgid "Fill in a comma-separated list of category ids. E.g. 3,8,17"
+msgstr "Indtast en kommasepareret liste af kategori-id&#39;er. Fx 3,8,17"
+
+#: d:\wordpress\themes\translated\suffusion/widgets/suffusion-featured-posts.php:101
+msgid "Include posts:"
+msgstr "Medtag indlæg:"
+
+#: d:\wordpress\themes\translated\suffusion/widgets/suffusion-featured-posts.php:103
+msgid "Fill in a comma-separated list of post ids. E.g. 7,9,13"
+msgstr "Indtast en kommasepareret liste af indlægsid&#39;er. Fx 3,8,17"
+
+#: d:\wordpress\themes\translated\suffusion/widgets/suffusion-featured-posts.php:107
+msgid "Include pages:"
+msgstr "Medtag sider:"
+
+#: d:\wordpress\themes\translated\suffusion/widgets/suffusion-featured-posts.php:109
+msgid "Fill in a comma-separated list of page ids. E.g. 7,9,13"
+msgstr "Indtast en kommasepareret liste af side-id&#39;er. Fx 3,8,17"
+
+#: d:\wordpress\themes\translated\suffusion/widgets/suffusion-featured-posts.php:113
+msgid "Featured content transition effect:"
+msgstr "Overgangseffekt for fremhævede indlæg:"
+
+#: d:\wordpress\themes\translated\suffusion/widgets/suffusion-featured-posts.php:116
+msgid "Fade In"
+msgstr "Ton ind"
+
+#: d:\wordpress\themes\translated\suffusion/widgets/suffusion-featured-posts.php:116
+msgid "Scroll Up"
+msgstr "Scroll op"
+
+#: d:\wordpress\themes\translated\suffusion/widgets/suffusion-featured-posts.php:116
+msgid "Scroll Down"
+msgstr "Scroll ned"
+
+#: d:\wordpress\themes\translated\suffusion/widgets/suffusion-featured-posts.php:117
+msgid "Scroll Left"
+msgstr "Scroll venstre"
+
+#: d:\wordpress\themes\translated\suffusion/widgets/suffusion-featured-posts.php:117
+msgid "Scroll Right"
+msgstr "Scroll højre"
+
+#: d:\wordpress\themes\translated\suffusion/widgets/suffusion-featured-posts.php:117
+msgid "Scroll Horizontally"
+msgstr "Scroll horisontalt"
+
+#: d:\wordpress\themes\translated\suffusion/widgets/suffusion-featured-posts.php:118
+msgid "Scroll Vertically"
+msgstr "Scroll vertikalt"
+
+#: d:\wordpress\themes\translated\suffusion/widgets/suffusion-featured-posts.php:118
+msgid "Slide in and back horizontally"
+msgstr "Glid ind og bagud horisontalt"
+
+#: d:\wordpress\themes\translated\suffusion/widgets/suffusion-featured-posts.php:119
+msgid "Slide in and back vertically"
+msgstr "Glid ind og bagud vertikalt"
+
+#: d:\wordpress\themes\translated\suffusion/widgets/suffusion-featured-posts.php:119
+msgid "Turn Upwards"
+msgstr "Drej opad"
+
+#: d:\wordpress\themes\translated\suffusion/widgets/suffusion-featured-posts.php:119
+msgid "Turn Downwards"
+msgstr "Drej nedad"
+
+#: d:\wordpress\themes\translated\suffusion/widgets/suffusion-featured-posts.php:120
+msgid "Turn Leftwards"
+msgstr "Drej mod venstre"
+
+#: d:\wordpress\themes\translated\suffusion/widgets/suffusion-featured-posts.php:120
+msgid "Turn Rightwards"
+msgstr "Drej mod højre"
+
+#: d:\wordpress\themes\translated\suffusion/widgets/suffusion-featured-posts.php:120
+msgid "Zoom"
+msgstr "Zoom"
+
+#: d:\wordpress\themes\translated\suffusion/widgets/suffusion-featured-posts.php:121
+msgid "Zoom and Fade"
+msgstr "Zoom og ton ud"
+
+#: d:\wordpress\themes\translated\suffusion/widgets/suffusion-featured-posts.php:121
+msgid "Vertical Blinds"
+msgstr "Vertikale persienner"
+
+#: d:\wordpress\themes\translated\suffusion/widgets/suffusion-featured-posts.php:121
+msgid "Horizontal Blinds"
+msgstr "Horisontale persienner"
+
+#: d:\wordpress\themes\translated\suffusion/widgets/suffusion-featured-posts.php:122
+msgid "Diagonal Blinds"
+msgstr "Diagonale persienner"
+
+#: d:\wordpress\themes\translated\suffusion/widgets/suffusion-featured-posts.php:122
+msgid "Grow horizontally from center"
+msgstr "Voks horisontalt fra midten"
+
+#: d:\wordpress\themes\translated\suffusion/widgets/suffusion-featured-posts.php:123
+msgid "Grow vertically from center"
+msgstr "Voks vertikalt fra midten"
+
+#: d:\wordpress\themes\translated\suffusion/widgets/suffusion-featured-posts.php:123
+msgid "Squeeze in both edges horizontally"
+msgstr "Pres begge ender sammen horisontalt"
+
+#: d:\wordpress\themes\translated\suffusion/widgets/suffusion-featured-posts.php:124
+msgid "Squeeze in both edges vertically"
+msgstr "Pres begge ender sammen vertikalt"
+
+#: d:\wordpress\themes\translated\suffusion/widgets/suffusion-featured-posts.php:124
+msgid "Current post is covered by next post"
+msgstr "Aktuelle indlæg er dækket af næste indlæg"
+
+#: d:\wordpress\themes\translated\suffusion/widgets/suffusion-featured-posts.php:125
+msgid "Current post moves off next post"
+msgstr "Aktuelle indlæg flytter sig væk fra næste indlæg"
+
+#: d:\wordpress\themes\translated\suffusion/widgets/suffusion-featured-posts.php:125
+msgid "Wipe"
+msgstr "Ryd"
+
+#: d:\wordpress\themes\translated\suffusion/widgets/suffusion-featured-posts.php:137
+#: d:\wordpress\themes\translated\suffusion/widgets/suffusion-featured-posts.php:143
+msgid "Time for each post display:"
+msgstr "Vis tidspunkt for hvert indlæg:"
+
+#: d:\wordpress\themes\translated\suffusion/widgets/suffusion-featured-posts.php:139
+msgid "Enter time in milliseconds. E.g. 4000"
+msgstr "Indtast tid i millisekunder. Fx 4000"
+
+#: d:\wordpress\themes\translated\suffusion/widgets/suffusion-featured-posts.php:145
+msgid "Enter time in milliseconds. E.g. 1000"
+msgstr "Indtast tid i millisekunder. Fx 1000"
+
+#: d:\wordpress\themes\translated\suffusion/widgets/suffusion-featured-posts.php:151
+msgid "Height of featured content section:"
+msgstr "Højde på sektion med fremhævede indlæg:"
+
+#: d:\wordpress\themes\translated\suffusion/widgets/suffusion-featured-posts.php:153
+msgid "E.g. 250px"
+msgstr "Fx 250px"
+
+#: d:\wordpress\themes\translated\suffusion/widgets/suffusion-featured-posts.php:158
+msgid "Enable custom image size for featured images"
+msgstr "Aktivér brugerdefineret billedstørrelse for fremhævede (\"featured\") billeder"
+
+#: d:\wordpress\themes\translated\suffusion/widgets/suffusion-featured-posts.php:162
+msgid "Custom image height:"
+msgstr "Brugerdefineret billedhøjde:"
+
+#: d:\wordpress\themes\translated\suffusion/widgets/suffusion-featured-posts.php:164
+#: d:\wordpress\themes\translated\suffusion/widgets/suffusion-featured-posts.php:170
+msgid "This is applicable only if custom image size is enabled"
+msgstr "Denne anvendes kun, hvis brugerdefineret billedstørrelse er aktiveret"
+
+#: d:\wordpress\themes\translated\suffusion/widgets/suffusion-featured-posts.php:168
+msgid "Custom image width:"
+msgstr "Brugerdefineret billedbredde:"
+
+#: d:\wordpress\themes\translated\suffusion/widgets/suffusion-featured-posts.php:174
+msgid "Text display options:"
+msgstr "Indstillinger for visning af tekst:"
+
+#: d:\wordpress\themes\translated\suffusion/widgets/suffusion-featured-posts.php:177
+msgid "Show post title and excerpt"
+msgstr "Vis indlægstitel og uddrag"
+
+#: d:\wordpress\themes\translated\suffusion/widgets/suffusion-featured-posts.php:177
+msgid "Show post title only (no excerpt)"
+msgstr "Vis kun indlægstitel (intet uddrag)"
+
+#: d:\wordpress\themes\translated\suffusion/widgets/suffusion-featured-posts.php:178
+msgid "Show excerpt only (no title)"
+msgstr "Vis kun uddrag (ingen titel)"
+
+#: d:\wordpress\themes\translated\suffusion/widgets/suffusion-featured-posts.php:178
+msgid "Don't show any text"
+msgstr "Vis ingen tekst"
+
+#: d:\wordpress\themes\translated\suffusion/widgets/suffusion-featured-posts.php:189
+msgid "Position of the excerpt:"
+msgstr "Placering af uddrag:"
+
+#: d:\wordpress\themes\translated\suffusion/widgets/suffusion-featured-posts.php:192
+msgid "Top"
+msgstr "Top"
+
+#: d:\wordpress\themes\translated\suffusion/widgets/suffusion-featured-posts.php:192
+msgid "Bottom"
+msgstr "Bund"
+
+#: d:\wordpress\themes\translated\suffusion/widgets/suffusion-featured-posts.php:192
+msgid "Right"
+msgstr "Højre"
+
+#: d:\wordpress\themes\translated\suffusion/widgets/suffusion-featured-posts.php:192
+msgid "Left"
+msgstr "Venstre"
+
+#: d:\wordpress\themes\translated\suffusion/widgets/suffusion-featured-posts.php:193
+msgid "Alternate excerpt between top and bottom"
+msgstr "Uddrag skiftevist i top og i bund"
+
+#: d:\wordpress\themes\translated\suffusion/widgets/suffusion-featured-posts.php:193
+msgid "Alternate excerpt between left and right"
+msgstr "Uddrag skiftevist til venstre og til højre"
+
+#: d:\wordpress\themes\translated\suffusion/widgets/suffusion-featured-posts.php:194
+msgid "Rotate between the four positions"
+msgstr "Skift mellem de fire placeringer"
+
+#: d:\wordpress\themes\translated\suffusion/widgets/suffusion-featured-posts.php:205
+msgid "Width of excerpt section:"
+msgstr "Bredde på sektion med uddrag:"
+
+#: d:\wordpress\themes\translated\suffusion/widgets/suffusion-featured-posts.php:207
+msgid "This is only applicable if your excerpt is at the right or at the left of your featured posts."
+msgstr "Denne anvendes kun, hvis dit uddrag vises til højre eller til venstre i dine fremhævede (\"featured\") indlæg."
+
+#: d:\wordpress\themes\translated\suffusion/widgets/suffusion-featured-posts.php:211
+msgid "Excerpt background color:"
+msgstr "Baggrundsfarve for uddrag:"
+
+#: d:\wordpress\themes\translated\suffusion/widgets/suffusion-featured-posts.php:216
+msgid "Excerpt title color:"
+msgstr "Farve for uddragstitel:"
+
+#: d:\wordpress\themes\translated\suffusion/widgets/suffusion-featured-posts.php:221
+msgid "Excerpt font color:"
+msgstr "Farve for uddragsskrifttype:"
+
+#: d:\wordpress\themes\translated\suffusion/widgets/suffusion-featured-posts.php:227
+msgid "Show a numbered post index"
+msgstr "Vis et nummereret indlægsindeks"
+
+#: d:\wordpress\themes\translated\suffusion/widgets/suffusion-featured-posts.php:232
+msgid "Show Previous, Pause and Next buttons"
+msgstr "Vis knapper for Forrige, Pause og Næste"
+
+#: d:\wordpress\themes\translated\suffusion/widgets/suffusion-featured-posts.php:236
+msgid "The following three settings only apply if you show the previous, pause and next buttons:"
+msgstr "De følgende tre indstillinger anvendes kun, hvis du viser knapper for Forrige, Pause og Næste:"
+
+#: d:\wordpress\themes\translated\suffusion/widgets/suffusion-featured-posts.php:240
+msgid "Text for \"Previous Post\":"
+msgstr "Tekst for \"Forrige indlæg\":"
+
+#: d:\wordpress\themes\translated\suffusion/widgets/suffusion-featured-posts.php:245
+msgid "Text for \"Pause\":"
+msgstr "Tekst for \"Pause\":"
+
+#: d:\wordpress\themes\translated\suffusion/widgets/suffusion-featured-posts.php:250
+msgid "Text for \"Next Post\":"
+msgstr "Tekst for \"Næste indlæg\":"
+
+#: d:\wordpress\themes\translated\suffusion/widgets/suffusion-meta.php:11
+msgid "Log in/out, admin, feed and WordPress links"
+msgstr "Log ind/ud, admin, feed og WordPress-links"
+
+#: d:\wordpress\themes\translated\suffusion/widgets/suffusion-search.php:13
+msgid "A search form for your blog"
+msgstr "Et søgefelt til din blog"
+
+#: d:\wordpress\themes\translated\suffusion/widgets/suffusion-subscription.php:16
+msgid "This widget lets visitors of your blog subscribe to it and follow you on popular social networks like Digg, FaceBook etc. Additionally they can subscribe to your blog by email, for which you need a FeedBurner account."
+msgstr "Denne widget lader din blogs besøgende abonnere på den og følge den på populære sociale netværk som Digg, Facebook m.fl. De kan også abonnere på din blogindlæg via email; det kræver, at du har en FeedBurner-konto."
+
+#: d:\wordpress\themes\translated\suffusion/widgets/suffusion-subscription.php:19
+#: d:\wordpress\themes\translated\suffusion/widgets/suffusion-subscription.php:51
+msgid "Follow Me"
+msgstr "Følg mig"
+
+#: d:\wordpress\themes\translated\suffusion/widgets/suffusion-subscription.php:52
+msgid "your-feed-name"
+msgstr "dit-feed-navn"
+
+#: d:\wordpress\themes\translated\suffusion/widgets/suffusion-subscription.php:54
+msgid "Enter email address"
+msgstr "Indtast e-mail-adresse"
+
+#: d:\wordpress\themes\translated\suffusion/widgets/suffusion-subscription.php:55
+msgid "Subscribe"
+msgstr "Abonnér"
+
+#: d:\wordpress\themes\translated\suffusion/widgets/suffusion-subscription.php:73
+msgid "FeedBurner Feed:"
+msgstr "FeedBurner-feed:"
+
+#: d:\wordpress\themes\translated\suffusion/widgets/suffusion-subscription.php:75
+#, php-format
+msgid "Enter your %1$s feed name. If your feed address is http://feeds.feedburner.com/my_feed_name, your feed name is my_feed_name"
+msgstr "Indtast dit %1$s-feed-navn. Hvis din feed-adresse er http://feeds.feedburner.com/mit_feed_navn, er dit feed-navn mit_feed_navn"
+
+#: d:\wordpress\themes\translated\suffusion/widgets/suffusion-subscription.php:80
+msgid "Show Email Subscription"
+msgstr "Vis e-mail-abonnementstilmelding"
+
+#: d:\wordpress\themes\translated\suffusion/widgets/suffusion-subscription.php:81
+msgid "Will show a text box for visitors to enter an email address for subscription"
+msgstr "Viser en tekstboks, hvori besøgende kan indtaste en e-mail-adresse og tegne abonnement på bloggen"
+
+#: d:\wordpress\themes\translated\suffusion/widgets/suffusion-subscription.php:85
+msgid "Email Subscription Box Default Text:"
+msgstr "Standardtekst for e-mail-abonnementstilmeldingsbox:"
+
+#: d:\wordpress\themes\translated\suffusion/widgets/suffusion-subscription.php:87
+msgid "This text will be shown in the subscription box by default. When the visitor starts entering the email address the text will disappear."
+msgstr "Denne tekst vises som standard i abonnementstilmeldingsboksen. Når den besøgende begynder at indtaste sin e-mail-adresse, forsvinder teksten."
+
+#: d:\wordpress\themes\translated\suffusion/widgets/suffusion-subscription.php:91
+msgid "Email Subscription Button Text:"
+msgstr "Knap-tekst for e-mail-abonnementstilmeldingsbox:"
+
+#: d:\wordpress\themes\translated\suffusion/widgets/suffusion-subscription.php:93
+msgid "This text will be shown in the subscription button near the email field"
+msgstr "Denne tekst vises på abonnementstilmeldingsknappen i nærheden af e-mail-feltet"
+
+#: d:\wordpress\themes\translated\suffusion/widgets/suffusion-subscription.php:98
+msgid "Show FeedBurner reader count"
+msgstr "Vis antal FeedBurner-læsere"
+
+#: d:\wordpress\themes\translated\suffusion/widgets/suffusion-subscription.php:107
+#, php-format
+msgid "Show %1$s icon"
+msgstr "Vis %1$s-ikon"
+
+#: d:\wordpress\themes\translated\suffusion/widgets/suffusion-subscription.php:118
+#, php-format
+msgid "Enter %1$s account name:"
+msgstr "Indtast %1$s-kontonavn:"
+
+#: d:\wordpress\themes\translated\suffusion/widgets/suffusion-subscription.php:121
+#, php-format
+msgid "Enter your full %1$s URL:"
+msgstr "Indtast din fulde %1$s-URL:"
+
+#: d:\wordpress\themes\translated\suffusion/widgets/suffusion-subscription.php:140
+#, php-format
+msgid "Select your %1$s icon"
+msgstr "Vælg din %1$s-ikon"
+
+#: d:\wordpress\themes\translated\suffusion/widgets/suffusion-subscription.php:153
+msgid "Select your icon size"
+msgstr "Vælg din ikonstørrelse"
+
+#: d:\wordpress\themes\translated\suffusion/widgets/suffusion-translator.php:12
+msgid "A widget to let people use Google Translator to translate your site"
+msgstr "En widget, der lader folk oversætte din site vha. <span title=\"Google Translator\">Google Oversætter</span>"
+
+#: d:\wordpress\themes\translated\suffusion/widgets/suffusion-translator.php:13
+msgid "Google Translator"
+msgstr "<span title=\"Google Translator\">Google Oversætter</span>"
+
+#: d:\wordpress\themes\translated\suffusion/widgets/suffusion-translator.php:103
+msgid "Translate this Page"
+msgstr "Oversæt denne side"
+
+#: d:\wordpress\themes\translated\suffusion/widgets/suffusion-translator.php:116
+msgid "Source Language:"
+msgstr "Originalsprog:"
+
+#: d:\wordpress\themes\translated\suffusion/widgets/suffusion-translator.php:122
+msgid "What language is your page in?"
+msgstr "Hvilket sprog er din side på?"
+
+#: d:\wordpress\themes\translated\suffusion/widgets/suffusion-twitter.php:12
+msgid "A widget to enable people to follow you on Twitter"
+msgstr "En widget, der giver folk mulighed for at følge dig på Twitter"
+
+#: d:\wordpress\themes\translated\suffusion/widgets/suffusion-twitter.php:15
+msgid "Twitter"
+msgstr "Twitter"
+
+#: d:\wordpress\themes\translated\suffusion/widgets/suffusion-twitter.php:112
+msgid "your-user-name"
+msgstr "dit-brugernavn"
+
+#: d:\wordpress\themes\translated\suffusion/widgets/suffusion-twitter.php:113
+msgid "My Tweets"
+msgstr "Mine tweets!"
+
+#: d:\wordpress\themes\translated\suffusion/widgets/suffusion-twitter.php:114
+msgid "Follow me on Twitter"
+msgstr "Følg mig på Twitter"
+
+#: d:\wordpress\themes\translated\suffusion/widgets/suffusion-twitter.php:131
+msgid "<p>This widget lets you set up a link to allow people to follow you on Twitter. You can additionally show your latest feeds.</p>"
+msgstr "<p>Denne widget lader dig konfigurere et link, som giver folk mulighed for at følge dig på Twitter. Hvis du vil, kan du også vise dine nyeste feeds.</p>"
+
+#: d:\wordpress\themes\translated\suffusion/widgets/suffusion-twitter.php:132
+msgid "Recommended settings:"
+msgstr "Anbefalede indstillinger:"
+
+#: d:\wordpress\themes\translated\suffusion/widgets/suffusion-twitter.php:134
+msgid "If you are placing this widget in the \"Right Header Widgets\":"
+msgstr "Hvis du placerer denne widget i \"Right Header Widgets\":"
+
+#: d:\wordpress\themes\translated\suffusion/widgets/suffusion-twitter.php:136
+#: d:\wordpress\themes\translated\suffusion/widgets/suffusion-twitter.php:144
+msgid "Show icon"
+msgstr "Vis ikon"
+
+#: d:\wordpress\themes\translated\suffusion/widgets/suffusion-twitter.php:137
+msgid "Don't show tagline"
+msgstr "Vis ikke tagline (slogan)"
+
+#: d:\wordpress\themes\translated\suffusion/widgets/suffusion-twitter.php:138
+msgid "Don't show feeds"
+msgstr "Vis ikke feeds"
+
+#: d:\wordpress\themes\translated\suffusion/widgets/suffusion-twitter.php:142
+msgid "If you are placing this widget in the sidebars or in \"Widget Area below Header\" or \"Widget Area below Footer\":"
+msgstr "Hvis du placerer denne widget i sidepanelerne eller i \"Widget-området under headeren\" eller i \"Widget-området under footeren\":"
+
+#: d:\wordpress\themes\translated\suffusion/widgets/suffusion-twitter.php:145
+msgid "Show tagline"
+msgstr "Vis tagline (slogan)"
+
+#: d:\wordpress\themes\translated\suffusion/widgets/suffusion-twitter.php:146
+msgid "Show feeds"
+msgstr "Vis feeds"
+
+#: d:\wordpress\themes\translated\suffusion/widgets/suffusion-twitter.php:154
+msgid "User:"
+msgstr "Bruger:"
+
+#: d:\wordpress\themes\translated\suffusion/widgets/suffusion-twitter.php:156
+msgid "This is the user who will be followed"
+msgstr "Dette er brugeren, som vil blive \"fulgt\""
+
+#: d:\wordpress\themes\translated\suffusion/widgets/suffusion-twitter.php:161
+msgid "Show Twitter Icon"
+msgstr "Vis Twitter-ikon"
+
+#: d:\wordpress\themes\translated\suffusion/widgets/suffusion-twitter.php:162
+msgid "Will show the selected Twitter icon"
+msgstr "Viser den valgte Twitter-ikon"
+
+#: d:\wordpress\themes\translated\suffusion/widgets/suffusion-twitter.php:167
+msgid "Show a Tagline"
+msgstr "Vis tagline (slogan)"
+
+#: d:\wordpress\themes\translated\suffusion/widgets/suffusion-twitter.php:168
+msgid "Will show up near the Twitter icon"
+msgstr "Vises nær Twitter-ikonet"
+
+#: d:\wordpress\themes\translated\suffusion/widgets/suffusion-twitter.php:173
+msgid "Show my Tweets"
+msgstr "Vis mine Tweets"
+
+#: d:\wordpress\themes\translated\suffusion/widgets/suffusion-twitter.php:174
+msgid "Will show your latest tweets"
+msgstr "Viser dine seneste tweets"
+
+#: d:\wordpress\themes\translated\suffusion/widgets/suffusion-twitter.php:183
+msgid "Tagline:"
+msgstr "Tagline:"
+
+#: d:\wordpress\themes\translated\suffusion/widgets/suffusion-twitter.php:188
+msgid "Number of Tweets to display:"
+msgstr "Antal Tweets, der skal vises:"
+
+#: d:\wordpress\themes\translated\suffusion/widgets/suffusion-twitter.php:203
+msgid "Select your Twitter icon:"
+msgstr "Vælg din Twitter-ikon:"
+
+#: d:\wordpress\themes\translated\suffusion/widgets/suffusion-twitter.php:214
+msgid "Set the height for the Twitter icon:"
+msgstr "Sæt højden for Twitter-ikonen:"
+
+#: d:\wordpress\themes\translated\suffusion/widgets/suffusion-twitter.php:218
+msgid "Recommended sizes: 32px if the widget is being added to the \"Right Header Widgets\" area, whatever you like otherwise. Note that making the image too large will cause loss of picture quality."
+msgstr "Anbefalede størrelser: 32pix hvis widgetten tilføjes til \"Right Header Widgets\"-området; ellers hvad du synes. Bemærk, at billedkvaliteten bliver ringere, hvis du gør billedet for stort."
+
+#~ msgid "<acronym title=\"Uniform Resource Identifier\">URI</acronym>"
+#~ msgstr "<acronym title=\"Uniform Resource Identifier\">URI</acronym>"
+
+#~ msgid "No Comments"
+#~ msgstr "Ingen kommentarer"
+
+#~ msgid "One Comment"
+#~ msgstr "Én kommentar"
+
+#~ msgid "% Comments"
+#~ msgstr "% kommentarer"
+
+#~ msgid "Your comment is awaiting moderation"
+#~ msgstr "Din kommentar afventer godkendelse"
+
+#~ msgid "Comments are closed"
+#~ msgstr "Kommentarer er lukket"
+
+#~ msgid "You must be logged in to post a comment"
+#~ msgstr "Du skal være logget ind for at skrive en kommentar."
+
+#~ msgid "Mail"
+#~ msgstr "Mail"
+
+#~ msgid "will not be published"
+#~ msgstr "vil ikke blive offentliggjort"
+
+#~ msgid "Website (OpenID supported)"
+#~ msgstr "Website (OpenID-understøttet)"
+
+#~ msgid "Arbitrary text or HTML"
+#~ msgstr "Vilkårlig tekst eller HTML"
+
+#~ msgid "Text"
+#~ msgstr "Tekst"
+
+#~ msgid "Don't show outer border"
+#~ msgstr "Vis ikke ydre ramme"
+
+#~ msgid "Don't show title"
+#~ msgstr "Vis ikke titel"
+
+#~ msgid "Show outer border"
+#~ msgstr "Vis ydre ramme"
+
+#~ msgid "Show title"
+#~ msgstr "Vis titel"
+
+#~ msgid "Show Outer Border"
+#~ msgstr "Vis ydre ramme"
+
+#~ msgid "Creates a border around the widget"
+#~ msgstr "Opretter en ramme omkring widgetten"
+
+#~ msgid "Show Title"
+#~ msgstr "Vis titel"
+
+#~ msgid "Shows the title of the widget"
+#~ msgstr "Vis titlen på widgetten"
+
+#~ msgid "Tags"
+#~ msgstr "Tags"
+
+#~ msgid "Title"
+#~ msgstr "Titel"
+
+#~ msgid "Content"
+#~ msgstr "Indhold"
+
+#~ msgid "Post it"
+#~ msgstr "Udgiv det!"
+
+#~ msgid "1 Comment"
+#~ msgstr "Én kommentar"
+
+#~ msgid "Responses"
+#~ msgstr "Kommentarer"
+
+#~ msgid "&laquo; Older Comments"
+#~ msgstr "&laquo; Ældre kommentarer"
+
+#~ msgid "Newer Comments &raquo;"
+#~ msgstr "Nyere kommentarer &raquo;"
