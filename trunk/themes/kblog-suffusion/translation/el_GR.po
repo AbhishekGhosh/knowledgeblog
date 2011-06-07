@@ -1,0 +1,1351 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Project-Id-Version: Suffusion\n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: 2010-11-27 11:28-0800\n"
+"Last-Translator: \n"
+"Language-Team: Aquoid\n"
+"MIME-Version: 1.0\n"
+
+#. Text in function
+#: suffusion/functions/actions.php:1360
+#: suffusion/functions/actions.php:2188
+#: suffusion/comments.php:26
+msgid "% Responses"
+msgstr "% Απαντήσεις"
+
+#. Text in function
+#: suffusion/comments.php:26
+msgid "%1$s to &#8220;%2$s&#8221;"
+msgstr ""
+
+#. Text in function
+#: suffusion/functions.php:352
+msgid "(required)"
+msgstr "(απαιτείται)"
+
+#. Text in function
+#: suffusion/functions/actions.php:1360
+#: suffusion/functions/actions.php:2188
+msgid "1 Response"
+msgstr "1 Απάντηση"
+
+#. Text in echo
+#: suffusion/widgets/suffusion-featured-posts.php:255
+msgid "<p>This widget displays a featured posts slider.</p>"
+msgstr "<p>Μονάδα (widget) που εμφανίζει κυλιόμενα τα featured άρθρα.</p>"
+
+#. Text in echo
+#: suffusion/widgets/suffusion-category-posts.php:215
+msgid "<p>This widget lets you display the latest posts from a category.</p>"
+msgstr "<p>Μονάδα (widget) που εμφανίζει τα πρόσφατα άρθρα μιας κατηγορίας.</p>"
+
+#. Text in function
+#: suffusion/widgets/suffusion-search.php:53
+msgid "A search form for your blog"
+msgstr "Μια φόρμα αναζήτησης για το ιστολόγιό σας"
+
+#. Text in function
+#: suffusion/widgets/suffusion-featured-posts.php:255
+msgid "A widget for displaying featured posts."
+msgstr "Μονάδα (widget) που εμφανίζει featured άρθρα."
+
+#. Text in function
+#: suffusion/widgets/suffusion-category-posts.php:215
+msgid "A widget for displaying posts in a category. You can use this to selectively display posts."
+msgstr "Μονάδα (widget) που εμφανίζει άρθρα μιας κατηγορίας. Χρήσιμο για επιλεκτική εμφάνιση άρθρων."
+
+#. Text in function
+#: suffusion/widgets/suffusion-twitter.php:222
+msgid "A widget to enable people to follow you on Twitter"
+msgstr "Μονάδα (wiidget) για να σας ακολουθούν στο Twitter"
+
+#. Text in function
+#: suffusion/widgets/suffusion-translator.php:125
+msgid "A widget to let people use Google Translator to translate your site"
+msgstr "Μονάδα (widget) μετάφρασης του site σας με χρήση του Google"
+
+#. Text in echo
+#: suffusion/functions/actions.php:1408
+#: suffusion/functions/actions.php:2188
+msgid "Add comments"
+msgstr "Υποβολή σχολίων"
+
+#. Text in function
+#: suffusion/widgets/suffusion-featured-posts.php:255
+msgid "Alternate excerpt between left and right"
+msgstr "Εναλλαγή θέσης του αποσπάσματος μεταξύ δεξιά και αριστερά"
+
+#. Text in function
+#: suffusion/widgets/suffusion-featured-posts.php:255
+msgid "Alternate excerpt between top and bottom"
+msgstr "Εναλλαγή θέσης του αποσπάσματος μεταξύ πάνω και κάτω"
+
+#. Text in function
+#: suffusion/functions/media.php:1
+msgid "Aperture"
+msgstr ""
+
+#. Text in echo
+#: suffusion/sidebar.php:47
+#: suffusion/functions.php:352
+msgid "Archives"
+msgstr "Αρχείο"
+
+#. Text in function
+#: suffusion/widgets/suffusion-featured-posts.php:255
+msgid "Bottom"
+msgstr "Κάτω"
+
+#. Text in function
+#: suffusion/widgets/suffusion-category-posts.php:215
+msgid "Box upon hover (magazine-style)"
+msgstr "Εμφάνιση πλαισίου στο πέρασμα του ποντικιού (διάταξη περιοδικού)"
+
+#. Text in function
+#: suffusion/functions/media.php:1
+msgid "Camera"
+msgstr ""
+
+#. Text in function
+#: suffusion/comments.php:158
+msgid "Cancel reply"
+msgstr ""
+
+#. Text in function
+#: suffusion/functions/media.php:1
+msgid "Caption"
+msgstr ""
+
+#. Text in echo
+#: suffusion/sidebar.php:36
+#: suffusion/functions.php:352
+msgid "Categories"
+msgstr "Κατηγορίες"
+
+#. Text in echo
+#: suffusion/widgets/suffusion-category-posts.php:175
+msgid "Category Icon:"
+msgstr "Εικονίδια Κατηγορίας: "
+
+#. Text in function
+#: suffusion/widgets/suffusion-category-posts.php:215
+msgid "Category Posts"
+msgstr "Άρθρα Κατηγορίας"
+
+#. Text in echo
+#: suffusion/widgets/suffusion-category-posts.php:193
+msgid "Category icon custom image link:"
+msgstr "Διεύθυνση προσαρμοσμένου εικονιδίου για την Κατηγορία: "
+
+#. Text in function
+#: suffusion/functions.php:352
+msgid "Comments"
+msgstr "Σχόλια"
+
+#. Text in echo
+#: suffusion/sidebar.php:76
+msgid "Comments (RSS)"
+msgstr "Σχόλια (RSS)"
+
+#. Text in echo
+#: suffusion/sidebar-tabs.php:65
+#: suffusion/widgets/suffusion-meta.php:27
+msgid "Comments <abbr title=\"Really Simple Syndication\">RSS</abbr>"
+msgstr "Σχόλια <abbr title=\"Really Simple Syndication\">RSS</abbr>"
+
+#. Text in function
+#: suffusion/functions/actions.php:919
+msgid "Continue reading"
+msgstr "Διαβάστε τη συνέχεια"
+
+#. Text in function
+#: suffusion/functions/media.php:1
+msgid "Copyright"
+msgstr ""
+
+#. Text in function
+#: suffusion/functions/actions.php:2188
+msgid "Copyright (c) %1$s"
+msgstr "Copyright (c) %1$s"
+
+#. Text in function
+#: suffusion/functions/media.php:1
+msgid "Credit"
+msgstr ""
+
+#. Text in function
+#: suffusion/widgets/suffusion-featured-posts.php:255
+msgid "Current post is covered by next post"
+msgstr "Αυτό το άρθρο καλύπεται από το επόμενο άρθρο"
+
+#. Text in function
+#: suffusion/widgets/suffusion-featured-posts.php:255
+msgid "Current post moves off next post"
+msgstr "Αυτό το άρθρο μετακινεί το επόμενο άρθρο"
+
+#. Text in function
+#: suffusion/functions.php:352
+msgid "Custom Tab 1"
+msgstr "Προσαρμογή 1ης Καρτέλας"
+
+#. Text in function
+#: suffusion/functions.php:352
+msgid "Custom Tab 10"
+msgstr "Προσαρμογή 10ης Καρτέλας"
+
+#. Text in function
+#: suffusion/functions.php:352
+msgid "Custom Tab 2"
+msgstr "Προσαρμογή 2ης Καρτέλας"
+
+#. Text in function
+#: suffusion/functions.php:352
+msgid "Custom Tab 3"
+msgstr "Προσαρμογή 3ης Καρτέλας"
+
+#. Text in function
+#: suffusion/functions.php:352
+msgid "Custom Tab 4"
+msgstr "Προσαρμογή 4ης Καρτέλας"
+
+#. Text in function
+#: suffusion/functions.php:352
+msgid "Custom Tab 5"
+msgstr "Προσαρμογή 5ης Καρτέλας"
+
+#. Text in function
+#: suffusion/functions.php:352
+msgid "Custom Tab 6"
+msgstr "Προσαρμογή 6ης Καρτέλας"
+
+#. Text in function
+#: suffusion/functions.php:352
+msgid "Custom Tab 7"
+msgstr "Προσαρμογή 7ης Καρτέλας"
+
+#. Text in function
+#: suffusion/functions.php:352
+msgid "Custom Tab 8"
+msgstr "Προσαρμογή 8ης Καρτέλας"
+
+#. Text in function
+#: suffusion/functions.php:352
+msgid "Custom Tab 9"
+msgstr "Προσαρμογή 9ης Καρτέλας"
+
+#. Text in echo
+#: suffusion/widgets/suffusion-featured-posts.php:162
+msgid "Custom image height:"
+msgstr "Προσαρμοσμένο ύψος εικόνας: "
+
+#. Text in echo
+#: suffusion/widgets/suffusion-featured-posts.php:168
+msgid "Custom image width:"
+msgstr "Προσαρμοσμένο πλάτος εικόνας: "
+
+#. Text in function
+#: suffusion/functions/media.php:1
+msgid "Date Taken"
+msgstr ""
+
+#. Text in function
+#: suffusion/widgets/suffusion-featured-posts.php:255
+msgid "Diagonal Blinds"
+msgstr "Διαγώνιες Περσίδες"
+
+#. Text in echo
+#: suffusion/functions.php:289
+msgid "Do not link to this page in the navigation bars"
+msgstr "Απολκεισμός σύνδεσμου προς αυτή τη σελίδα στις γραμμές πλοήγησης"
+
+#. Text in function
+#: suffusion/widgets/suffusion-featured-posts.php:255
+msgid "Don't show any text"
+msgstr "Απόκρυψη κειμένων"
+
+#. Text in function
+#: suffusion/widgets/suffusion-twitter.php:222
+msgid "Don't show feeds"
+msgstr "Απόκρυψη τροφοδοσιών"
+
+#. Text in function
+#: suffusion/widgets/suffusion-twitter.php:222
+msgid "Don't show tagline"
+msgstr "Απόκρυψη γραμμής ετικετών"
+
+#. Text in function
+#: suffusion/functions.php:352
+msgid "E-mail"
+msgstr "E-mail"
+
+#. Text in echo
+#: suffusion/widgets/suffusion-featured-posts.php:153
+msgid "E.g. 250px"
+msgstr "Π.χ. 250px"
+
+#. Text in function
+#: suffusion/functions/actions.php:1363
+#: suffusion/functions/actions.php:1413
+#: suffusion/functions/actions.php:2187
+msgid "Edit"
+msgstr "Επεξεργασία"
+
+#. Text in echo
+#: suffusion/widgets/suffusion-subscription.php:85
+msgid "Email Subscription Box Default Text:"
+msgstr "Προεπιλεγμένο κείμενο για το πλαίσιο Εγγραφής μέσω email:"
+
+#. Text in echo
+#: suffusion/widgets/suffusion-subscription.php:91
+msgid "Email Subscription Button Text:"
+msgstr "Κείμενο για το κουμπί Εγγραφής μέσω email:"
+
+#. Text in echo
+#: suffusion/widgets/suffusion-featured-posts.php:158
+msgid "Enable custom image size for featured images"
+msgstr "Ενεργοποίηση προσαρμοσμένων διαστάσεων στις \"Προβεβλημένες\" εικόνες"
+
+#. Text in function
+#: suffusion/widgets/suffusion-subscription.php:252
+msgid "Enter %1$s account name:"
+msgstr "Ο λογαριασμός σας στο %1$s:"
+
+#. Text in echo
+#: suffusion/functions.php:349
+msgid "Enter a comma-separated list of keywords for this post. This list will be included in the meta tags for this post."
+msgstr "Προσθέστε τις λέξεις-κλειδιά (διαχωρισμένες με κόμματα) που θέλετε να εμφανιστούν στην Ετικέτες Μeta αυτού του άρθρου."
+
+#. Text in function
+#: suffusion/widgets/suffusion-subscription.php:252
+msgid "Enter email address"
+msgstr "Διεύθυνση Email"
+
+#. Text in echo
+#: suffusion/functions.php:328
+msgid "Enter the full URL of the featured image that you would like to use, including http://"
+msgstr "Πλήρης διεύθυνση της εικόνας που θέλετε να χρησιμοποιήσετε ως \"Προβεβλημένη\" (συμπεριλαμβανομένου του http://) "
+
+#. Text in echo
+#: suffusion/functions.php:323
+msgid "Enter the full URL of the thumbnail image that you would like to use, including http://"
+msgstr "Πλήρης διεύθυνση της εικόνας που θέλετε να χρησιμοποιθηεί ως μικρογραφία (συμπεριλαμβανομένου του http://) "
+
+#. Text in echo
+#: suffusion/widgets/suffusion-featured-posts.php:145
+msgid "Enter time in milliseconds. E.g. 1000"
+msgstr "Διάρκεια σε χιλιοστά του δευτερολέπτου (π.χ. 1000)"
+
+#. Text in echo
+#: suffusion/widgets/suffusion-featured-posts.php:139
+msgid "Enter time in milliseconds. E.g. 4000"
+msgstr "Διάρκεια σε χιλιοστά του δευτερολέπτου (π.χ. 4000)"
+
+#. Text in function
+#: suffusion/widgets/suffusion-subscription.php:75
+msgid "Enter your %1$s feed name. If your feed address is http://feeds.feedburner.com/my_feed_name, your feed name is my_feed_name"
+msgstr "Ο λογαριασμός σας στο %1$s. Αν για παράδειγμα η διεύθυνσή σας είναι http://feeds.feedburner.com/my_feed_name, ο λογαριασμός σας είναι my_feed_name"
+
+#. Text in function
+#: suffusion/widgets/suffusion-subscription.php:252
+msgid "Enter your full %1$s URL:"
+msgstr "Πλήρες URL για το %1$s:"
+
+#. Text in echo
+#: suffusion/sidebar.php:75
+msgid "Entries (RSS)"
+msgstr "Εγγραφές (RSS)"
+
+#. Text in echo
+#: suffusion/sidebar-tabs.php:64
+#: suffusion/widgets/suffusion-meta.php:26
+msgid "Entries <abbr title=\"Really Simple Syndication\">RSS</abbr>"
+msgstr "Εγγραφές <abbr title=\"Really Simple Syndication\">RSS</abbr>"
+
+#. Text in function
+#: suffusion/functions.php:352
+msgid "Error 404 - Not Found"
+msgstr "Σφάλμα 404 - Δεν βρέθηκε"
+
+#. Text in echo
+#: suffusion/widgets/suffusion-featured-posts.php:211
+msgid "Excerpt background color:"
+msgstr "Χρώμα φόντου των αποσπασματάτων: "
+
+#. Text in echo
+#: suffusion/widgets/suffusion-featured-posts.php:221
+msgid "Excerpt font color:"
+msgstr "Χρώμα κειμένου των αποσπασμάτων: "
+
+#. Text in echo
+#: suffusion/widgets/suffusion-featured-posts.php:216
+msgid "Excerpt title color:"
+msgstr "Χρώμα τίτλου των αποσπασμάτων: "
+
+#. Text in function
+#: suffusion/widgets/suffusion-featured-posts.php:255
+msgid "Fade In"
+msgstr "Σταδιακή Εμφάνιση (Fade In)"
+
+#. Text in function
+#: suffusion/widgets/suffusion-featured-posts.php:255
+msgid "Featured Content"
+msgstr "\"Προβεβλημένο\" Περιεχόμενο"
+
+#. Text in echo
+#: suffusion/functions.php:326
+msgid "Featured Image"
+msgstr "\"Προβεβλημένη\" Εικόνα"
+
+#. Text in echo
+#: suffusion/widgets/suffusion-featured-posts.php:113
+msgid "Featured content transition effect:"
+msgstr "Εφέ κύλισης \"Προβεβλημένου\" περιεχόμενου: "
+
+#. Text in echo
+#: suffusion/widgets/suffusion-subscription.php:73
+msgid "FeedBurner Feed:"
+msgstr "Τροφοδοσία FeedBurner:"
+
+#. Text in function
+#: suffusion/functions/media.php:1
+msgid "File"
+msgstr ""
+
+#. Text in echo
+#: suffusion/widgets/suffusion-featured-posts.php:97
+msgid "Fill in a comma-separated list of category ids. E.g. 3,8,17"
+msgstr "Ταυτότητες κατηγοριών (διαχωρίστε τες με κόμμα - π.χ. 3,8,17)"
+
+#. Text in echo
+#: suffusion/widgets/suffusion-featured-posts.php:109
+msgid "Fill in a comma-separated list of page ids. E.g. 7,9,13"
+msgstr "Ταυτότητες σελίδων (διαχωρίστε τες με κόμμα - π.χ. 7,9,13)"
+
+#. Text in echo
+#: suffusion/widgets/suffusion-featured-posts.php:103
+msgid "Fill in a comma-separated list of post ids. E.g. 7,9,13"
+msgstr "Ταυτότητες άρθρων (διαχωρίστε τες με κόμμα - π.χ. 2,6,18)"
+
+#. Text in function
+#: suffusion/functions/media.php:1
+msgid "Focal Length"
+msgstr ""
+
+#. Text in function
+#: suffusion/widgets/suffusion-subscription.php:252
+msgid "Follow Me"
+msgstr "Ακολουθήστε μας"
+
+#. Text in function
+#: suffusion/widgets/suffusion-twitter.php:93
+msgid "Follow me on Twitter"
+msgstr "Ακολουθήστε μας στο Twitter"
+
+#. Text in function
+#: suffusion/widgets/suffusion-translator.php:125
+msgid "Google Translator"
+msgstr "Μετάφραση Google"
+
+#. Text in function
+#: suffusion/widgets/suffusion-featured-posts.php:255
+msgid "Grow horizontally from center"
+msgstr "Οριζόντια ανάπτυξη απο το κέντρο"
+
+#. Text in function
+#: suffusion/widgets/suffusion-featured-posts.php:255
+msgid "Grow vertically from center"
+msgstr "Κάθετη ανάπτυξη απο το κέντρο"
+
+#. Text in function
+#: suffusion/functions/media.php:1
+msgid "Height"
+msgstr ""
+
+#. Text in echo
+#: suffusion/widgets/suffusion-featured-posts.php:151
+msgid "Height of featured content section:"
+msgstr "Ύψος της περιοχής που περιέχει \"Προβεβλημένο\" περιεχόμενο: "
+
+#. Text in echo
+#: suffusion/functions/actions.php:1293
+msgid "Highlight matching results below"
+msgstr ""
+
+#. Text in function
+#: suffusion/widgets/suffusion-featured-posts.php:255
+msgid "Horizontal Blinds"
+msgstr "Οριζόντιες Περσίδες"
+
+#. Text in function
+#: suffusion/functions/media.php:1
+msgid "ISO"
+msgstr ""
+
+#. Text in echo
+#: suffusion/functions.php:292
+msgid "If this box is checked, clicking on this page in the navigation bar will not take you anywhere."
+msgstr "Ενεργοποιήστε αυτή την επιλογή αν δεν θέλετε να λειτουργεί ο σύνδεσμος προς αυτή την σελίδα στη γραμμή πλοήγησης."
+
+#. Text in echo
+#: suffusion/functions.php:334
+msgid "If this box is checked, this post will show up as a headline in the magazine template."
+msgstr "Ενεργοποιήστε αυτή την επιλογή αν θέλετε το άρθρο να εμφανίζεται ως τίτλος στην διάταξη περιοδικού."
+
+#. Text in echo
+#: suffusion/functions.php:340
+msgid "If this box is checked, this post will show up as an excerpt in the magazine template."
+msgstr "Ενεργοποιήστε αυτή την επιλογή αν θέλετε το άρθρο να εμφανίζεται ως απόσπασμα στην διάταξη περιοδικού."
+
+#. Text in echo
+#: suffusion/widgets/suffusion-featured-posts.php:91
+msgid "If you are including latest posts and you select 5 here, the latest 5 posts will be included in the featured content. If this number is higher than the maximum number of posts, this setting will be ignored"
+msgstr "Αν έχετε συμπεριλάβει τα Πρόσφατα Άρθρα και ορίσετε εδώ πλήθος ίσο με 5, τότε τα 5 τελευταία άρθρα θα συμπεριληφθούν στο \"Προβεβλημένο\" Περιεχόμενο. Αν όμως αυτό το πλήθος υπερβαινει το γενικό μέγιστο πλήθος των άρθρων, τότε αυτή εδώ η ρύθμιση θα αγνοηθεί."
+
+#. Text in function
+#: suffusion/widgets/suffusion-twitter.php:222
+msgid "If you are placing this widget in the \\\"Right Header Widgets\\\":"
+msgstr "Αν τοποθετήσετε αυτή τη μονάδα (widget) στην περιοχή \\\"Right Header Widgets\\\": "
+
+#. Text in function
+#: suffusion/widgets/suffusion-twitter.php:222
+msgid "If you are placing this widget in the sidebars or in \\\"Widget Area below Header\\\" or \\\"Widget Area below Footer\\\":"
+msgstr "Αν τοποθετήσετε αυτή τη μονάδα (widget) στα sidebars ή στην περιοχή  \\\"Widget Area below Header\\\" ή στην  \\\"Widget Area below Footer\\\": "
+
+#. Text in echo
+#: suffusion/widgets/suffusion-category-posts.php:195
+msgid "If you have chosen to use a custom image in the previous option, please enter the complete URL of the category icon here, including http://"
+msgstr "Αν στην προηγούμενη ενότητα επιλέξατε χρήση προαρμοσμένης εικόνας για το εικονιδιο της κατηγορίας, τότε συμπληρώστε εδώ τη πλήρη διεύθυνση της (συμπεριλαμβανομένου του http://)"
+
+#. Text in echo
+#: suffusion/widgets/suffusion-featured-posts.php:95
+msgid "Include categories:"
+msgstr "Συμπερίληψη κατηγοριών: "
+
+#. Text in echo
+#: suffusion/widgets/suffusion-featured-posts.php:77
+msgid "Include latest posts"
+msgstr "Συμπερίληψη πρόσφατων άρθρων"
+
+#. Text in echo
+#: suffusion/widgets/suffusion-featured-posts.php:107
+msgid "Include pages:"
+msgstr "Συμπερίληψη σελίδων: "
+
+#. Text in echo
+#: suffusion/widgets/suffusion-featured-posts.php:101
+msgid "Include posts:"
+msgstr "Συμπερίληψη άρθρων: "
+
+#. Text in echo
+#: suffusion/widgets/suffusion-featured-posts.php:72
+msgid "Include sticky posts"
+msgstr "Συμπερίληψη μονιμοποιημένων άρθρων 1ης σελίδος"
+
+#. Text in function
+#: suffusion/comments.php:158
+#: suffusion/comments.php:78
+msgid "Leave a Reply"
+msgstr "Υποβολή Απάντησης"
+
+#. Text in function
+#: suffusion/comments.php:158
+#: suffusion/comments.php:78
+msgid "Leave a Reply to %s"
+msgstr "Απάντηση στον/στην %s"
+
+#. Text in function
+#: suffusion/widgets/suffusion-featured-posts.php:255
+msgid "Left"
+msgstr "Αριστερά"
+
+#. Text in echo
+#: suffusion/sidebar.php:58
+#: suffusion/functions.php:352
+msgid "Links"
+msgstr "Σύνδεσμοι"
+
+#. Text in function
+#: suffusion/widgets/suffusion-meta.php:30
+msgid "Log in/out, admin, feed and WordPress links"
+msgstr "Σύνδεση/Αποσύνδεση, Διαχείριση και Σύνδεσμοι"
+
+#. Text in function
+#: suffusion/comments.php:158
+#: suffusion/comments.php:93
+msgid "Log out"
+msgstr "Αποσύνδεση"
+
+#. Text in function
+#: suffusion/comments.php:158
+#: suffusion/comments.php:92
+msgid "Logged in as %s. "
+msgstr "Συνδεθήκατε ως %s. "
+
+#. Text in echo
+#: suffusion/functions.php:331
+msgid "Make this post a headline"
+msgstr "Ορισμός του άρθρου ως επικεφαλίδα"
+
+#. Text in echo
+#: suffusion/functions.php:337
+msgid "Make this post an excerpt in the magazine layout"
+msgstr "Ορισμός του άρθρου ως απόσπασμα στη διάταξη περιοδικού"
+
+#. Text in echo
+#: suffusion/widgets/suffusion-featured-posts.php:58
+msgid "Maximum number of posts / pages to display:"
+msgstr "Μέγιστο πλήθος άρθρων / σελίδων προς εμφάνιση: "
+
+#. Text in echo
+#: suffusion/sidebar.php:69
+#: suffusion/functions.php:352
+#: suffusion/widgets/suffusion-meta.php:30
+msgid "Meta"
+msgstr "Meta"
+
+#. Text in echo
+#: suffusion/functions.php:343
+msgid "Meta Description"
+msgstr "Περιγραφή Meta"
+
+#. Text in echo
+#: suffusion/functions.php:347
+msgid "Meta Keywords"
+msgstr "Λέξεις-Κλειδιά Meta"
+
+#. Text in function
+#: suffusion/widgets/suffusion-twitter.php:93
+msgid "My Tweets"
+msgstr "Τα Tweets μου"
+
+#. Text in function
+#: suffusion/functions.php:352
+msgid "Name"
+msgstr "Όνομα"
+
+#. Text in function
+#: suffusion/functions/filters.php:261
+msgid "Newer %1$s"
+msgstr "Νέα %1$s"
+
+#. Text in function
+#: suffusion/functions/filters.php:261
+msgid "Newer Comments"
+msgstr "Νέα Σχόλια"
+
+#. Text in function
+#: suffusion/functions/actions.php:2188
+#: suffusion/functions/actions.php:1223
+msgid "Newer Entries"
+msgstr "Νεότερες Εγγραφές"
+
+#. Text in function
+#: suffusion/image.php:21
+msgid "Next Image"
+msgstr ""
+
+#. Text in function
+#: suffusion/featured-posts.php:1
+#: suffusion/widgets/suffusion-featured-posts.php:255
+msgid "Next Post"
+msgstr "Επόμενο άρθρο"
+
+#. Text in function
+#: suffusion/functions/actions.php:1360
+#: suffusion/functions/actions.php:2188
+#: suffusion/comments.php:26
+msgid "No Responses"
+msgstr "Καμία απάντηση"
+
+#. Text in function
+#: suffusion/widgets/suffusion-category-posts.php:215
+msgid "No category icon"
+msgstr "Κανένα εικονίδιο κατηγορίας"
+
+#. Text in echo
+#: suffusion/now-reading/single.php:118
+#: suffusion/layouts/template-missing.php:23
+msgid "Not Found"
+msgstr "Δεν βρέθηκε"
+
+#. Text in echo
+#: suffusion/layouts/template-missing.php:12
+msgid "Nothing Found"
+msgstr "Ανεπιτυχής αναζήτηση"
+
+#. Text in echo
+#: suffusion/widgets/suffusion-featured-posts.php:81
+msgid "Number of \"Latest Posts\":"
+msgstr "Πλήθος \"Πρόσφατων Άρθρων\": "
+
+#. Text in echo
+#: suffusion/widgets/suffusion-twitter.php:188
+msgid "Number of Tweets to display:"
+msgstr "Πλήθος εμφανιζόμενων Tweets: "
+
+#. Text in echo
+#: suffusion/widgets/suffusion-category-posts.php:138
+msgid "Number of posts to display:"
+msgstr "Πλήθος εμφανιζόμενων άρθρων: "
+
+#. Text in function
+#: suffusion/functions/filters.php:261
+msgid "Older %1$s"
+msgstr "Παλαιότερα %1$s"
+
+#. Text in function
+#: suffusion/functions/filters.php:261
+msgid "Older Comments"
+msgstr "Παλαιότερα Σχόλια"
+
+#. Text in function
+#: suffusion/functions/actions.php:2188
+#: suffusion/functions/actions.php:1222
+msgid "Older Entries"
+msgstr "Παλαιότερες Εγγραφές"
+
+#. Text in function
+#: suffusion/comments.php:26
+msgid "One Response"
+msgstr "Μια απάντηση"
+
+#. Text in function
+#: suffusion/functions/actions.php:1198
+#: suffusion/functions/filters.php:233
+msgid "Page %1$s of %2$s"
+msgstr "Σελίδα %1$s από %2$s"
+
+#. Text in function
+#: suffusion/functions/actions.php:2188
+msgid "Page %s"
+msgstr ""
+
+#. Text in echo
+#: suffusion/functions.php:284
+msgid "Page Title in Dropdown Menu"
+msgstr "Τίτλος Σελίδας στο Μενού"
+
+#. Text in function
+#: suffusion/functions.php:352
+msgid "Pages"
+msgstr "Σελίδες"
+
+#. Text in function
+#: suffusion/functions/filters.php:261
+msgid "Pages:"
+msgstr "Σελίδες: "
+
+#. Text in function
+#: suffusion/featured-posts.php:1
+#: suffusion/functions/actions.php:2188
+#: suffusion/widgets/suffusion-featured-posts.php:255
+msgid "Pause"
+msgstr "Παύση"
+
+#. Text in function
+#: suffusion/functions.php:352
+msgid "Pingbacks"
+msgstr "Pingbacks"
+
+#. Text in echo
+#: suffusion/layouts/template-missing.php:14
+msgid "Please try another search."
+msgstr "Παρακαλώ δοκιμάστε άλλη αναζήτηση."
+
+#. Text in echo
+#: suffusion/widgets/suffusion-featured-posts.php:189
+msgid "Position of the excerpt:"
+msgstr "Τοποθέτηση του αποσπάσματος: "
+
+#. Text in echo
+#: suffusion/widgets/suffusion-category-posts.php:151
+msgid "Post display style:"
+msgstr "Στυλ εμφάνισης άρθρου: "
+
+#. Text in function
+#: suffusion/functions/actions.php:1403
+#: suffusion/functions/actions.php:2188
+msgid "Posted by %1$s at %2$s"
+msgstr "Δημοσιεύτηκε από %1$s στις %2$s"
+
+#. Text in echo
+#: suffusion/widgets/suffusion-category-posts.php:134
+msgid "Posts from the selected category will show in the widget"
+msgstr "Τα άρθρα της επιλεγμένης κατηγορίας θα εμφανιστούν στη μονάδα (widget)"
+
+#. Text in function
+#: suffusion/image.php:20
+msgid "Previous Image"
+msgstr ""
+
+#. Text in function
+#: suffusion/featured-posts.php:1
+#: suffusion/widgets/suffusion-featured-posts.php:255
+msgid "Previous Post"
+msgstr "Προηγούμενο Άρθρο"
+
+#. Text in function
+#: suffusion/categories.php:51
+msgid "RSS"
+msgstr "RSS"
+
+#. Text in function
+#: suffusion/functions.php:352
+msgid "Recent Comments"
+msgstr "Πρόσφατα Σχόλια"
+
+#. Text in function
+#: suffusion/functions.php:352
+msgid "Recent Posts"
+msgstr "Πρόσφατα Άρθρα"
+
+#. Text in function
+#: suffusion/widgets/suffusion-twitter.php:222
+msgid "Recommended settings:"
+msgstr "Προτεινόμενες ρυθμίσεις: "
+
+#. Text in echo
+#: suffusion/widgets/suffusion-twitter.php:218
+msgid "Recommended sizes: 32px if the widget is being added to the \\\"Right Header Widgets\\\" area, whatever you like otherwise. Note that making the image too large will cause loss of picture quality."
+msgstr "Προτεινομενες διαστάσεις: 32px αν η μονάδα (widget) προορίζεται για την περιοχή \\\"Right Header Widgets\\\", αλλιώς ότι διάσταση θέλετε. Σημειώστε πως αν η εικόνα είναι πολύ μεγάλη θα χαθεί μέρος της ποιότητάς της."
+
+#. Text in function
+#: suffusion/functions/actions.php:2188
+msgid "Resume"
+msgstr "Επαναφορά"
+
+#. Text in function
+#: suffusion/widgets/suffusion-featured-posts.php:255
+msgid "Right"
+msgstr "Δεξιά"
+
+#. Text in function
+#: suffusion/widgets/suffusion-featured-posts.php:255
+msgid "Rotate between the four positions"
+msgstr "Εναλλαγή μεταξύ των 4 γωνιών"
+
+#. Text in function
+#: suffusion/widgets/suffusion-featured-posts.php:255
+msgid "Scroll Down"
+msgstr "Κύλιση προς τα Κάτω"
+
+#. Text in function
+#: suffusion/widgets/suffusion-featured-posts.php:255
+msgid "Scroll Horizontally"
+msgstr "Οριζόντια Κύλιση"
+
+#. Text in function
+#: suffusion/widgets/suffusion-featured-posts.php:255
+msgid "Scroll Left"
+msgstr "Κύλιση προς τα Αριστερά"
+
+#. Text in function
+#: suffusion/widgets/suffusion-featured-posts.php:255
+msgid "Scroll Right"
+msgstr "Κύλιση προς τα Δεξιά"
+
+#. Text in function
+#: suffusion/widgets/suffusion-featured-posts.php:255
+msgid "Scroll Up"
+msgstr "Κύλιση προς τα Πάνω"
+
+#. Text in function
+#: suffusion/widgets/suffusion-featured-posts.php:255
+msgid "Scroll Vertically"
+msgstr "Κάθετη Κύλιση"
+
+#. Text in echo
+#: suffusion/searchform.php:11
+#: suffusion/functions.php:352
+#: suffusion/widgets/suffusion-search.php:53
+msgid "Search"
+msgstr "Αναζήτηση"
+
+#. Text in function
+#: suffusion/sidebar-tabs.php:227
+msgid "Select"
+msgstr "Επιλογή"
+
+#. Text in echo
+#: suffusion/widgets/suffusion-category-posts.php:125
+msgid "Select category to show:"
+msgstr "Επιλογή κατηγορίας προς εμφάνιση: "
+
+#. Text in function
+#: suffusion/widgets/suffusion-subscription.php:140
+msgid "Select your %1$s icon"
+msgstr "Επιλογή εικονιδίου για το %1$s"
+
+#. Text in echo
+#: suffusion/widgets/suffusion-twitter.php:203
+msgid "Select your Twitter icon:"
+msgstr "Επιλογή εικονιδίου Twitter: "
+
+#. Text in echo
+#: suffusion/widgets/suffusion-subscription.php:153
+msgid "Select your icon size"
+msgstr "Διαστάσεις εικονιδίου"
+
+#. Text in echo
+#: suffusion/widgets/suffusion-twitter.php:214
+msgid "Set the height for the Twitter icon:"
+msgstr "Ορσιμός ύψους για το εικονίδιο του Twitter: "
+
+#. Text in echo
+#: suffusion/widgets/suffusion-category-posts.php:199
+msgid "Set the height for the category icon:"
+msgstr "Ορισμός ύψους για το εικονίδιο της κατηγορίας: "
+
+#. Text in echo
+#: suffusion/widgets/suffusion-category-posts.php:207
+msgid "Set the width for the category icon:"
+msgstr "Ορισμός πλάτους για το εικονίδιο της κατηγορίας: "
+
+#. Text in function
+#: suffusion/widgets/suffusion-subscription.php:107
+msgid "Show %1$s icon"
+msgstr "Εμφάνιση εικονιδίου %1$s"
+
+#. Text in echo
+#: suffusion/widgets/suffusion-subscription.php:80
+msgid "Show Email Subscription"
+msgstr "Εμφάνιση της Εγγραφής μέσω Email"
+
+#. Text in echo
+#: suffusion/widgets/suffusion-subscription.php:98
+msgid "Show FeedBurner reader count"
+msgstr "Εμφάνιση μετρητή αναγνώσεων του FedBurner"
+
+#. Text in echo
+#: suffusion/widgets/suffusion-featured-posts.php:232
+msgid "Show Previous, Pause and Next buttons"
+msgstr "Εμφάνιση επιλογών μετάβασης (Προηγούμενο, Παύση, Επόμενο)"
+
+#. Text in echo
+#: suffusion/widgets/suffusion-twitter.php:161
+msgid "Show Twitter Icon"
+msgstr "Εμφάνιση εικονιδίου Twitter"
+
+#. Text in echo
+#: suffusion/widgets/suffusion-twitter.php:167
+msgid "Show a Tagline"
+msgstr "Εμφάνιση Ετικετών"
+
+#. Text in echo
+#: suffusion/widgets/suffusion-featured-posts.php:227
+msgid "Show a numbered post index"
+msgstr "Εμφάνιση αριθμητικού ευρετηρίου άρθρων"
+
+#. Text in function
+#: suffusion/widgets/suffusion-featured-posts.php:255
+msgid "Show excerpt only (no title)"
+msgstr "Εμφάνιση αποσπάσματος μόνο (χωρίς τίτλο)"
+
+#. Text in function
+#: suffusion/widgets/suffusion-twitter.php:222
+msgid "Show feeds"
+msgstr "Εμφάνιση τροφοδοσιών"
+
+#. Text in function
+#: suffusion/widgets/suffusion-twitter.php:222
+msgid "Show icon"
+msgstr "Εμφάνιση εικονιδίου"
+
+#. Text in echo
+#: suffusion/widgets/suffusion-twitter.php:173
+msgid "Show my Tweets"
+msgstr "Εμφάνιση των Tweets μου"
+
+#. Text in function
+#: suffusion/widgets/suffusion-featured-posts.php:255
+msgid "Show post title and excerpt"
+msgstr "Εμφάνσιη τίτλου κι αποσπάσματος του άρθρου"
+
+#. Text in function
+#: suffusion/widgets/suffusion-featured-posts.php:255
+msgid "Show post title only (no excerpt)"
+msgstr "Εμφάνιση τίτλου του άρθρου (χωρίς απόσπασμα)"
+
+#. Text in function
+#: suffusion/widgets/suffusion-twitter.php:222
+msgid "Show tagline"
+msgstr "Εμφάνιση γραμμής ετικετών"
+
+#. Text in function
+#: suffusion/functions/media.php:1
+msgid "Shutter Speed"
+msgstr ""
+
+#. Text in function
+#: suffusion/widgets/suffusion-featured-posts.php:255
+msgid "Slide in and back horizontally"
+msgstr "Οριζόντια εμφάνιση κι επαναφορά"
+
+#. Text in function
+#: suffusion/widgets/suffusion-featured-posts.php:255
+msgid "Slide in and back vertically"
+msgstr "Κάθετη εμφάνιση κι επαναφορά"
+
+#. Text in echo
+#: suffusion/now-reading/single.php:120
+#: suffusion/layouts/template-missing.php:25
+msgid "Sorry, but you are looking for something that isn't here"
+msgstr "Δεν βρέθηκαν αποτελέσματα σε αυτή την αναζήτηση"
+
+#. Text in echo
+#: suffusion/attachment.php:34
+#: suffusion/image.php:38
+#: suffusion/single.php:60
+msgid "Sorry, no posts matched your criteria."
+msgstr "Δεν βρέθηκαν άρθρα με αυτά τα κριτήρια αναζήτησης"
+
+#. Text in echo
+#: suffusion/comments.php:157
+msgid "Sorry, the comment form is closed at this time."
+msgstr "Η υποβολή σχολίων είναι απενεργοποιημένη"
+
+#. Text in function
+#: suffusion/functions.php:352
+msgid "Sorry, the page that you are looking for does not exist."
+msgstr "Δεν βρέθηκε η σελίδα που αναζητήσατε"
+
+#. Text in echo
+#: suffusion/widgets/suffusion-translator.php:116
+msgid "Source Language:"
+msgstr "Αρχική γλώσσα:"
+
+#. Text in function
+#: suffusion/widgets/suffusion-featured-posts.php:255
+msgid "Squeeze in both edges horizontally"
+msgstr "Οριζόντια συμπίεση"
+
+#. Text in function
+#: suffusion/widgets/suffusion-featured-posts.php:255
+msgid "Squeeze in both edges vertically"
+msgstr "Κάθετη συμπίεση"
+
+#. Text in function
+#: suffusion/comments.php:158
+#: suffusion/comments.php:131
+msgid "Submit Comment"
+msgstr "Υποβολή Σχολίου"
+
+#. Text in function
+#: suffusion/widgets/suffusion-subscription.php:252
+msgid "Subscribe"
+msgstr "Εγγραφή"
+
+#. Text in function
+#: suffusion/sidebar-tabs.php:64
+#: suffusion/widgets/suffusion-meta.php:26
+msgid "Syndicate this site using RSS 2.0"
+msgstr "Διάδοση της ιστοσελίδας μέσω RSS 2.0"
+
+#. Text in function
+#: suffusion/functions.php:352
+msgid "Tag Cloud"
+msgstr "Ευρετήριο Ετικετών"
+
+#. Text in echo
+#: suffusion/now-reading/single.php:107
+#: suffusion/functions/actions.php:1367
+#: suffusion/functions/actions.php:2188
+msgid "Tagged with: "
+msgstr "Ετικέτες: "
+
+#. Text in echo
+#: suffusion/widgets/suffusion-twitter.php:183
+msgid "Tagline:"
+msgstr "Γραμμή ετικετών: "
+
+#. Text in echo
+#: suffusion/widgets/suffusion-featured-posts.php:174
+msgid "Text display options:"
+msgstr "Επιλογές εμφάνισης κειμένου: "
+
+#. Text in echo
+#: suffusion/widgets/suffusion-category-posts.php:168
+msgid "Text for \"All Posts\":"
+msgstr "Νέο κείμενο αντί του \"Όλα τα Άρθρα\": "
+
+#. Text in echo
+#: suffusion/widgets/suffusion-featured-posts.php:250
+msgid "Text for \"Next Post\":"
+msgstr "Νέο κείμενο αντί του \"Επόμενο Άρθρο\": "
+
+#. Text in echo
+#: suffusion/widgets/suffusion-featured-posts.php:245
+msgid "Text for \"Pause\":"
+msgstr "Νέο κείμενο αντί του \"Παύση\": "
+
+#. Text in echo
+#: suffusion/widgets/suffusion-featured-posts.php:240
+msgid "Text for \"Previous Post\":"
+msgstr "Νέο κείμενο αντί του \"Προηγούμενο Άρθρο\": "
+
+#. Text in echo
+#: suffusion/widgets/suffusion-featured-posts.php:236
+msgid "The following three settings only apply if you show the previous, pause and next buttons:"
+msgstr "Οι επόμενες 3 ρυθμίσεις εφαρμόζονται μόνο αν επιλέξετε να εμφανίζονται οι επιλογές Προηγούμενο, Παύση και Επόμενο: "
+
+#. Text in echo
+#: suffusion/widgets/suffusion-category-posts.php:203
+msgid "The image you have picked will be scaled to this height."
+msgstr " Η επιλεγμένη εικόνα θα προσαρμοστεί αυτοματα σε αυτό το ύψος."
+
+#. Text in echo
+#: suffusion/widgets/suffusion-category-posts.php:211
+msgid "The image you have picked will be scaled to this width."
+msgstr " Η επιλεγμένη εικόνα θα προσαρμοστεί αυτοματα σε αυτό το πλάτος."
+
+#. Text in function
+#: suffusion/sidebar-tabs.php:65
+#: suffusion/widgets/suffusion-meta.php:27
+msgid "The latest comments to all posts in RSS"
+msgstr "Τα πρόσφατα σχόλια όλων των άρθρων του RSS"
+
+#. Text in echo
+#: suffusion/widgets/suffusion-category-posts.php:170
+msgid "The text you enter here will be the displayed in the button for \\\"All Posts\\\". If you leave this field blank the button will not be shown."
+msgstr "Το κείμενο που θα συμπληρώσετε εδώ θα εμφανιστεί μέσα στην επιλογή \\\"All Posts\\\" (αν το αφήσετε κενό, η επιλογή δεν θα εμφανιστεί καθόλου)."
+
+#. Text in echo
+#: suffusion/widgets/suffusion-featured-posts.php:170
+msgid "This is applicable only if custom image size is enabled"
+msgstr "Εφαρμοζεται μόνο αν είναι ενεργοποιημένες οι προσαρμοσμένες διαστάσεις στην εικόνα"
+
+#. Text in echo
+#: suffusion/widgets/suffusion-featured-posts.php:207
+msgid "This is only applicable if your excerpt is at the right or at the left of your featured posts."
+msgstr "Εφαρμόζεται μόνο αν τα αποσπασματα είναι τοποθετημένα αριστερά ή δεξιά στα \"Προβεβλημένα\" σας άρθρα."
+
+#. Text in echo
+#: suffusion/widgets/suffusion-twitter.php:156
+msgid "This is the user who will be followed"
+msgstr "Μέλος που θέλετε να ακολουθήσετε"
+
+#. Text in echo
+#: suffusion/comments.php:15
+msgid "This post is password protected. Enter the password to view comments."
+msgstr "Κλειδωμένο άρθρο! Πληκτρολογήστε τον κωδικό για να εμφανιστούν τα σχόλια."
+
+#. Text in echo
+#: suffusion/functions.php:286
+msgid "This text will be shown in the drop-down menus in the navigation bar. If left blank, the title of the page is used."
+msgstr "Το όνομα με το οποίο θέλετε να εμφανίζεται η σελίδα στο μενού της γραμμής πλοήγησης (αν μείνει κενό θα χρησιμοποιηθεί ο τίτλος της σελίδας)"
+
+#. Text in echo
+#: suffusion/widgets/suffusion-subscription.php:87
+msgid "This text will be shown in the subscription box by default. When the visitor starts entering the email address the text will disappear."
+msgstr "Το κέιμενο αυτό εμφανίζεται ως προεπιλεγμένο μέσα στο πεδίο του Email (σβήνεται μόλις ο επισκεπτης αρχίζει να γράφει τη δικιά του διεύθυνση)."
+
+#. Text in echo
+#: suffusion/widgets/suffusion-subscription.php:93
+msgid "This text will be shown in the subscription button near the email field"
+msgstr "Το κείμενο που θέλετε να εμφανίζεται στο κουμπί επιλογής, κοντά στο πεδίο του email"
+
+#. Text in function
+#: suffusion/widgets/suffusion-subscription.php:252
+msgid "This widget lets visitors of your blog subscribe to it and follow you on popular social networks like Digg, FaceBook etc. Additionally they can subscribe to your blog by email, for which you need a FeedBurner account."
+msgstr "Μονάδα (widget) που επιτρέπει στους επισκέπτες να εγγραφούν στο ιστολόγιό σας για να σας ακολουθούν σε διάφορα κοινωνικά δίκτυα, όπως το Digg, το FaceBook, κλπ. Εναλλακτικά μπορούν να εγγραφούν μέσω email, αλλά τότε χρειάζεται να έχετε λογαριασμό στο FeedBurner."
+
+#. Text in echo
+#: suffusion/widgets/suffusion-category-posts.php:121
+msgid "This will default to the name of the selected category if left blank"
+msgstr "Αν μείνει κενό θα συμπληρωθεί αυτόματα με το όνομα της επιλεγμένης Κατηγορίας"
+
+#. Text in echo
+#: suffusion/functions.php:321
+msgid "Thumbnail"
+msgstr "Μικρογραφία"
+
+#. Text in echo
+#: suffusion/widgets/suffusion-featured-posts.php:137
+#: suffusion/widgets/suffusion-featured-posts.php:143
+msgid "Time for each post display:"
+msgstr "Διάρκεια εμφάνισης του κάθε άρθρου: "
+
+#. Text in function
+#: suffusion/functions/media.php:1
+msgid "Title"
+msgstr ""
+
+#. Text in echo
+#: suffusion/widgets/suffusion-translator.php:111
+#: suffusion/widgets/suffusion-category-posts.php:119
+#: suffusion/widgets/suffusion-twitter.php:178
+#: suffusion/widgets/suffusion-search.php:49
+#: suffusion/widgets/suffusion-featured-posts.php:53
+#: suffusion/widgets/suffusion-subscription.php:68
+msgid "Title:"
+msgstr "Τίτλος: "
+
+#. Text in function
+#: suffusion/widgets/suffusion-featured-posts.php:255
+msgid "Top"
+msgstr "Πάνω"
+
+#. Text in function
+#: suffusion/functions.php:352
+msgid "Trackbacks"
+msgstr "Trackbacks"
+
+#. Text in function
+#: suffusion/widgets/suffusion-translator.php:125
+msgid "Translate this Page"
+msgstr "Μετάφραση της Σελίδας"
+
+#. Text in function
+#: suffusion/widgets/suffusion-featured-posts.php:255
+msgid "Turn Downwards"
+msgstr "Εμφάνιση από Κάτω"
+
+#. Text in function
+#: suffusion/widgets/suffusion-featured-posts.php:255
+msgid "Turn Leftwards"
+msgstr "Εμφάνιση από Αριστερά"
+
+#. Text in function
+#: suffusion/widgets/suffusion-featured-posts.php:255
+msgid "Turn Rightwards"
+msgstr "Εμφάνιση από Δεξιά"
+
+#. Text in function
+#: suffusion/widgets/suffusion-featured-posts.php:255
+msgid "Turn Upwards"
+msgstr "Εμφάνιση από Πάνω"
+
+#. Text in function
+#: suffusion/widgets/suffusion-twitter.php:222
+msgid "Twitter"
+msgstr "Twitter"
+
+#. Text in function
+#: suffusion/functions.php:352
+msgid "URI"
+msgstr ""
+
+#. Text in function
+#: suffusion/widgets/suffusion-category-posts.php:215
+msgid "Underline upon hover (sidebar-style)"
+msgstr "Υπογράμμιση με το πέρασμα του ποντικιού (sidebar-style)"
+
+#. Text in function
+#: suffusion/widgets/suffusion-category-posts.php:215
+msgid "Use Category Icons Plugin"
+msgstr "Χρήση του Πρόσθετου: Category Icons"
+
+#. Text in function
+#: suffusion/widgets/suffusion-category-posts.php:215
+msgid "Use custom image"
+msgstr "Χρήση δικιάς σας εικόνας"
+
+#. Text in echo
+#: suffusion/widgets/suffusion-twitter.php:154
+msgid "User:"
+msgstr "Μέλος: "
+
+#. Text in echo
+#: suffusion/sidebar.php:74
+msgid "Valid XHTML"
+msgstr "Εγκεκριμένος κώδικας XHTML"
+
+#. Text in function
+#: suffusion/widgets/suffusion-featured-posts.php:255
+msgid "Vertical Blinds"
+msgstr "Κάθετες Περσίδες"
+
+#. Text in echo
+#: suffusion/widgets/suffusion-translator.php:122
+msgid "What language is your page in?"
+msgstr "Σε ποια γλώσσα είναι γραμμένη η σελίδα σας;"
+
+#. Text in function
+#: suffusion/functions/media.php:1
+msgid "Width"
+msgstr ""
+
+#. Text in echo
+#: suffusion/widgets/suffusion-featured-posts.php:205
+msgid "Width of excerpt section:"
+msgstr "Πλάτος της περιοχής του απσοσπάσματος (excerpt): "
+
+#. Text in echo
+#: suffusion/widgets/suffusion-subscription.php:81
+msgid "Will show a text box for visitors to enter an email address for subscription"
+msgstr "Προτρέπει τους επισκέπτες να πληκτρολογήσουν το Email τους για να εγγραφούν"
+
+#. Text in echo
+#: suffusion/widgets/suffusion-twitter.php:162
+msgid "Will show the selected Twitter icon"
+msgstr "Εμφάνιση του επιλεγμένου εικονιδίου Twitter"
+
+#. Text in echo
+#: suffusion/widgets/suffusion-twitter.php:168
+msgid "Will show up near the Twitter icon"
+msgstr "Εμφάνιση δίπλα στο εικονίδιο του Twitter"
+
+#. Text in echo
+#: suffusion/widgets/suffusion-twitter.php:174
+msgid "Will show your latest tweets"
+msgstr "Εμφάνιση των πρόσφατων tweets σας"
+
+#. Text in function
+#: suffusion/widgets/suffusion-featured-posts.php:255
+msgid "Wipe"
+msgstr "Εκκαθάριση"
+
+#. Text in function
+#: suffusion/login.php:86
+msgid "You are currently logged in as <a href=\"%1$s\" title=\"%2$s\">%2$s</a>."
+msgstr ""
+
+#. Text in echo
+#: suffusion/widgets/suffusion-category-posts.php:189
+msgid "You can choose to display an icon for the category based on the Category Icons plugin, or a custom image"
+msgstr "Eπιλέξετε αν το εικονίδιο που θα εμφανιστεί μπροστά από την Κατηγορία θα είναι δικά σας εικόνα ή από το Πρόσθετο: Category Icons "
+
+#. Text in function
+#: suffusion/login.php:86
+msgid "You have successfully logged in as <a href=\"%1$s\" title=\"%2$s\">%2$s</a>."
+msgstr ""
+
+#. Text in function
+#: suffusion/comments.php:158
+msgid "You may use these <abbr title=\"HyperText Markup Language\">HTML</abbr> tags and attributes: %s"
+msgstr ""
+
+#. Text in function
+#: suffusion/comments.php:158
+#: suffusion/comments.php:81
+msgid "You must be logged in to post a comment."
+msgstr "Πρέπει να συνδεθείτε για να μπορείτε να σχολιάσετε."
+
+#. Text in function
+#: suffusion/functions.php:352
+msgid "Your Comment"
+msgstr "Το Σχόλιό σας"
+
+#. Text in function
+#: suffusion/widgets/suffusion-featured-posts.php:255
+msgid "Zoom"
+msgstr "Μεγέθυνση"
+
+#. Text in function
+#: suffusion/widgets/suffusion-featured-posts.php:255
+msgid "Zoom and Fade"
+msgstr "Μεγέθυνση & Σταδιακή αποχώρηση"
+
+#. Text in function
+#: suffusion/widgets/suffusion-subscription.php:252
+msgid "your-feed-name"
+msgstr "ο-λογαριασμός-τροφοδοσίας-σας"
+
+#. Text in function
+#: suffusion/widgets/suffusion-twitter.php:93
+msgid "your-user-name"
+msgstr "ο-λογαριασμός-σας"
+

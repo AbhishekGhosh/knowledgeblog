@@ -1,0 +1,1351 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Project-Id-Version: Suffusion\n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: Federico <info@lastbeach.info>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+
+#. Text in function
+#: suffusion/functions/actions.php:1360
+#: suffusion/functions/actions.php:2188
+#: suffusion/comments.php:26
+msgid "% Responses"
+msgstr "% Commenti"
+
+#. Text in function
+#: suffusion/comments.php:26
+msgid "%1$s to &#8220;%2$s&#8221;"
+msgstr ""
+
+#. Text in function
+#: suffusion/functions.php:352
+msgid "(required)"
+msgstr "(richiesto)"
+
+#. Text in function
+#: suffusion/functions/actions.php:1360
+#: suffusion/functions/actions.php:2188
+msgid "1 Response"
+msgstr "1 Commento"
+
+#. Text in echo
+#: suffusion/widgets/suffusion-featured-posts.php:255
+msgid "<p>This widget displays a featured posts slider.</p>"
+msgstr "<p>Questo widget mostra uno slider per i Featured Post.</p>"
+
+#. Text in echo
+#: suffusion/widgets/suffusion-category-posts.php:215
+msgid "<p>This widget lets you display the latest posts from a category.</p>"
+msgstr "<p>Questo widget permette di visualizzare l'ultimo articolo da una categoria.</p>"
+
+#. Text in function
+#: suffusion/widgets/suffusion-search.php:53
+msgid "A search form for your blog"
+msgstr "Una Form di ricerca per il tuo blog"
+
+#. Text in function
+#: suffusion/widgets/suffusion-featured-posts.php:255
+msgid "A widget for displaying featured posts."
+msgstr "Un widget per mostrare i Featured Post."
+
+#. Text in function
+#: suffusion/widgets/suffusion-category-posts.php:215
+msgid "A widget for displaying posts in a category. You can use this to selectively display posts."
+msgstr "Un widget per visualizzare i post in una categoria. Puoi usarlo per visualizzare i post con un certo criterio."
+
+#. Text in function
+#: suffusion/widgets/suffusion-twitter.php:222
+msgid "A widget to enable people to follow you on Twitter"
+msgstr "Un widget per permettere agli utenti di seguirti su Twitter"
+
+#. Text in function
+#: suffusion/widgets/suffusion-translator.php:125
+msgid "A widget to let people use Google Translator to translate your site"
+msgstr "Un widget per permettere agli utenti di usare il Traduttore di Google per tradurre il vostro sito"
+
+#. Text in echo
+#: suffusion/functions/actions.php:1408
+#: suffusion/functions/actions.php:2188
+msgid "Add comments"
+msgstr "Lascia un Commento"
+
+#. Text in function
+#: suffusion/widgets/suffusion-featured-posts.php:255
+msgid "Alternate excerpt between left and right"
+msgstr "Alterna riassunti tra sinistra e destra"
+
+#. Text in function
+#: suffusion/widgets/suffusion-featured-posts.php:255
+msgid "Alternate excerpt between top and bottom"
+msgstr "Alterna riassunti tra alto e basso"
+
+#. Text in function
+#: suffusion/functions/media.php:1
+msgid "Aperture"
+msgstr ""
+
+#. Text in echo
+#: suffusion/sidebar.php:47
+#: suffusion/functions.php:352
+msgid "Archives"
+msgstr "Archivi"
+
+#. Text in function
+#: suffusion/widgets/suffusion-featured-posts.php:255
+msgid "Bottom"
+msgstr "Basso"
+
+#. Text in function
+#: suffusion/widgets/suffusion-category-posts.php:215
+msgid "Box upon hover (magazine-style)"
+msgstr "Box upon hover (magazine-style)"
+
+#. Text in function
+#: suffusion/functions/media.php:1
+msgid "Camera"
+msgstr ""
+
+#. Text in function
+#: suffusion/comments.php:158
+msgid "Cancel reply"
+msgstr ""
+
+#. Text in function
+#: suffusion/functions/media.php:1
+msgid "Caption"
+msgstr ""
+
+#. Text in echo
+#: suffusion/sidebar.php:36
+#: suffusion/functions.php:352
+msgid "Categories"
+msgstr "Categorie"
+
+#. Text in echo
+#: suffusion/widgets/suffusion-category-posts.php:175
+msgid "Category Icon:"
+msgstr "Icona Categoria:"
+
+#. Text in function
+#: suffusion/widgets/suffusion-category-posts.php:215
+msgid "Category Posts"
+msgstr "Articoli Categoria"
+
+#. Text in echo
+#: suffusion/widgets/suffusion-category-posts.php:193
+msgid "Category icon custom image link:"
+msgstr "Link immagine personalizzata categoria:"
+
+#. Text in function
+#: suffusion/functions.php:352
+msgid "Comments"
+msgstr "Commenti"
+
+#. Text in echo
+#: suffusion/sidebar.php:76
+msgid "Comments (RSS)"
+msgstr "Commenti (RSS)"
+
+#. Text in echo
+#: suffusion/sidebar-tabs.php:65
+#: suffusion/widgets/suffusion-meta.php:27
+msgid "Comments <abbr title=\"Really Simple Syndication\">RSS</abbr>"
+msgstr "Commenti <abbr title=\"Really Simple Syndication\">RSS</abbr>"
+
+#. Text in function
+#: suffusion/functions/actions.php:919
+msgid "Continue reading"
+msgstr "Continua a leggere"
+
+#. Text in function
+#: suffusion/functions/media.php:1
+msgid "Copyright"
+msgstr ""
+
+#. Text in function
+#: suffusion/functions/actions.php:2188
+msgid "Copyright (c) %1$s"
+msgstr "Copyright (c) %1$s"
+
+#. Text in function
+#: suffusion/functions/media.php:1
+msgid "Credit"
+msgstr ""
+
+#. Text in function
+#: suffusion/widgets/suffusion-featured-posts.php:255
+msgid "Current post is covered by next post"
+msgstr "L'articolo viene ricoperto da quello seguente"
+
+#. Text in function
+#: suffusion/widgets/suffusion-featured-posts.php:255
+msgid "Current post moves off next post"
+msgstr ""
+
+#. Text in function
+#: suffusion/functions.php:352
+msgid "Custom Tab 1"
+msgstr ""
+
+#. Text in function
+#: suffusion/functions.php:352
+msgid "Custom Tab 10"
+msgstr ""
+
+#. Text in function
+#: suffusion/functions.php:352
+msgid "Custom Tab 2"
+msgstr ""
+
+#. Text in function
+#: suffusion/functions.php:352
+msgid "Custom Tab 3"
+msgstr ""
+
+#. Text in function
+#: suffusion/functions.php:352
+msgid "Custom Tab 4"
+msgstr ""
+
+#. Text in function
+#: suffusion/functions.php:352
+msgid "Custom Tab 5"
+msgstr ""
+
+#. Text in function
+#: suffusion/functions.php:352
+msgid "Custom Tab 6"
+msgstr ""
+
+#. Text in function
+#: suffusion/functions.php:352
+msgid "Custom Tab 7"
+msgstr ""
+
+#. Text in function
+#: suffusion/functions.php:352
+msgid "Custom Tab 8"
+msgstr ""
+
+#. Text in function
+#: suffusion/functions.php:352
+msgid "Custom Tab 9"
+msgstr ""
+
+#. Text in echo
+#: suffusion/widgets/suffusion-featured-posts.php:162
+msgid "Custom image height:"
+msgstr "Altezza personalizzata immagine:"
+
+#. Text in echo
+#: suffusion/widgets/suffusion-featured-posts.php:168
+msgid "Custom image width:"
+msgstr "Larghezza personalizzata immagine"
+
+#. Text in function
+#: suffusion/functions/media.php:1
+msgid "Date Taken"
+msgstr ""
+
+#. Text in function
+#: suffusion/widgets/suffusion-featured-posts.php:255
+msgid "Diagonal Blinds"
+msgstr ""
+
+#. Text in echo
+#: suffusion/functions.php:289
+msgid "Do not link to this page in the navigation bars"
+msgstr ""
+
+#. Text in function
+#: suffusion/widgets/suffusion-featured-posts.php:255
+msgid "Don't show any text"
+msgstr "Non mostrare alcun testo"
+
+#. Text in function
+#: suffusion/widgets/suffusion-twitter.php:222
+msgid "Don't show feeds"
+msgstr "Non mostare i Feed"
+
+#. Text in function
+#: suffusion/widgets/suffusion-twitter.php:222
+msgid "Don't show tagline"
+msgstr ""
+
+#. Text in function
+#: suffusion/functions.php:352
+msgid "E-mail"
+msgstr "E-mail"
+
+#. Text in echo
+#: suffusion/widgets/suffusion-featured-posts.php:153
+msgid "E.g. 250px"
+msgstr "Es. 250 px"
+
+#. Text in function
+#: suffusion/functions/actions.php:1363
+#: suffusion/functions/actions.php:1413
+#: suffusion/functions/actions.php:2187
+msgid "Edit"
+msgstr "Modifica"
+
+#. Text in echo
+#: suffusion/widgets/suffusion-subscription.php:85
+msgid "Email Subscription Box Default Text:"
+msgstr "Testo predefinito per il Box di sottoscrizione Email:"
+
+#. Text in echo
+#: suffusion/widgets/suffusion-subscription.php:91
+msgid "Email Subscription Button Text:"
+msgstr "Testo Pulsante per sottoscrizione email"
+
+#. Text in echo
+#: suffusion/widgets/suffusion-featured-posts.php:158
+msgid "Enable custom image size for featured images"
+msgstr "Abilita l'uso di grandezze personalizzate per le immagini Featured"
+
+#. Text in function
+#: suffusion/widgets/suffusion-subscription.php:252
+msgid "Enter %1$s account name:"
+msgstr "Inserisci nome account %1$s"
+
+#. Text in echo
+#: suffusion/functions.php:349
+msgid "Enter a comma-separated list of keywords for this post. This list will be included in the meta tags for this post."
+msgstr "Inserisci una lista di parole chiave per questo Articolo (separate da una virgola). Questa lista verrà inclusa nei meta tag di questo post."
+
+#. Text in function
+#: suffusion/widgets/suffusion-subscription.php:252
+msgid "Enter email address"
+msgstr "Inserisci email"
+
+#. Text in echo
+#: suffusion/functions.php:328
+msgid "Enter the full URL of the featured image that you would like to use, including http://"
+msgstr "Inserisci l'URL completa per l'immagine Featured che volete usare, incluso http://"
+
+#. Text in echo
+#: suffusion/functions.php:323
+msgid "Enter the full URL of the thumbnail image that you would like to use, including http://"
+msgstr "Inserisci l'URL completo per il thumbnail (miniatura) che vuoi usare, incluso http://"
+
+#. Text in echo
+#: suffusion/widgets/suffusion-featured-posts.php:145
+msgid "Enter time in milliseconds. E.g. 1000"
+msgstr "Inserisci il tempo in millisecondi. Es. 1000"
+
+#. Text in echo
+#: suffusion/widgets/suffusion-featured-posts.php:139
+msgid "Enter time in milliseconds. E.g. 4000"
+msgstr "Inserisci il tempo in millisecondi. Es. 4000"
+
+#. Text in function
+#: suffusion/widgets/suffusion-subscription.php:75
+msgid "Enter your %1$s feed name. If your feed address is http://feeds.feedburner.com/my_feed_name, your feed name is my_feed_name"
+msgstr "Inserisci il nome del tuo feed %1$s. Se il tuo indirizzo per il feed è http://feeds.feedburner.com/my_feed_name, il tuo nome è my_feed_name"
+
+#. Text in function
+#: suffusion/widgets/suffusion-subscription.php:252
+msgid "Enter your full %1$s URL:"
+msgstr "Inserisci ULR completo %1$s:"
+
+#. Text in echo
+#: suffusion/sidebar.php:75
+msgid "Entries (RSS)"
+msgstr "Articoli (RSS)"
+
+#. Text in echo
+#: suffusion/sidebar-tabs.php:64
+#: suffusion/widgets/suffusion-meta.php:26
+msgid "Entries <abbr title=\"Really Simple Syndication\">RSS</abbr>"
+msgstr "Articoli <abbr title=\"Really Simple Syndication\">RSS</abbr>"
+
+#. Text in function
+#: suffusion/functions.php:352
+msgid "Error 404 - Not Found"
+msgstr "Errore 404 - Non Trovato"
+
+#. Text in echo
+#: suffusion/widgets/suffusion-featured-posts.php:211
+msgid "Excerpt background color:"
+msgstr "Colore di sfondo riassunti:"
+
+#. Text in echo
+#: suffusion/widgets/suffusion-featured-posts.php:221
+msgid "Excerpt font color:"
+msgstr "Colore scrittura riassunti:"
+
+#. Text in echo
+#: suffusion/widgets/suffusion-featured-posts.php:216
+msgid "Excerpt title color:"
+msgstr "Colore titolo riassunti:"
+
+#. Text in function
+#: suffusion/widgets/suffusion-featured-posts.php:255
+msgid "Fade In"
+msgstr ""
+
+#. Text in function
+#: suffusion/widgets/suffusion-featured-posts.php:255
+msgid "Featured Content"
+msgstr "Contenuto in Evidenza"
+
+#. Text in echo
+#: suffusion/functions.php:326
+msgid "Featured Image"
+msgstr "Immagini in Evidenza"
+
+#. Text in echo
+#: suffusion/widgets/suffusion-featured-posts.php:113
+msgid "Featured content transition effect:"
+msgstr "Effetti di transizione contenuto in Evidenza:"
+
+#. Text in echo
+#: suffusion/widgets/suffusion-subscription.php:73
+msgid "FeedBurner Feed:"
+msgstr "FeedBurner Feed:"
+
+#. Text in function
+#: suffusion/functions/media.php:1
+msgid "File"
+msgstr ""
+
+#. Text in echo
+#: suffusion/widgets/suffusion-featured-posts.php:97
+msgid "Fill in a comma-separated list of category ids. E.g. 3,8,17"
+msgstr "Riempi con gli ID delle categorie (separate da virgola). Es. 3,8,17"
+
+#. Text in echo
+#: suffusion/widgets/suffusion-featured-posts.php:109
+msgid "Fill in a comma-separated list of page ids. E.g. 7,9,13"
+msgstr "Riempi con gli ID delle pagine (separate da virgola). Es. 7,9,13"
+
+#. Text in echo
+#: suffusion/widgets/suffusion-featured-posts.php:103
+msgid "Fill in a comma-separated list of post ids. E.g. 7,9,13"
+msgstr "Riempi con gli ID degli Articoli (separate da virgola). Es. 7,9,13"
+
+#. Text in function
+#: suffusion/functions/media.php:1
+msgid "Focal Length"
+msgstr ""
+
+#. Text in function
+#: suffusion/widgets/suffusion-subscription.php:252
+msgid "Follow Me"
+msgstr "Seguimi"
+
+#. Text in function
+#: suffusion/widgets/suffusion-twitter.php:93
+msgid "Follow me on Twitter"
+msgstr "Seguimi su Twitter"
+
+#. Text in function
+#: suffusion/widgets/suffusion-translator.php:125
+msgid "Google Translator"
+msgstr "Traduttore Google"
+
+#. Text in function
+#: suffusion/widgets/suffusion-featured-posts.php:255
+msgid "Grow horizontally from center"
+msgstr "Cresci orizzontalmente dal centro"
+
+#. Text in function
+#: suffusion/widgets/suffusion-featured-posts.php:255
+msgid "Grow vertically from center"
+msgstr "Cresi verticalmente dal centro"
+
+#. Text in function
+#: suffusion/functions/media.php:1
+msgid "Height"
+msgstr ""
+
+#. Text in echo
+#: suffusion/widgets/suffusion-featured-posts.php:151
+msgid "Height of featured content section:"
+msgstr "Altezza delle sezioni dei contenuti in evidenza:"
+
+#. Text in echo
+#: suffusion/functions/actions.php:1293
+msgid "Highlight matching results below"
+msgstr ""
+
+#. Text in function
+#: suffusion/widgets/suffusion-featured-posts.php:255
+msgid "Horizontal Blinds"
+msgstr ""
+
+#. Text in function
+#: suffusion/functions/media.php:1
+msgid "ISO"
+msgstr ""
+
+#. Text in echo
+#: suffusion/functions.php:292
+msgid "If this box is checked, clicking on this page in the navigation bar will not take you anywhere."
+msgstr ""
+
+#. Text in echo
+#: suffusion/functions.php:334
+msgid "If this box is checked, this post will show up as a headline in the magazine template."
+msgstr ""
+
+#. Text in echo
+#: suffusion/functions.php:340
+msgid "If this box is checked, this post will show up as an excerpt in the magazine template."
+msgstr ""
+
+#. Text in echo
+#: suffusion/widgets/suffusion-featured-posts.php:91
+msgid "If you are including latest posts and you select 5 here, the latest 5 posts will be included in the featured content. If this number is higher than the maximum number of posts, this setting will be ignored"
+msgstr "Se selezioni la spunta \"Includi ultimi articoli\" e selezioni 5 qui, gli ultimi 5 articoli verranno inclusi tra i contenuti in evidenza. Se questo numero è maggiore di \"Massimo numero di articoli/pagine da visualizzare\" questa impostazione verrà ignorata"
+
+#. Text in function
+#: suffusion/widgets/suffusion-twitter.php:222
+msgid "If you are placing this widget in the \\\"Right Header Widgets\\\":"
+msgstr "Se posizioni questo widget nel \"Right Header Widgets\""
+
+#. Text in function
+#: suffusion/widgets/suffusion-twitter.php:222
+msgid "If you are placing this widget in the sidebars or in \\\"Widget Area below Header\\\" or \\\"Widget Area below Footer\\\":"
+msgstr "Se posizioni questo widget nella sidebar oppure in \"Widget Area below Header\" oppure in \"Widget Area Below Footer\":"
+
+#. Text in echo
+#: suffusion/widgets/suffusion-category-posts.php:195
+msgid "If you have chosen to use a custom image in the previous option, please enter the complete URL of the category icon here, including http://"
+msgstr "Se hai scelto di usare un'immagine personalizzata nella precedente opzione, inserisci l'URL completo delle icone delle categorie qui, includendo http://"
+
+#. Text in echo
+#: suffusion/widgets/suffusion-featured-posts.php:95
+msgid "Include categories:"
+msgstr "Includi Categorie:"
+
+#. Text in echo
+#: suffusion/widgets/suffusion-featured-posts.php:77
+msgid "Include latest posts"
+msgstr "Includi Ultimi Articoli"
+
+#. Text in echo
+#: suffusion/widgets/suffusion-featured-posts.php:107
+msgid "Include pages:"
+msgstr "Includi Pagine:"
+
+#. Text in echo
+#: suffusion/widgets/suffusion-featured-posts.php:101
+msgid "Include posts:"
+msgstr "Includi Articoli:"
+
+#. Text in echo
+#: suffusion/widgets/suffusion-featured-posts.php:72
+msgid "Include sticky posts"
+msgstr "Includi Sticky Post"
+
+#. Text in function
+#: suffusion/comments.php:158
+#: suffusion/comments.php:78
+msgid "Leave a Reply"
+msgstr "Lascia un commento"
+
+#. Text in function
+#: suffusion/comments.php:158
+#: suffusion/comments.php:78
+msgid "Leave a Reply to %s"
+msgstr "Lascia un commento per %s"
+
+#. Text in function
+#: suffusion/widgets/suffusion-featured-posts.php:255
+msgid "Left"
+msgstr "Sinistra"
+
+#. Text in echo
+#: suffusion/sidebar.php:58
+#: suffusion/functions.php:352
+msgid "Links"
+msgstr "Links"
+
+#. Text in function
+#: suffusion/widgets/suffusion-meta.php:30
+msgid "Log in/out, admin, feed and WordPress links"
+msgstr ""
+
+#. Text in function
+#: suffusion/comments.php:158
+#: suffusion/comments.php:93
+msgid "Log out"
+msgstr "Log out"
+
+#. Text in function
+#: suffusion/comments.php:158
+#: suffusion/comments.php:92
+msgid "Logged in as %s. "
+msgstr "Autenticato come %s."
+
+#. Text in echo
+#: suffusion/functions.php:331
+msgid "Make this post a headline"
+msgstr ""
+
+#. Text in echo
+#: suffusion/functions.php:337
+msgid "Make this post an excerpt in the magazine layout"
+msgstr ""
+
+#. Text in echo
+#: suffusion/widgets/suffusion-featured-posts.php:58
+msgid "Maximum number of posts / pages to display:"
+msgstr "Massimo numero di articoli/pagine da visualizzare"
+
+#. Text in echo
+#: suffusion/sidebar.php:69
+#: suffusion/functions.php:352
+#: suffusion/widgets/suffusion-meta.php:30
+msgid "Meta"
+msgstr "Meta"
+
+#. Text in echo
+#: suffusion/functions.php:343
+msgid "Meta Description"
+msgstr "Meta Description"
+
+#. Text in echo
+#: suffusion/functions.php:347
+msgid "Meta Keywords"
+msgstr "Meta Keywords"
+
+#. Text in function
+#: suffusion/widgets/suffusion-twitter.php:93
+msgid "My Tweets"
+msgstr "Tweet"
+
+#. Text in function
+#: suffusion/functions.php:352
+msgid "Name"
+msgstr "Nome"
+
+#. Text in function
+#: suffusion/functions/filters.php:261
+msgid "Newer %1$s"
+msgstr "Nuovi %1$s"
+
+#. Text in function
+#: suffusion/functions/filters.php:261
+msgid "Newer Comments"
+msgstr "Nuovi Commenti"
+
+#. Text in function
+#: suffusion/functions/actions.php:2188
+#: suffusion/functions/actions.php:1223
+msgid "Newer Entries"
+msgstr "Nuove aggiunte"
+
+#. Text in function
+#: suffusion/image.php:21
+msgid "Next Image"
+msgstr ""
+
+#. Text in function
+#: suffusion/featured-posts.php:1
+#: suffusion/widgets/suffusion-featured-posts.php:255
+msgid "Next Post"
+msgstr "Prossimo Articolo"
+
+#. Text in function
+#: suffusion/functions/actions.php:1360
+#: suffusion/functions/actions.php:2188
+#: suffusion/comments.php:26
+msgid "No Responses"
+msgstr "Nessun Commento"
+
+#. Text in function
+#: suffusion/widgets/suffusion-category-posts.php:215
+msgid "No category icon"
+msgstr "Nessuna Icona Categoria"
+
+#. Text in echo
+#: suffusion/now-reading/single.php:118
+#: suffusion/layouts/template-missing.php:23
+msgid "Not Found"
+msgstr "Nessun Risultato"
+
+#. Text in echo
+#: suffusion/layouts/template-missing.php:12
+msgid "Nothing Found"
+msgstr "Nessun Risultato"
+
+#. Text in echo
+#: suffusion/widgets/suffusion-featured-posts.php:81
+msgid "Number of \"Latest Posts\":"
+msgstr "Numero di \"Ultiimi Articoli\""
+
+#. Text in echo
+#: suffusion/widgets/suffusion-twitter.php:188
+msgid "Number of Tweets to display:"
+msgstr "Numero di Tweet da visualizzare:"
+
+#. Text in echo
+#: suffusion/widgets/suffusion-category-posts.php:138
+msgid "Number of posts to display:"
+msgstr "Numero di articoli da visualizzare:"
+
+#. Text in function
+#: suffusion/functions/filters.php:261
+msgid "Older %1$s"
+msgstr "Vecchi %1$s"
+
+#. Text in function
+#: suffusion/functions/filters.php:261
+msgid "Older Comments"
+msgstr "Vecchi commenti"
+
+#. Text in function
+#: suffusion/functions/actions.php:2188
+#: suffusion/functions/actions.php:1222
+msgid "Older Entries"
+msgstr "Vecchie Aggiunte"
+
+#. Text in function
+#: suffusion/comments.php:26
+msgid "One Response"
+msgstr "1 Commento"
+
+#. Text in function
+#: suffusion/functions/actions.php:1198
+#: suffusion/functions/filters.php:233
+msgid "Page %1$s of %2$s"
+msgstr "Pagina %1$s di %2$s"
+
+#. Text in function
+#: suffusion/functions/actions.php:2188
+msgid "Page %s"
+msgstr ""
+
+#. Text in echo
+#: suffusion/functions.php:284
+msgid "Page Title in Dropdown Menu"
+msgstr ""
+
+#. Text in function
+#: suffusion/functions.php:352
+msgid "Pages"
+msgstr "Pagine"
+
+#. Text in function
+#: suffusion/functions/filters.php:261
+msgid "Pages:"
+msgstr "Pagine:"
+
+#. Text in function
+#: suffusion/featured-posts.php:1
+#: suffusion/functions/actions.php:2188
+#: suffusion/widgets/suffusion-featured-posts.php:255
+msgid "Pause"
+msgstr "Pausa"
+
+#. Text in function
+#: suffusion/functions.php:352
+msgid "Pingbacks"
+msgstr "Pingbacks"
+
+#. Text in echo
+#: suffusion/layouts/template-missing.php:14
+msgid "Please try another search."
+msgstr "Prova con altre chiavi di ricerca."
+
+#. Text in echo
+#: suffusion/widgets/suffusion-featured-posts.php:189
+msgid "Position of the excerpt:"
+msgstr "Posizione del riassunto:"
+
+#. Text in echo
+#: suffusion/widgets/suffusion-category-posts.php:151
+msgid "Post display style:"
+msgstr "Stile visualizzazione articoli:"
+
+#. Text in function
+#: suffusion/functions/actions.php:1403
+#: suffusion/functions/actions.php:2188
+msgid "Posted by %1$s at %2$s"
+msgstr "Scritto da %1$s alle %2$s"
+
+#. Text in echo
+#: suffusion/widgets/suffusion-category-posts.php:134
+msgid "Posts from the selected category will show in the widget"
+msgstr "Gli articoli delle categorie selezionate verranno visualizzati in un widget"
+
+#. Text in function
+#: suffusion/image.php:20
+msgid "Previous Image"
+msgstr ""
+
+#. Text in function
+#: suffusion/featured-posts.php:1
+#: suffusion/widgets/suffusion-featured-posts.php:255
+msgid "Previous Post"
+msgstr "Articolo Precedente"
+
+#. Text in function
+#: suffusion/categories.php:51
+msgid "RSS"
+msgstr "RSS"
+
+#. Text in function
+#: suffusion/functions.php:352
+msgid "Recent Comments"
+msgstr "Commenti Recenti"
+
+#. Text in function
+#: suffusion/functions.php:352
+msgid "Recent Posts"
+msgstr "Articoli Recenti"
+
+#. Text in function
+#: suffusion/widgets/suffusion-twitter.php:222
+msgid "Recommended settings:"
+msgstr "Impostazioni Consigliate:"
+
+#. Text in echo
+#: suffusion/widgets/suffusion-twitter.php:218
+msgid "Recommended sizes: 32px if the widget is being added to the \\\"Right Header Widgets\\\" area, whatever you like otherwise. Note that making the image too large will cause loss of picture quality."
+msgstr "Impostazioni Consigliate: 32px se il widget è stato aggiunto nell'area \"Right Header Widgets\", altrimenti qualsiasi cosa. NB rendere l'immagino troppo larga causa perdita di qualità"
+
+#. Text in function
+#: suffusion/functions/actions.php:2188
+msgid "Resume"
+msgstr "Riprendi"
+
+#. Text in function
+#: suffusion/widgets/suffusion-featured-posts.php:255
+msgid "Right"
+msgstr "Destra"
+
+#. Text in function
+#: suffusion/widgets/suffusion-featured-posts.php:255
+msgid "Rotate between the four positions"
+msgstr "Cambia a rotazione (su, giu, destra, sinistra)"
+
+#. Text in function
+#: suffusion/widgets/suffusion-featured-posts.php:255
+msgid "Scroll Down"
+msgstr ""
+
+#. Text in function
+#: suffusion/widgets/suffusion-featured-posts.php:255
+msgid "Scroll Horizontally"
+msgstr ""
+
+#. Text in function
+#: suffusion/widgets/suffusion-featured-posts.php:255
+msgid "Scroll Left"
+msgstr ""
+
+#. Text in function
+#: suffusion/widgets/suffusion-featured-posts.php:255
+msgid "Scroll Right"
+msgstr ""
+
+#. Text in function
+#: suffusion/widgets/suffusion-featured-posts.php:255
+msgid "Scroll Up"
+msgstr ""
+
+#. Text in function
+#: suffusion/widgets/suffusion-featured-posts.php:255
+msgid "Scroll Vertically"
+msgstr ""
+
+#. Text in echo
+#: suffusion/searchform.php:11
+#: suffusion/functions.php:352
+#: suffusion/widgets/suffusion-search.php:53
+msgid "Search"
+msgstr "Cerca"
+
+#. Text in function
+#: suffusion/sidebar-tabs.php:227
+msgid "Select"
+msgstr "Seleziona"
+
+#. Text in echo
+#: suffusion/widgets/suffusion-category-posts.php:125
+msgid "Select category to show:"
+msgstr "Seleziona categorie da mostrare:"
+
+#. Text in function
+#: suffusion/widgets/suffusion-subscription.php:140
+msgid "Select your %1$s icon"
+msgstr "Seleziona la tua icona %1$s "
+
+#. Text in echo
+#: suffusion/widgets/suffusion-twitter.php:203
+msgid "Select your Twitter icon:"
+msgstr "Seleziona la tua icona Twitter:"
+
+#. Text in echo
+#: suffusion/widgets/suffusion-subscription.php:153
+msgid "Select your icon size"
+msgstr "Seleziona la grandezza della tua icona"
+
+#. Text in echo
+#: suffusion/widgets/suffusion-twitter.php:214
+msgid "Set the height for the Twitter icon:"
+msgstr "Imposta l'altezza dell'icona Twitter"
+
+#. Text in echo
+#: suffusion/widgets/suffusion-category-posts.php:199
+msgid "Set the height for the category icon:"
+msgstr "Imposta l'altezza dell'icona delle categorie"
+
+#. Text in echo
+#: suffusion/widgets/suffusion-category-posts.php:207
+msgid "Set the width for the category icon:"
+msgstr "Imposta la larghezza dell'icona delle categorie"
+
+#. Text in function
+#: suffusion/widgets/suffusion-subscription.php:107
+msgid "Show %1$s icon"
+msgstr "Mostra icona %1$s"
+
+#. Text in echo
+#: suffusion/widgets/suffusion-subscription.php:80
+msgid "Show Email Subscription"
+msgstr ""
+
+#. Text in echo
+#: suffusion/widgets/suffusion-subscription.php:98
+msgid "Show FeedBurner reader count"
+msgstr "Mostra contatore letture Feedburner"
+
+#. Text in echo
+#: suffusion/widgets/suffusion-featured-posts.php:232
+msgid "Show Previous, Pause and Next buttons"
+msgstr "Mostra Pulsanti: Precedente, Pausa, Prossimo"
+
+#. Text in echo
+#: suffusion/widgets/suffusion-twitter.php:161
+msgid "Show Twitter Icon"
+msgstr "Mostra icona Twitter"
+
+#. Text in echo
+#: suffusion/widgets/suffusion-twitter.php:167
+msgid "Show a Tagline"
+msgstr ""
+
+#. Text in echo
+#: suffusion/widgets/suffusion-featured-posts.php:227
+msgid "Show a numbered post index"
+msgstr ""
+
+#. Text in function
+#: suffusion/widgets/suffusion-featured-posts.php:255
+msgid "Show excerpt only (no title)"
+msgstr "Mostra solo riassunti (no titolo)"
+
+#. Text in function
+#: suffusion/widgets/suffusion-twitter.php:222
+msgid "Show feeds"
+msgstr "Mostra Feed"
+
+#. Text in function
+#: suffusion/widgets/suffusion-twitter.php:222
+msgid "Show icon"
+msgstr "Mostra icona"
+
+#. Text in echo
+#: suffusion/widgets/suffusion-twitter.php:173
+msgid "Show my Tweets"
+msgstr "Mostra i miei Tweet"
+
+#. Text in function
+#: suffusion/widgets/suffusion-featured-posts.php:255
+msgid "Show post title and excerpt"
+msgstr "Mostra Titolo Articolo e riassunto"
+
+#. Text in function
+#: suffusion/widgets/suffusion-featured-posts.php:255
+msgid "Show post title only (no excerpt)"
+msgstr "Mostra solo il Titolo dell'Articolo (no riassunto)"
+
+#. Text in function
+#: suffusion/widgets/suffusion-twitter.php:222
+msgid "Show tagline"
+msgstr ""
+
+#. Text in function
+#: suffusion/functions/media.php:1
+msgid "Shutter Speed"
+msgstr ""
+
+#. Text in function
+#: suffusion/widgets/suffusion-featured-posts.php:255
+msgid "Slide in and back horizontally"
+msgstr ""
+
+#. Text in function
+#: suffusion/widgets/suffusion-featured-posts.php:255
+msgid "Slide in and back vertically"
+msgstr ""
+
+#. Text in echo
+#: suffusion/now-reading/single.php:120
+#: suffusion/layouts/template-missing.php:25
+msgid "Sorry, but you are looking for something that isn't here"
+msgstr "Spiacente ma stai cercando qualcosa che non è qui"
+
+#. Text in echo
+#: suffusion/attachment.php:34
+#: suffusion/image.php:38
+#: suffusion/single.php:60
+msgid "Sorry, no posts matched your criteria."
+msgstr "Spiacente, nessun risultato trovato."
+
+#. Text in echo
+#: suffusion/comments.php:157
+msgid "Sorry, the comment form is closed at this time."
+msgstr "Spiacente, I commenti sono chiusi al momento"
+
+#. Text in function
+#: suffusion/functions.php:352
+msgid "Sorry, the page that you are looking for does not exist."
+msgstr "Spiacente, la pagina che stai cercando non esiste."
+
+#. Text in echo
+#: suffusion/widgets/suffusion-translator.php:116
+msgid "Source Language:"
+msgstr "Linguaggio Sorgente:"
+
+#. Text in function
+#: suffusion/widgets/suffusion-featured-posts.php:255
+msgid "Squeeze in both edges horizontally"
+msgstr ""
+
+#. Text in function
+#: suffusion/widgets/suffusion-featured-posts.php:255
+msgid "Squeeze in both edges vertically"
+msgstr ""
+
+#. Text in function
+#: suffusion/comments.php:158
+#: suffusion/comments.php:131
+msgid "Submit Comment"
+msgstr "Lascia Commento"
+
+#. Text in function
+#: suffusion/widgets/suffusion-subscription.php:252
+msgid "Subscribe"
+msgstr ""
+
+#. Text in function
+#: suffusion/sidebar-tabs.php:64
+#: suffusion/widgets/suffusion-meta.php:26
+msgid "Syndicate this site using RSS 2.0"
+msgstr "Vai agli articoli su RSS"
+
+#. Text in function
+#: suffusion/functions.php:352
+msgid "Tag Cloud"
+msgstr "Tag Cloud"
+
+#. Text in echo
+#: suffusion/now-reading/single.php:107
+#: suffusion/functions/actions.php:1367
+#: suffusion/functions/actions.php:2188
+msgid "Tagged with: "
+msgstr "Tag:"
+
+#. Text in echo
+#: suffusion/widgets/suffusion-twitter.php:183
+msgid "Tagline:"
+msgstr "Tagline:"
+
+#. Text in echo
+#: suffusion/widgets/suffusion-featured-posts.php:174
+msgid "Text display options:"
+msgstr "Opzioni visualizzazione testo"
+
+#. Text in echo
+#: suffusion/widgets/suffusion-category-posts.php:168
+msgid "Text for \"All Posts\":"
+msgstr "Testo per \"All Posts\""
+
+#. Text in echo
+#: suffusion/widgets/suffusion-featured-posts.php:250
+msgid "Text for \"Next Post\":"
+msgstr "Testo per \"Next Post\":"
+
+#. Text in echo
+#: suffusion/widgets/suffusion-featured-posts.php:245
+msgid "Text for \"Pause\":"
+msgstr "Testo per \"Pause\""
+
+#. Text in echo
+#: suffusion/widgets/suffusion-featured-posts.php:240
+msgid "Text for \"Previous Post\":"
+msgstr "Testo per \"Previous Post\""
+
+#. Text in echo
+#: suffusion/widgets/suffusion-featured-posts.php:236
+msgid "The following three settings only apply if you show the previous, pause and next buttons:"
+msgstr "Queste impostazioni verranno applicate se scegli l'opzione per mostrare i pulsanti: Precedente, Pausa, Prossimo"
+
+#. Text in echo
+#: suffusion/widgets/suffusion-category-posts.php:203
+msgid "The image you have picked will be scaled to this height."
+msgstr "L'immagine scelta verrà scalato a questa altezza."
+
+#. Text in echo
+#: suffusion/widgets/suffusion-category-posts.php:211
+msgid "The image you have picked will be scaled to this width."
+msgstr "L'immagine scelta verrà scalato a questa larghezza."
+
+#. Text in function
+#: suffusion/sidebar-tabs.php:65
+#: suffusion/widgets/suffusion-meta.php:27
+msgid "The latest comments to all posts in RSS"
+msgstr "Gli utlimi commenti a tutti gli Articoli RSS"
+
+#. Text in echo
+#: suffusion/widgets/suffusion-category-posts.php:170
+msgid "The text you enter here will be the displayed in the button for \\\"All Posts\\\". If you leave this field blank the button will not be shown."
+msgstr ""
+
+#. Text in echo
+#: suffusion/widgets/suffusion-featured-posts.php:170
+msgid "This is applicable only if custom image size is enabled"
+msgstr "Questa impostazione viene applicata solo se hai abilitato l'uso di grandezze personalizzate per le immagini in evidenza"
+
+#. Text in echo
+#: suffusion/widgets/suffusion-featured-posts.php:207
+msgid "This is only applicable if your excerpt is at the right or at the left of your featured posts."
+msgstr "Questa impostazione è applicabile solo se il tuo riassunto è a destra o a sinistra dei tuoi Articoli in Evidenza"
+
+#. Text in echo
+#: suffusion/widgets/suffusion-twitter.php:156
+msgid "This is the user who will be followed"
+msgstr "Questo è il nick che verrà seguito"
+
+#. Text in echo
+#: suffusion/comments.php:15
+msgid "This post is password protected. Enter the password to view comments."
+msgstr "Questo articolo è protetto da password. Inserisci la password per vedere i commenti."
+
+#. Text in echo
+#: suffusion/functions.php:286
+msgid "This text will be shown in the drop-down menus in the navigation bar. If left blank, the title of the page is used."
+msgstr ""
+
+#. Text in echo
+#: suffusion/widgets/suffusion-subscription.php:87
+msgid "This text will be shown in the subscription box by default. When the visitor starts entering the email address the text will disappear."
+msgstr "Questo testo verrà mostrato di default nel box di inserimento email. Quando i visitatori comincieranno a visitare l'indirizzo mail il testo scomparirà."
+
+#. Text in echo
+#: suffusion/widgets/suffusion-subscription.php:93
+msgid "This text will be shown in the subscription button near the email field"
+msgstr "Questo testo verrà mostrato nel pulsante \"subscription\" vicino al campo mail"
+
+#. Text in function
+#: suffusion/widgets/suffusion-subscription.php:252
+msgid "This widget lets visitors of your blog subscribe to it and follow you on popular social networks like Digg, FaceBook etc. Additionally they can subscribe to your blog by email, for which you need a FeedBurner account."
+msgstr "Questo widget permette ai tuoi visitatori di sottoscrivere il tuo blog sui piu popolari social network (Digg, Facebook, Twitter etc.) Additionally they can subscribe to your blog by email, for which you need a FeedBurner account."
+
+#. Text in echo
+#: suffusion/widgets/suffusion-category-posts.php:121
+msgid "This will default to the name of the selected category if left blank"
+msgstr ""
+
+#. Text in echo
+#: suffusion/functions.php:321
+msgid "Thumbnail"
+msgstr "Thumbnail (Miniatura)"
+
+#. Text in echo
+#: suffusion/widgets/suffusion-featured-posts.php:137
+#: suffusion/widgets/suffusion-featured-posts.php:143
+msgid "Time for each post display:"
+msgstr "Tempo di visualizzazione per ogni articolo:"
+
+#. Text in function
+#: suffusion/functions/media.php:1
+msgid "Title"
+msgstr ""
+
+#. Text in echo
+#: suffusion/widgets/suffusion-translator.php:111
+#: suffusion/widgets/suffusion-category-posts.php:119
+#: suffusion/widgets/suffusion-twitter.php:178
+#: suffusion/widgets/suffusion-search.php:49
+#: suffusion/widgets/suffusion-featured-posts.php:53
+#: suffusion/widgets/suffusion-subscription.php:68
+msgid "Title:"
+msgstr "Titolo;"
+
+#. Text in function
+#: suffusion/widgets/suffusion-featured-posts.php:255
+msgid "Top"
+msgstr "In Alto"
+
+#. Text in function
+#: suffusion/functions.php:352
+msgid "Trackbacks"
+msgstr "Trackbacks"
+
+#. Text in function
+#: suffusion/widgets/suffusion-translator.php:125
+msgid "Translate this Page"
+msgstr "Traduci questa pagina"
+
+#. Text in function
+#: suffusion/widgets/suffusion-featured-posts.php:255
+msgid "Turn Downwards"
+msgstr ""
+
+#. Text in function
+#: suffusion/widgets/suffusion-featured-posts.php:255
+msgid "Turn Leftwards"
+msgstr ""
+
+#. Text in function
+#: suffusion/widgets/suffusion-featured-posts.php:255
+msgid "Turn Rightwards"
+msgstr ""
+
+#. Text in function
+#: suffusion/widgets/suffusion-featured-posts.php:255
+msgid "Turn Upwards"
+msgstr ""
+
+#. Text in function
+#: suffusion/widgets/suffusion-twitter.php:222
+msgid "Twitter"
+msgstr "Twitter"
+
+#. Text in function
+#: suffusion/functions.php:352
+msgid "URI"
+msgstr ""
+
+#. Text in function
+#: suffusion/widgets/suffusion-category-posts.php:215
+msgid "Underline upon hover (sidebar-style)"
+msgstr ""
+
+#. Text in function
+#: suffusion/widgets/suffusion-category-posts.php:215
+msgid "Use Category Icons Plugin"
+msgstr ""
+
+#. Text in function
+#: suffusion/widgets/suffusion-category-posts.php:215
+msgid "Use custom image"
+msgstr ""
+
+#. Text in echo
+#: suffusion/widgets/suffusion-twitter.php:154
+msgid "User:"
+msgstr "User:"
+
+#. Text in echo
+#: suffusion/sidebar.php:74
+msgid "Valid XHTML"
+msgstr "Valid XHTML"
+
+#. Text in function
+#: suffusion/widgets/suffusion-featured-posts.php:255
+msgid "Vertical Blinds"
+msgstr ""
+
+#. Text in echo
+#: suffusion/widgets/suffusion-translator.php:122
+msgid "What language is your page in?"
+msgstr "In che linguaggio è il tuo sito?"
+
+#. Text in function
+#: suffusion/functions/media.php:1
+msgid "Width"
+msgstr ""
+
+#. Text in echo
+#: suffusion/widgets/suffusion-featured-posts.php:205
+msgid "Width of excerpt section:"
+msgstr "Larghezza della sezione riassunti:"
+
+#. Text in echo
+#: suffusion/widgets/suffusion-subscription.php:81
+msgid "Will show a text box for visitors to enter an email address for subscription"
+msgstr "Mostra una casella di testo per i visitatori per inserire un'indirizzo email per la sottoscrizione"
+
+#. Text in echo
+#: suffusion/widgets/suffusion-twitter.php:162
+msgid "Will show the selected Twitter icon"
+msgstr "Verrà mostrata l'icona Twitter selezionata"
+
+#. Text in echo
+#: suffusion/widgets/suffusion-twitter.php:168
+msgid "Will show up near the Twitter icon"
+msgstr "Verrà mostrato sopra l'icona Twitter"
+
+#. Text in echo
+#: suffusion/widgets/suffusion-twitter.php:174
+msgid "Will show your latest tweets"
+msgstr "Mostrerà i tuoi ultimi tweet"
+
+#. Text in function
+#: suffusion/widgets/suffusion-featured-posts.php:255
+msgid "Wipe"
+msgstr ""
+
+#. Text in function
+#: suffusion/login.php:86
+msgid "You are currently logged in as <a href=\"%1$s\" title=\"%2$s\">%2$s</a>."
+msgstr ""
+
+#. Text in echo
+#: suffusion/widgets/suffusion-category-posts.php:189
+msgid "You can choose to display an icon for the category based on the Category Icons plugin, or a custom image"
+msgstr ""
+
+#. Text in function
+#: suffusion/login.php:86
+msgid "You have successfully logged in as <a href=\"%1$s\" title=\"%2$s\">%2$s</a>."
+msgstr ""
+
+#. Text in function
+#: suffusion/comments.php:158
+msgid "You may use these <abbr title=\"HyperText Markup Language\">HTML</abbr> tags and attributes: %s"
+msgstr ""
+
+#. Text in function
+#: suffusion/comments.php:158
+#: suffusion/comments.php:81
+msgid "You must be logged in to post a comment."
+msgstr "Devi avere un account per lasciare un commento"
+
+#. Text in function
+#: suffusion/functions.php:352
+msgid "Your Comment"
+msgstr "Scrivi il Commento"
+
+#. Text in function
+#: suffusion/widgets/suffusion-featured-posts.php:255
+msgid "Zoom"
+msgstr "Zoom"
+
+#. Text in function
+#: suffusion/widgets/suffusion-featured-posts.php:255
+msgid "Zoom and Fade"
+msgstr ""
+
+#. Text in function
+#: suffusion/widgets/suffusion-subscription.php:252
+msgid "your-feed-name"
+msgstr "tuo-nick-feed"
+
+#. Text in function
+#: suffusion/widgets/suffusion-twitter.php:93
+msgid "your-user-name"
+msgstr "tuo-user-name"
+
