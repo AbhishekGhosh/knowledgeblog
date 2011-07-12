@@ -3,7 +3,7 @@
 Contributors: philliplord, sjcockell, knowledgeblog, d_swan
 Tags: table-of-contents, res-comms, scholar, academic, science
 Requires at least: 3.0
-Tested up to: 3.1
+Tested up to: 3.2
 Stable tag: 0.3
 
 This plugin writes an alphabetic list of posts in a single category in place of a [ktoc] shortcode.
@@ -25,21 +25,20 @@ Unlike other Table of Contents plugins, KToC does not embed affiliate links in t
 
 == Changelog ==
 
+= 0.3 =
+* Added 'fill' attribute to shortcode, which allows for custom attribution (i.e. 'posted by' to replace the default 'by')
+
 = 0.2 =
 * Version 0.2 can deal with multiple authors, when controlled by the [Co-authors Plus](http://wordpress.org/extend/plugins/co-authors-plus/) plugin.
 * It retains the capacity to cope with normal, singly authored posts.
 
-= 0.3 =
-* Put in a workaround for a bug where get_coauthors() sometimes returns the wrong info. 
-   * Defaults to Wordpress-native author information for posts with a single author.
-
 == Upgrade Notice ==
+
+= 0.3 =
+Added 'fill' attribute to shortcode, which allows for custom attribution (i.e. 'posted by' to replace the default 'by')
 
 = 0.2 =
 This version provides compatibility with Co-authors Plus.
-
-= 0.3 =
-Bugfix release.
 
 == Copyright ==
 
