@@ -8,7 +8,7 @@
    Author URI: http://knowledgeblog.org
    License: GPL2
 
-   Copyright 2010. Simon Cockell (s.j.cockell@newcastle.ac.uk)
+   Copyright 2010-11. Simon Cockell (s.j.cockell@newcastle.ac.uk)
    Newcastle University. 
   
    This program is free software; you can redistribute it and/or modify
@@ -51,6 +51,7 @@ class KToC{
   function ktoc_shortcode($atts,$content){
     extract(shortcode_atts(array(
                 'cat' => get_option('display_category'),
+                'fill' => 'by',
             ), $atts));
 	$categories = get_categories();
 	$items = array();
@@ -64,7 +65,7 @@ class KToC{
 					$author_name = $author->user_login;
 					$author_realname = $author->first_name." ".$author->last_name;
 					$author_url = $author->user_url;
-					$item = "<li><a href=" . get_permalink($post->ID) . ">" . get_the_title($post->ID) . "</a> by ";
+					$item = "<li><a href=" . get_permalink($post->ID) . ">" . get_the_title($post->ID) . "</a> $fill ";
 					if ($author_realname != ' ') {
 						$item .= $author_realname ."</li>\n";
 					}
@@ -75,14 +76,10 @@ class KToC{
 				}
 				else {
                     //deal with co-authors
-                    $item = "<li><a href=" . get_permalink($post->ID) . ">" . get_the_title($post->ID) . "</a> by ";
+                    $item = "<li><a href=" . get_permalink($post->ID) . ">" . get_the_title($post->ID) . "</a> $fill ";
                     $authors = get_coauthors($post->ID);
                     $i = 1;
                     $len = count($authors);
-                    if ($len == 1) {
-                        //circumvent very rare (unique?) bug, where get_coauthors returns wrong info...
-                        $authors = array(get_userdata($post->post_author));
-                    }
                     $author_html = '';
                     foreach ($authors as $author) {
 				        $author_name = $author->user_login;
