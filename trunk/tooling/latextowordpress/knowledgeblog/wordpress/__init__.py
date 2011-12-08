@@ -37,7 +37,9 @@ class Wordpress(_Renderer):
         _Renderer.__init__(self, *args,**kwargs)
         for name in ['math','displaymath','eqnarray']:
             self[name] = self.do_math
+        
 
+        self['includegraphics'] = self.do_includegraphics
         self.prerender = False
 
 
@@ -61,6 +63,10 @@ class Wordpress(_Renderer):
     def doCHMFiles(self, document, encoding='ISO-8859-1'):
         pass
         
+    def do_includegraphics(self, node):
+        print "Doing wierd includegraphcs %s" % node.attributes
+        
+        return u'<img src="%s">' % node.attributes['file']
 
     def do_math(self, node):
         if( node.source in self.latex_math_replacements ):
