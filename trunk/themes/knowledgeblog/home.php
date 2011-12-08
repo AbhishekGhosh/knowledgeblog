@@ -39,7 +39,7 @@
 				on <?php the_date(); ?> 
 						<!-- SJC -->
 						<!--by <?php the_author(); ?>-->
-						by <?php 
+						by <?php if( function_exists( "coauthors" ) ){coauthors();} ?>
 	<div class="latest" id="post-<?php the_ID(); ?>">
 		<p class="details_small">
 			on <?php the_date(); ?> 
