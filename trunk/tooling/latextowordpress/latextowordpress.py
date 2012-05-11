@@ -49,8 +49,6 @@ __version__ = '0.1'
 def main(argv):
 
     print >>sys.stderr, 'latextowordpress version %s' % __version__
-    print sys.path
-
 
     # Parse the command line options
     try: 
@@ -94,6 +92,7 @@ def main(argv):
     # Parse the document
     tex.parse()
 
+
     # Set up TEXINPUTS to include the current directory for the renderer
     os.environ['TEXINPUTS'] = '%s:%s' % (os.getcwd(), 
                                          os.environ.get('TEXINPUTS',''))
@@ -107,7 +106,7 @@ def main(argv):
         log.info('Directing output files to directory: %s.' % outdir)        
         os.chdir(outdir)
     
-    renderer = Renderer()
+    renderer = Renderer( file=file )
     renderer.render(document)
 
 try:

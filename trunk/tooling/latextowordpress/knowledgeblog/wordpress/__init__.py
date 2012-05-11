@@ -18,7 +18,7 @@
 ## along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 from plasTeX.Renderers.XHTML import XHTML as _Renderer
-
+import re
 
 class Wordpress(_Renderer):
 
@@ -34,12 +34,15 @@ class Wordpress(_Renderer):
     keys_set_prerender = []
     
     def __init__(self, *args, **kwargs):
+        self.file = kwargs.pop( 'file' );
+
         _Renderer.__init__(self, *args,**kwargs)
         for name in ['math','displaymath','eqnarray']:
             self[name] = self.do_math
         
-
         self['includegraphics'] = self.do_includegraphics
+        self['cite'] = self.do_cite
+                
         self.prerender = False
 
 
@@ -64,8 +67,6 @@ class Wordpress(_Renderer):
         pass
         
     def do_includegraphics(self, node):
-        print "Doing wierd includegraphcs %s" % node.attributes
-        
         return u'<img src="%s">' % node.attributes['file']
 
     def do_math(self, node):
@@ -74,4 +75,61 @@ class Wordpress(_Renderer):
 
         return u'[latex]%s[/latex]' % node.source[1:-1]
 
+    def do_cite(self, node):
+        if not hasattr( self, "citation" ):
+            self.parse_bbl_file()
+            print self.citation
+            
+        key = node.source[6:-1]
+        ref = "Unknown"
+
+        print "checking for %s" % key
+        if( key in self.citation ):
+            ref = self.citation[ key ]
+            print "found"
+
+        return u'[cite]%s[/cite]' % ref
+
+
+    def parse_bbl_file(self):
+        self.citation = {}
+        ## we are in the output directory -- .bbl file is in directory above. 
+        file = "../" + self.file.split(".")[ 0 ] + ".bbl"
+
+        current_item = False
+        current_doi = False
+        current_url = False
+        
+        ## state
+        moving_over_prolog = True
+        bib_item_searching_for_key = False
+        
+        with open(file) as f:
+            for line in f:
+                if(line.startswith("\\bibitem")):
+                    bib_item_searching_for_key = True
+                    if( not moving_over_prolog ):
+                        if( current_doi or current_url ):
+                            self.citation[ current_item ] = current_doi or current_url
+                        current_item = False
+                        current_doi = False
+                        current_url = False
+                    moving_over_prolog = False
+
+
+                if(bib_item_searching_for_key):
+                    m = re.search("\{(.*)\}", line)
+                    if( m ):
+                        current_item = m.group( 1 )
+                        bib_item_searching_for_key = False
+
+
+                if(line.startswith( "\\newblock \\doi")):
+                    current_doi = "http://dx.doi.org/" + line[15:-3]
+                    
+                if(line.startswith( "\\newblock URL")):
+                    current_url = line[19:-3]
+                    
+
+                    
 Renderer = Wordpress
