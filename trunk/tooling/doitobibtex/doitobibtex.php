@@ -24,6 +24,9 @@
  */
 
 $doi = $_GET[ "doi" ];
+
+var_dump( $_GET );
+
 $url = "http://dx.doi.org/" . $doi;
 $ch = curl_init();
 curl_setopt ($ch, CURLOPT_URL, $url );

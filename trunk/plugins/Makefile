@@ -30,10 +30,13 @@ kb-coins-metadata:
 kb_doi:
 	$(CP) kb_doi $(PLUGINS)
 
+kblog-export:
+	$(CP) kblog-export $(PLUGINS)
+
 test-plugin:
 	$(CP) test-plugin.php $(PLUGINS)
 
-.PHONY: mathjax-latex kcite kblog-table-of-contents post-metadata kb-coins-metadata kblog-metadata kblog-author
+.PHONY: mathjax-latex kcite kblog-table-of-contents post-metadata kb-coins-metadata kblog-metadata kblog-author kblog-export
 
 include $(ROOT)/publish/fix_perm.inc
 
